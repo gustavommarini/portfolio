@@ -1,0 +1,25 @@
+section {
+  padding: 120px 0;
+  text-align: left;
+}
+
+.example-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.example-page {
+  display: flex;
+  a {
+    padding: 0 5px;
+    text-decoration: none;
+    img {
+      max-width: 80px;
+    }
+    .text-logo {
+      font-size: 70px;
+    }
+  }
+}

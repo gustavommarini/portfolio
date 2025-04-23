@@ -1,0 +1,62 @@
+.btn {
+  padding: 0;
+  border: none;
+  i {
+    transition: transform 0.3s;
+  }
+  &:hover {
+    i {
+      color: $color-hover-btn;
+      transform: rotate(45deg);
+    }
+    .btn-children {
+      background-color: $color-hover-btn;
+    }
+  }
+  &.sm {
+    .inner-btn {
+      font-size: 18px;
+      .btn-children,
+      .icon-container {
+        padding: 16px;
+      }
+    }
+  }
+  &.btn-secundary {
+    .btn-children {
+      color: black;
+    }
+    .icon-container {
+      background-color: black;
+    }
+    &:hover {
+      .icon-container {
+        background-color: $color-primary;
+      }
+      i {
+        color: black;
+      }
+      .btn-children {
+        background-color: black;
+        color: $color-primary;
+      }
+    }
+  }
+}
+.inner-btn {
+  display: flex;
+  border-radius: 2px;
+  overflow: hidden;
+  font-size: 24px;
+  .icon-container {
+    padding: 20px;
+    color: $color-primary;
+    background-color: #ffffff;
+  }
+}
+.btn-children {
+  text-transform: uppercase;
+  padding: 20px;
+  background-color: $color-primary;
+  color: #fff;
+}

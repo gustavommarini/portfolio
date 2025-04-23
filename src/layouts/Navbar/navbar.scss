@@ -1,0 +1,93 @@
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 9;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  color: #fff;
+  i {
+    color: $color-primary;
+    padding-right: 5px;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.top-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  line-height: 40px;
+}
+.other-contact {
+  display: flex;
+  .mail {
+    border-right: $border-nav;
+    padding-right: 10px;
+  }
+  .office-address {
+    padding-left: 10px;
+  }
+  a {
+    color: $color-nav-main;
+    font-weight: bold;
+    &:hover {
+      color: $color-nav-main-hover;
+    }
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: $border-nav;
+  border-bottom: $border-nav;
+  padding: 0 30px;
+  line-height: 90px;
+  .details {
+    border-left: $border-nav;
+  }
+}
+
+.logo-menu {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  padding-right: 20px;
+  max-width: 200px; //logo2
+  img {
+    vertical-align: middle;
+    // width: 27%; //logo
+    width: 85%; //logo2
+  }
+}
+
+.navigation-items {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  border-left: $border-nav;
+}
+.navigation-items,
+.details {
+  cursor: pointer;
+  a {
+    padding: 0 20px;
+    text-transform: uppercase;
+    color: $color-nav-main;
+    padding: 20px;
+    font-weight: bold;
+    &:hover {
+      color: $color-nav-main-hover;
+    }
+  }
+}
+
+.menu-icon {
+  display: none;
+}
