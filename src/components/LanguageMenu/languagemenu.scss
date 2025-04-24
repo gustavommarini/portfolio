@@ -1,0 +1,52 @@
+.language-selector {
+  z-index: 6;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 50%;
+  font-size: 32px;
+  cursor: pointer;
+  color: #000;
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+#language-menu {
+  &:checked ~ .language-flags {
+    bottom: 20px;
+    // height: 185px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.language-btn {
+  i {
+    z-index: 6;
+    position: relative;
+  }
+}
+
+.language-flags {
+  position: absolute;
+  border-radius: 10px;
+  padding-top: 10px;
+  background: #fff;
+  width: 100%;
+  bottom: -300px;
+  height: 185px;
+  .lang-link {
+    text-decoration: none;
+    font-size: 30px;
+    line-height: 40px;
+    &:hover,
+    &.selected {
+      font-size: 48px;
+    }
+  }
+}
