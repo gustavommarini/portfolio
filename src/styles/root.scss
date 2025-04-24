@@ -1,0 +1,44 @@
+/**
+ *
+ * Define the root for the HTML document to set the default css variables.
+ *
+ */
+
+:root {
+  /*=============================================
+  =            Global colors            =
+  =============================================*/
+  //   --nmd-body-text-color: #{$dark};
+  //   --nmd-body-bg-color: #{$white};
+  //   /*=====  End of Global colors  ======*/
+
+  //   --nmd-btn-primary-color: #{$dark};
+  //   --nmd-btn-primary-bg: #{$orange};
+  //   --nmd-btn-primary-color-hover: #{$dark-light};
+  //   --nmd-btn-primary-bg-hover: #{$yellow};
+
+  //   --nmd-body-text-size: #{$fs-sm};
+  //   --nmd-body-text-weight: #{$fw-medium};
+
+  //   --nmd-h1-text-size: #{$h1};
+  //   --nmd-h2-text-size: #{$h2};
+  //   --nmd-h3-text-size: #{$h3};
+  //   --nmd-h4-text-size: #{$h4};
+  //   --nmd-h5-text-size: #{$h5};
+  //   --nmd-h6-text-size: #{$h6};
+
+  //   --nmd-h1-text-weight: #{$fw-black};
+  //   --nmd-h2-text-weight: #{$fw-semibold};
+  //   --nmd-h3-text-weight: #{$fw-bold};
+  //   --nmd-h4-text-weight: #{$fw-medium};
+  //   --nmd-h5-text-weight: #{$fw-normal};
+  //   --nmd-h6-text-weight: #{$fw-light};
+
+  --background: #4285f4;
+  --icon-color: #344955;
+  --width: 50px;
+  --height: 50px;
+  --border-radius: 100%;
+
+  --bgcolor: rgb(0, 0, 0);
+}

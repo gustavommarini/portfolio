@@ -1,0 +1,88 @@
+$font-typewriter-size: 42px;
+$font-typewriter-size-cursor: 33px;
+$font-typewriter-color: #ffb400;
+
+.home {
+  background-image: url(../../assets/photos/VC-13.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    opacity: 1;
+    background: #090601;
+    background: rgba(1, 2, 18, 0.44);
+    background: radial-gradient(
+      at 70%,
+      rgba(1, 2, 18, 0.44) 40%,
+      rgba(9, 6, 1, 0.96) 65%,
+      #090601 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#010212",endColorstr="#090601",GradientType=1);
+  }
+}
+
+.main-text-container {
+  height: 100%;
+  //   width: 100%;
+  //   display: table;
+  margin-left: 10vw;
+  max-width: 550px;
+  display: flex;
+  align-items: center;
+}
+
+.main-text {
+  color: white;
+  position: relative;
+  font-family: 'Lato', sans-serif;
+  h3 {
+    font-weight: 400;
+    font-size: 19px;
+    text-transform: uppercase;
+  }
+  h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 42px;
+    line-height: $font-typewriter-size;
+    font-weight: 500;
+    position: relative;
+    margin: 19px 0px 10px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    span {
+      color: $font-typewriter-color;
+      font-weight: 700;
+    }
+  }
+  p {
+  }
+}
+
+.action_btns {
+  display: flex;
+  gap: 40px;
+  padding-top: 30px;
+}
+
+// TYPEWRITTER
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+}
+
+.typewriter-cursor-end::after {
+  content: '';
+  width: 3px;
+  height: $font-typewriter-size-cursor;
+  background: $font-typewriter-color;
+  display: inline-block;
+  animation: cursor-blink 1.5s steps(9) infinite;
+}
