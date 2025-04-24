@@ -1,4 +1,8 @@
 {
-  "welcome": "¡Bienvenido a nuestra aplicación!",
-  "description": "Esta es una descripción de ejemplo."
+  "navbar-items": {
+    "home": "Inicio",
+    "about": "Informacion",
+    "experience": "Experiencia",
+    "contact": "Contacto"
+  }
 }
