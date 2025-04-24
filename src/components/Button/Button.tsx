@@ -10,12 +10,7 @@ export const Button: FC<ButtonProps> = ({
 }) => {
   return (
     <button className={`btn ${type} ${size}`} onClick={onClick}>
-      <div className="inner-btn">
-        <div className="icon-container">
-          <i className="fa-solid fa-gavel"></i>
-        </div>
-        <div className="btn-children fjalla-one-regular">{children}</div>
-      </div>
+      <div className="btn-children fjalla-one-regular">{children}</div>
     </button>
   );
 };

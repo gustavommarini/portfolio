@@ -22,41 +22,18 @@
       }
     }
   }
-  &.btn-secundary {
+  &.btn-outlined {
+    background-color: transparent;
+    border: 1px solid white;
     .btn-children {
-      color: black;
+      background-color: transparent;
+      color: white;
     }
-    .icon-container {
-      background-color: black;
-    }
-    &:hover {
-      .icon-container {
-        background-color: $color-primary;
-      }
-      i {
-        color: black;
-      }
-      .btn-children {
-        background-color: black;
-        color: $color-primary;
-      }
-    }
-  }
-}
-.inner-btn {
-  display: flex;
-  border-radius: 2px;
-  overflow: hidden;
-  font-size: 24px;
-  .icon-container {
-    padding: 20px;
-    color: $color-primary;
-    background-color: #ffffff;
   }
 }
 .btn-children {
   text-transform: uppercase;
   padding: 20px;
-  background-color: $color-primary;
-  color: #fff;
+  background-color: white;
+  color: black;
 }
