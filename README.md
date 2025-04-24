@@ -52,3 +52,7 @@ export default tseslint.config({
   },
 });
 ```
+
+Typewriter effect
+https://medium.com/@hamzamakh/typewriter-effect-in-react-a103a4f385c9
+https://blog.logrocket.com/5-ways-implement-typing-animation-react/
