@@ -1,0 +1,15 @@
+{
+  "title": "lascia <span>una nota</span>",
+  "subtitle": "Inviatemi un messaggio di posta elettronica o chiamatemi. Sono sempre disponibile a discutere di nuove opportunità.",
+  "body_title": "Vie di contatto",
+  "phone": "Telefono",
+  "location": "Localizzazione",
+  "location_data": "Salerno, Italia",
+  "description": "Se avete qualche suggerimento, progetto o volete anche solo salutarmi... compilate il modulo sottostante e vi risponderò al più presto. Sono sempre disponibile a discutere di lavori di design di prodotti o di collaborazioni.",
+  "form": {
+    "name": "Nome",
+    "email": "Email",
+    "message": "Messaggio",
+    "btn": "Invia"
+  }
+}

@@ -11,6 +11,15 @@ import itAbout from './locales/it/about.json';
 import enNavbar from './locales/en/navbar.json';
 import esNavbar from './locales/es/navbar.json';
 import itNavbar from './locales/it/navbar.json';
+import enEducation from './locales/en/education.json';
+import esEducation from './locales/es/education.json';
+import itEducation from './locales/it/education.json';
+import enExperience from './locales/en/experience.json';
+import esExperience from './locales/es/experience.json';
+import itExperience from './locales/it/experience.json';
+import enContact from './locales/en/contact.json';
+import esContact from './locales/es/contact.json';
+import itContact from './locales/it/contact.json';
 import { AvailableLanguages } from './i18n.types';
 
 i18n
@@ -33,23 +42,32 @@ i18n
       order: ['localStorage', 'navigator'],
       caches: ['localStorage'],
     },
-    ns: ['home', 'navbar', 'about'], // Define your namespaces
+    ns: ['home', 'navbar', 'about', 'education', 'experience', 'contact'], // Define your namespaces
     defaultNS: 'home', // Set a default namespace
     resources: {
       en: {
         home: enHome,
         about: enAbout,
         navbar: enNavbar,
+        education: enEducation,
+        experience: enExperience,
+        contact: enContact,
       },
       es: {
         home: esHome,
         about: esAbout,
         navbar: esNavbar,
+        education: esEducation,
+        experience: esExperience,
+        contact: esContact,
       },
       it: {
         home: itHome,
         about: itAbout,
         navbar: itNavbar,
+        education: itEducation,
+        experience: itExperience,
+        contact: itContact,
       },
     },
   });

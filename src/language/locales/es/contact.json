@@ -1,0 +1,15 @@
+{
+  "title": "escribime <span>unas lineas</span>",
+  "subtitle": "Envíame un mensaje por correo electrónico o llámame. Estoy disponible para discutir nuevas oportunidades.",
+  "body_title": "Vias de contacto",
+  "phone": "Telefono",
+  "location": "Ubicacion",
+  "location_data": "Salerno, Italia",
+  "description": "Si tienes alguna sugerencia, proyecto o incluso quieres decir Hola.. por favor rellena el siguiente formulario y te responderé en breve. Siempre estoy abierto a discutir el trabajo de diseño de productos o asociaciones.",
+  "form": {
+    "name": "Nombre",
+    "email": "Email",
+    "message": "Mensaje",
+    "btn": "Enviar"
+  }
+}

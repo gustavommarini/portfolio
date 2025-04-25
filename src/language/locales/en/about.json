@@ -1,13 +1,22 @@
 {
-  "title": "Hi There!!",
-  "animated": {
-    "first": "Gustavo Marini",
-    "second": "a freelancer",
-    "third": "a mobile apps developer",
-    "fourth": "a website developer"
+  "title": "about <span>me</span>",
+  "subtitle": "I design and code beautiful things, and I love what I do.",
+  "description": {
+    "title": "I am a Web/App Developer, specialized in JavaScript, React & React Native",
+    "subtitle": "Passionate developer with over 10 years of experience, specializing in modern Web and Mobile development. I focus on JavaScript, TypeScript, React, and React Native, with a strong emphasis on clean architecture and performance. I’ve contributed to complex projects implementing scalable solutions using GraphQL, Redux, Styled Components, Nx, Lerna, feature flags with Split, testing with Jest and Detox, and worked with tools like Amplitude, Retool, and Notion for tracking and documentation. Constantly learning cutting edge technologies and tools. I'm a self-taught team player, proactive, versatile and a very positive attitude, always embracing agile methodologies and committed to delivering high-quality code."
   },
-  "description": "I'm a Freelance Front End Developer and UI/UX Designer based in Salerno, Italy. I strives to build immersive and beautiful web applications through carefully crafted code and user-centric design.",
-  "main_btn": "About Me",
-  "secundary_btn": "Get in Touch",
-  "follow_me": "Follow Me"
+  "details": {
+    "birthday": "Birthday",
+    "birthday_data": "11 November",
+    "residence": "Residence",
+    "residence_data": "Salerno, Italy",
+    "languages": "Languages",
+    "languages_data": "Spanish, English and Italian",
+    "experience": "Experience",
+    "nationality": "Nationality",
+    "freelance": "Freelance",
+    "freelance_data": "Available"
+  },
+  "btn_dwn_cv": "Download CV",
+  "edu_section_title": "Education"
 }
