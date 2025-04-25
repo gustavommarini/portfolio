@@ -1,0 +1,37 @@
+$font-typewriter-color: #ffb400;
+
+.page-title {
+  text-align: center;
+  h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 42px;
+    font-weight: 500;
+    position: relative;
+    margin: 19px 0px 10px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    span {
+      color: $font-typewriter-color;
+      font-weight: 700;
+    }
+  }
+}
+
+.page-subtitle {
+  position: relative;
+  &:before,
+  &:after {
+    background-color: $font-typewriter-color;
+    position: absolute;
+    content: '';
+    height: 2px;
+    top: 11px;
+    width: 30px;
+  }
+  &:before {
+    right: -50px;
+  }
+  &:after {
+    left: -50px;
+  }
+}
