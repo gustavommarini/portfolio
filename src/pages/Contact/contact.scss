@@ -1,0 +1,47 @@
+#contact {
+  color: white;
+  font-family: 'Lato', sans-serif;
+}
+
+.contact-content {
+  padding-top: 50px;
+}
+
+.describe-contact {
+  h3 {
+    padding-bottom: 20px;
+    font-size: 32px;
+  }
+}
+
+.contact_form {
+  width: 100%;
+  .input-group {
+    display: flex;
+    gap: 10px;
+  }
+  .input-single-item {
+    width: 50%;
+  }
+  .form-control {
+    appearance: none;
+    background-clip: padding-box;
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    width: 100%;
+    background-color: #222222;
+    border: none;
+    border-radius: 0 !important;
+    color: white;
+    line-height: 1.5;
+    padding: 1.375rem 0.75rem;
+    margin-bottom: 2em;
+  }
+  textarea {
+    min-height: calc(1.5em + 0.75rem + 2px);
+  }
+  button {
+    width: 20%;
+  }
+}
