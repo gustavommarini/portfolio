@@ -1,58 +1,31 @@
-# Law Firm
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A CV/portfolio template for developers built with React. Inspired in [react-portfolio](https://github.com/ubaimutl/react-portfolio).
 
-Currently, two official plugins are available:
+To create the Typewriter effect I follow these two links
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Typewritter Effect In React](https://medium.com/@hamzamakh/typewriter-effect-in-react-a103a4f385c9)
+- [5 ways to implement typing animation in react](https://blog.logrocket.com/5-ways-implement-typing-animation-react/)
 
-## Expanding the ESLint configuration
+For the menu I used these codepens:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [Split animation on hover with single element](https://codepen.io/ggsingla/pen/MWOzxbq)
+- [Navi　Bar](https://codepen.io/yuhomyan/pen/WNwGywp)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
+### Features
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- App created with Vite + React + React Router + Sass + i18next + ESLint + Prettier + Husky + Jest + RTL
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+### Setup
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
-```
+Get the code
 
-Typewriter effect
-https://medium.com/@hamzamakh/typewriter-effect-in-react-a103a4f385c9
-https://blog.logrocket.com/5-ways-implement-typing-animation-react/
+<pre>git clone https://github.com/gustavommarini/portfolio.git</pre>
+
+Install required dependencies
+
+<pre>yarn install</pre>
+
+Start the server
+
+<pre>yarn run dev</pre>
