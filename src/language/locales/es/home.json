@@ -1,8 +1,14 @@
 {
-  "navbar-items": {
-    "home": "Inicio",
-    "about": "Informacion",
-    "experience": "Experiencia",
-    "contact": "Contacto"
-  }
+  "title": "Hey! Hola!",
+  "i_am": "Soy ",
+  "animated": {
+    "first": "Gustavo Marini",
+    "second": "un freelancer",
+    "third": "un desarrollador de apps mobiles",
+    "fourth": "un desarrollador de Sitios Web"
+  },
+  "description": "Soy un Freelance Front End Developer y UI / UX Designer con sede en Salerno, Italia. Me esfuerzo por construir aplicaciones web inmersivas y hermosas a través de un código cuidadosamente elaborado y un diseño centrado en el usuario.",
+  "main_btn": "Sobre Mi",
+  "secundary_btn": "Contactame",
+  "follow_me": "Sigueme"
 }

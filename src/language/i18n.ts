@@ -3,11 +3,14 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpBackend from 'i18next-http-backend';
 import enHome from './locales/en/home.json';
-import enIntroData from './locales/en/intro_data.json';
-import enSinglePage from './locales/en/single_page.json';
 import esHome from './locales/es/home.json';
-import esSinglePage from './locales/es/single_page.json';
-import esIntroData from './locales/es/intro_data.json';
+import itHome from './locales/it/home.json';
+import enAbout from './locales/en/about.json';
+import esAbout from './locales/es/about.json';
+import itAbout from './locales/it/about.json';
+import enNavbar from './locales/en/navbar.json';
+import esNavbar from './locales/es/navbar.json';
+import itNavbar from './locales/it/navbar.json';
 import { AvailableLanguages } from './i18n.types';
 
 i18n
@@ -17,7 +20,11 @@ i18n
   .init({
     lng: AvailableLanguages.en, // Set the initial language of the App
     fallbackLng: AvailableLanguages.en, // Default language
-    supportedLngs: [AvailableLanguages.en, AvailableLanguages.es], // Supported languages
+    supportedLngs: [
+      AvailableLanguages.en,
+      AvailableLanguages.es,
+      AvailableLanguages.it,
+    ], // Supported languages
     debug: true,
     interpolation: {
       escapeValue: false, // React already protects from XSS
@@ -26,18 +33,23 @@ i18n
       order: ['localStorage', 'navigator'],
       caches: ['localStorage'],
     },
-    ns: ['home', 'single'], // Define your namespaces
+    ns: ['home', 'navbar', 'about'], // Define your namespaces
     defaultNS: 'home', // Set a default namespace
     resources: {
       en: {
         home: enHome,
-        single: enSinglePage,
-        intro: enIntroData,
+        about: enAbout,
+        navbar: enNavbar,
       },
       es: {
         home: esHome,
-        single: esSinglePage,
-        intro: esIntroData,
+        about: esAbout,
+        navbar: esNavbar,
+      },
+      it: {
+        home: itHome,
+        about: itAbout,
+        navbar: itNavbar,
       },
     },
   });

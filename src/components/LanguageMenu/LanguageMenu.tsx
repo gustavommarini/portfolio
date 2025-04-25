@@ -8,6 +8,7 @@ export const LanguageMenu = () => {
   const checkboxRef: React.LegacyRef<HTMLInputElement> | null = useRef(null);
   const langSpanish = i18n.language === AvailableLanguages.es;
   const langEnglish = i18n.language === AvailableLanguages.en;
+  const langItalian = i18n.language === AvailableLanguages.it;
 
   const changeLanguage = (lang: AvailableLanguages) => {
     i18n.changeLanguage(lang);
@@ -36,8 +37,8 @@ export const LanguageMenu = () => {
           🇬🇧
         </div>
         <div
-          className="lang-link"
-          onClick={() => changeLanguage(AvailableLanguages.en)}
+          className={`lang-link ${langItalian && 'selected'}`}
+          onClick={() => changeLanguage(AvailableLanguages.it)}
         >
           🇮🇹
         </div>
