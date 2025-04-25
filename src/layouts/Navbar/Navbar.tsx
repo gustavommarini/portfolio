@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation } from 'react-router-dom';
 
 const Navbar: FC = () => {
-  const { t: navTranslation } = useTranslation(['home']);
+  const { t: navTranslation } = useTranslation(['navbar']);
   const checkboxRef: React.LegacyRef<HTMLInputElement> | null = useRef(null);
   const location = useLocation();
 
@@ -31,9 +31,9 @@ const Navbar: FC = () => {
               className={(isActive) =>
                 'nav-element' + (isActive ? ' selected' : '')
               }
-              data-name={navTranslation('navbar-items.home')}
+              data-name={navTranslation('home')}
             >
-              {navTranslation('navbar-items.home')}
+              {navTranslation('home')}
             </NavLink>
           </li>
           <li className="nav-link">
@@ -42,9 +42,9 @@ const Navbar: FC = () => {
               className={(isActive) =>
                 'nav-element' + (isActive ? ' selected' : '')
               }
-              data-name={navTranslation('navbar-items.about')}
+              data-name={navTranslation('about')}
             >
-              {navTranslation('navbar-items.about')}
+              {navTranslation('about')}
             </NavLink>
           </li>
           <li className="nav-link">
@@ -53,9 +53,9 @@ const Navbar: FC = () => {
               className={(isActive) =>
                 'nav-element' + (isActive ? ' selected' : '')
               }
-              data-name={navTranslation('navbar-items.experience')}
+              data-name={navTranslation('experience')}
             >
-              {navTranslation('navbar-items.experience')}
+              {navTranslation('experience')}
             </NavLink>
           </li>
           <li className="nav-link">
@@ -64,9 +64,9 @@ const Navbar: FC = () => {
               className={(isActive) =>
                 'nav-element' + (isActive ? ' selected' : '')
               }
-              data-name={navTranslation('navbar-items.contact')}
+              data-name={navTranslation('contact')}
             >
-              {navTranslation('navbar-items.contact')}
+              {navTranslation('contact')}
             </NavLink>
           </li>
         </ul>

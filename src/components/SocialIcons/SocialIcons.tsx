@@ -2,8 +2,11 @@ import React from 'react';
 import { socialprofils } from '@/services/data_content';
 import { ICON_MAPPING } from './SocialIcons.types';
 import './socialicons.scss';
+import { useTranslation } from 'react-i18next';
 
 export const SocialIcons = () => {
+  const { t: homeTranslation } = useTranslation(['home']);
+
   return (
     <div className="stick_follow_icon">
       <ul>
@@ -18,8 +21,7 @@ export const SocialIcons = () => {
           );
         })}
       </ul>
-      {/* Add translation */}
-      <p>Follow Me</p>
+      <p>{homeTranslation('follow_me')}</p>
     </div>
   );
 };

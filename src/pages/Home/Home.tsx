@@ -5,12 +5,12 @@ import { Button } from '@/components';
 import { ButtonType } from '@/components/Button/Button.types';
 
 const Home = () => {
-  const { t: introTranslation } = useTranslation(['intro']);
+  const { t: homeTranslation } = useTranslation(['home']);
   const currentText = useTypewriter([
-    introTranslation('animated.first'),
-    introTranslation('animated.second'),
-    introTranslation('animated.third'),
-    introTranslation('animated.fourth'),
+    homeTranslation('animated.first'),
+    homeTranslation('animated.second'),
+    homeTranslation('animated.third'),
+    homeTranslation('animated.fourth'),
   ]);
 
   const goToProfileAction = () => {};
@@ -21,16 +21,19 @@ const Home = () => {
       <div className="overlay"></div>
       <div className="main-text-container">
         <div className="main-text">
-          <h3>{introTranslation('title')}</h3>
+          <h3>{homeTranslation('title')}</h3>
           <h1>
-            I'm <span className="typewriter-cursor-end">{currentText}</span>
+            {homeTranslation('i_am')}{' '}
+            <span className="typewriter-cursor-end">{currentText}</span>
           </h1>
-          <p>{introTranslation('description')}</p>
+          <p>{homeTranslation('description')}</p>
           <div className="action_btns">
             <Button type={ButtonType.outlined} onClick={goToProfileAction}>
-              My Portfolio
+              {homeTranslation('main_btn')}
             </Button>
-            <Button onClick={goToContactAction}>Contact Me</Button>
+            <Button onClick={goToContactAction}>
+              {homeTranslation('secundary_btn')}
+            </Button>
           </div>
         </div>
       </div>
