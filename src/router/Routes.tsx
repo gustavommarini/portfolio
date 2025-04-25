@@ -6,24 +6,22 @@ import { LanguageMenu, SocialIcons } from '@/components';
 
 export const Routes = () => {
   return (
-    <main id="main">
-      <BrowserRouter
-        future={{
-          v7_startTransition: true,
-          v7_relativeSplatPath: true,
-        }}
-      >
-        <Navbar />
-        <AppRoutes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/work-experience" element={<Work />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<Home />} />
-        </AppRoutes>
-        <SocialIcons />
-        <LanguageMenu />
-      </BrowserRouter>
-    </main>
+    <BrowserRouter
+      future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true,
+      }}
+    >
+      <Navbar />
+      <AppRoutes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/work-experience" element={<Work />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<Home />} />
+      </AppRoutes>
+      <SocialIcons />
+      <LanguageMenu />
+    </BrowserRouter>
   );
 };

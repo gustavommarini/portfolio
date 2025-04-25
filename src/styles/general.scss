@@ -1,33 +1,86 @@
+#root {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+body {
+  background-color: #111111;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
 section {
   padding: 120px 0;
   text-align: left;
-}
-
-.example-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.example-page {
-  display: flex;
-  a {
-    padding: 0 5px;
-    text-decoration: none;
-    img {
-      max-width: 80px;
-    }
-    .text-logo {
-      font-size: 70px;
-    }
-  }
-}
-
-//Main page
-main#main {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+}
+
+.simple-row {
+  display: flex;
+}
+
+.simple-first-column {
+  padding-right: 30px;
+  flex: 0 0 40%;
+  max-width: 40%;
+}
+
+.simple-second-column {
+  flex: 0 0 60%;
+  max-width: 60%;
+}
+
+.simple-equal-column {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.content-row {
+  padding: 1.5rem 0;
+}
+
+.title-content {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.card-item {
+  padding-bottom: 4rem;
+  position: relative;
+  small {
+    position: absolute;
+    top: -20px;
+    font-size: 13px;
+    opacity: 0.8;
+    font-weight: 400;
+    i {
+      padding-right: 10px;
+    }
+  }
+  h4 {
+    padding: 8px 0;
+    text-transform: uppercase;
+    span {
+      font-weight: 500;
+    }
+  }
+  p {
+    hyphens: auto;
+    word-break: break-word;
+  }
+  .separator {
+    display: inline-block;
+    width: 10px;
+    background: #555;
+    height: 2px;
+    margin: 0 7px 3px 7px;
+    vertical-align: middle;
+  }
 }
