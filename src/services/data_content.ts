@@ -57,6 +57,22 @@ const skills = [
     name: 'React Native',
     value: 90,
   },
+  {
+    name: 'HTML',
+    value: 90,
+  },
+  {
+    name: 'CSS',
+    value: 85,
+  },
+  {
+    name: 'Sass / Less',
+    value: 90,
+  },
+  {
+    name: 'Jest / Testing',
+    value: 70,
+  },
 ];
 
 const services = [
@@ -175,6 +191,77 @@ const socialprofils = {
   linkedin: 'https://linkedin.com',
   instagram: 'https://instagram.com',
 };
+
+const educationInfo = {
+  education: [
+    {
+      id: '1',
+      name: 'universidad del sur',
+      location: 'bahia blanca',
+      description: 'a small description for this university',
+      from: '2002',
+      to: '2011',
+    },
+    {
+      id: '2',
+      name: 'escuela tecnica',
+      location: 'salliquelo argentina',
+      description: 'una breve descvripcion',
+      from: '1999',
+      to: '2002',
+    },
+  ],
+  courses: {},
+};
+
+const jobInfo = [
+  {
+    id: '1',
+    name: 'sdfdsfur',
+    location: 'bsdfdsfa',
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat quam amet accusantium alias esse ab vel incidunt, enim voluptatum? Qui neque quae fugiat tempore ut ipsam voluptatem illo error quis?',
+    from: '2012',
+    to: '2014',
+  },
+  {
+    id: '2',
+    name: 'universidad del sur',
+    location: 'bahia blanca',
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat quam amet accusantium alias esse ab vel incidunt, enim voluptatum? Qui neque quae fugiat tempore ut ipsam voluptatem illo error quis?',
+    from: '2014',
+    to: '2015',
+  },
+  {
+    id: '3',
+    name: 'universidad del sur',
+    location: 'bahia blanca',
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat quam amet accusantium alias esse ab vel incidunt, enim voluptatum? Qui neque quae fugiat tempore ut ipsam voluptatem illo error quis?',
+    from: '2014',
+    to: '2018',
+  },
+  {
+    id: '4',
+    name: 'universidad del sur',
+    location: 'bahia blanca',
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat quam amet accusantium alias esse ab vel incidunt, enim voluptatum? Qui neque quae fugiat tempore ut ipsam voluptatem illo error quis?',
+    from: '2014',
+    to: '2015',
+  },
+  {
+    id: '5',
+    name: 'universidad del sur',
+    location: 'bahia blanca',
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat quam amet accusantium alias esse ab vel incidunt, enim voluptatum? Qui neque quae fugiat tempore ut ipsam voluptatem illo error quis?',
+    from: '2014',
+    to: '2018',
+  },
+];
+
 export {
   meta,
   dataabout,
@@ -186,4 +273,6 @@ export {
   contactConfig,
   socialprofils,
   logotext,
+  educationInfo,
+  jobInfo,
 };
