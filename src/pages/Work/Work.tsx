@@ -3,13 +3,16 @@ import { TitlePage } from '@/components';
 import './work.scss';
 import { jobInfo, skills } from '@/services/data_content';
 import { WorkCardItem } from './components';
+import { useTranslation } from 'react-i18next';
 
 const Work = () => {
+  const { t: workTranslation } = useTranslation(['experience']);
+
   return (
     <section id="work" className="container">
       <TitlePage
-        title="work <span>experience</span>"
-        subtitle="I design and code beautiful things, and I love what I do."
+        title={workTranslation('title')}
+        subtitle={workTranslation('subtitle')}
       />
       <div className="container experience-and-skills">
         <div className="experience-description grid-row-experience">
@@ -22,7 +25,7 @@ const Work = () => {
 
         <div className="skill-row">
           <div className="title-content skill-title">
-            <h2>Skills</h2>
+            <h2>{workTranslation('skills_title')}</h2>
           </div>
           <div className="grid-row">
             {skills.map((item) => (

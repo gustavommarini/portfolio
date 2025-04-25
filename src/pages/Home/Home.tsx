@@ -3,9 +3,11 @@ import { useTranslation } from 'react-i18next';
 import './home.scss';
 import { Button } from '@/components';
 import { ButtonType } from '@/components/Button/Button.types';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const { t: homeTranslation } = useTranslation(['home']);
+  const navigate = useNavigate();
   const currentText = useTypewriter([
     homeTranslation('animated.first'),
     homeTranslation('animated.second'),
@@ -13,8 +15,12 @@ const Home = () => {
     homeTranslation('animated.fourth'),
   ]);
 
-  const goToProfileAction = () => {};
-  const goToContactAction = () => {};
+  const goToProfileAction = () => {
+    navigate('/about');
+  };
+  const goToContactAction = () => {
+    navigate('/contact');
+  };
 
   return (
     <section id="home" className="home">

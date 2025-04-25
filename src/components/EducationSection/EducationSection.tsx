@@ -1,11 +1,14 @@
 import React, { FC } from 'react';
 import './education-section.scss';
 import { EducationSectionProps } from './education-section.types';
+import { useTranslation } from 'react-i18next';
 
 export const EducationSection: FC<EducationSectionProps> = ({
   title,
   eduArray,
 }) => {
+  const { t: eduInfoTranslation } = useTranslation(['education']);
+
   return (
     <div className="container education-section">
       <div className="simple-row content-row">
@@ -16,14 +19,15 @@ export const EducationSection: FC<EducationSectionProps> = ({
           {eduArray.map((item) => (
             <div className="card-item" key={item.id}>
               <small>
-                <i className="fa-solid fa-building-columns"></i> {item.from} -{' '}
-                {item.to}
+                <i className="fa-solid fa-building-columns"></i> {item.from}{' '}
+                {item.to ? `- ${item.to}` : ''}
               </small>
               <h4>
-                {item.name} <div className="separator"></div>{' '}
+                {eduInfoTranslation(item.name)}{' '}
+                <div className="separator"></div>{' '}
                 <span>{item.location}</span>{' '}
               </h4>
-              <p>{item.description}</p>
+              <p>{eduInfoTranslation(item.description)}</p>
             </div>
           ))}
         </div>

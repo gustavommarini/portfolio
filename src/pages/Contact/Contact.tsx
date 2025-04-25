@@ -1,37 +1,37 @@
 import React from 'react';
 import { Button, TitlePage } from '@/components';
 import './contact.scss';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const { t: contactTranslation } = useTranslation(['contact']);
   const sendMessageAction = () => {};
 
   return (
     <section id="contact" className="container">
       <TitlePage
-        title="get <span>in touch</span>"
-        subtitle="I design and code beautiful things, and I love what I do."
+        title={contactTranslation('title')}
+        subtitle={contactTranslation('subtitle')}
       />
       <div className="contact-content">
         <div className="contact-row simple-row">
           <div className="describe-contact simple-first-column">
-            <h3 className="title-content">Get in touch</h3>
+            <h3 className="title-content">
+              {contactTranslation('body_title')}
+            </h3>
             <div>
               <strong>Email:</strong>{' '}
               <a href="mailto:name@domain.com">name@domain.com</a>
               <p>
-                <strong>Phone:</strong>{' '}
+                <strong>{contactTranslation('phone')}:</strong>{' '}
                 <a href="tel:5551234567">(555)123-4567</a>
               </p>
               <p>
-                <strong>Location:</strong> Salerno, Italy
+                <strong>{contactTranslation('location')}:</strong>{' '}
+                {contactTranslation('location_data')}
               </p>
             </div>
-            <p>
-              If you have any suggestion, project or even you want to say
-              Hello.. please fill out the form below and I will reply you
-              shortly. I’m always open to discussing product design work or
-              partnerships.
-            </p>
+            <p>{contactTranslation('description')}</p>
           </div>
           <div className="form-contact simple-second-column">
             <form className="contact_form">
@@ -41,7 +41,7 @@ const Contact = () => {
                     className="form-control"
                     id="name"
                     name="name"
-                    placeholder="Name"
+                    placeholder={contactTranslation('form.name')}
                     type="text"
                     required
                     value=""
@@ -52,7 +52,7 @@ const Contact = () => {
                     className="form-control rounded-0"
                     id="email"
                     name="email"
-                    placeholder="Email"
+                    placeholder={contactTranslation('form.email')}
                     type="email"
                     required
                     value=""
@@ -63,11 +63,13 @@ const Contact = () => {
                 className="form-control rounded-0"
                 id="message"
                 name="message"
-                placeholder="Message"
+                placeholder={contactTranslation('form.message')}
                 rows={5}
                 required
               ></textarea>
-              <Button onClick={sendMessageAction}>Send</Button>
+              <Button onClick={sendMessageAction}>
+                {contactTranslation('form.btn')}
+              </Button>
             </form>
           </div>
         </div>

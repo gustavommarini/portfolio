@@ -3,15 +3,17 @@ import ProfileImage from '../../assets/photos/AA013a.jpg';
 import './about.scss';
 import { Button, EducationSection, TitlePage } from '@/components';
 import { educationInfo } from '@/services/data_content';
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
   const downloadCVAction = () => {};
+  const { t: aboutTranslation } = useTranslation(['about']);
 
   return (
     <section id="about" className="container">
       <TitlePage
-        title="about <span>me</span>"
-        subtitle="I design and code beautiful things, and I love what I do."
+        title={aboutTranslation('title')}
+        subtitle={aboutTranslation('subtitle')}
       />
       <div className="container infos">
         <div className="basic-info-row simple-row">
@@ -21,57 +23,51 @@ const About = () => {
             </div>
           </div>
           <div className="basic-info simple-second-column">
-            <h3>
-              I am a Web/App Developer, specialized in JavaScript, React & React
-              Native
-            </h3>
-            <p>
-              Passionate developer with over 10 years of experience,
-              specializing in modern Web and Mobile development. I focus on
-              JavaScript, TypeScript, React, and React Native, with a strong
-              emphasis on clean architecture and performance. I’ve contributed
-              to complex projects implementing scalable solutions using GraphQL,
-              Redux, Styled Components, Nx, Lerna, feature flags with Split,
-              testing with Jest and Detox, and worked with tools like Amplitude,
-              Retool, and Notion for tracking and documentation. Constantly
-              learning cutting edge technologies and tools. I'm a self-taught
-              team player, proactive, versatile and a very positive attitude,
-              always embracing agile methodologies and committed to delivering
-              high-quality code.
-            </p>
+            <h3>{aboutTranslation('description.title')}</h3>
+            <p>{aboutTranslation('description.subtitle')}</p>
             <div className="detailed-data">
               <div className="detailed-column">
                 <ul>
                   <li>
-                    <span>Birthday:</span> 11 November
+                    <span>{aboutTranslation('details.birthday')}:</span>{' '}
+                    {aboutTranslation('details.birthday_data')}
                   </li>
                   <li>
-                    <span>Residence:</span> Salerno, Italy
+                    <span>{aboutTranslation('details.residence')}:</span>{' '}
+                    {aboutTranslation('details.residence_data')}
                   </li>
                   <li>
-                    <span>Languages:</span> Spanish, English and Italian
+                    <span>{aboutTranslation('details.languages')}:</span>{' '}
+                    {aboutTranslation('details.languages_data')}
                   </li>
                 </ul>
               </div>
               <div className="detailed-column">
                 <ul>
                   <li>
-                    <span>Experience:</span> 14+
+                    <span>{aboutTranslation('details.experience')}:</span> 14+
                   </li>
                   <li>
-                    <span>Nationality:</span> ARG/ITA
+                    <span>{aboutTranslation('details.nationality')}:</span>{' '}
+                    ARG/ITA
                   </li>
                   <li>
-                    <span>Freelance:</span> Available
+                    <span>{aboutTranslation('details.freelance')}:</span>{' '}
+                    {aboutTranslation('details.freelance_data')}
                   </li>
                 </ul>
               </div>
             </div>
-            <Button onClick={downloadCVAction}>Download CV</Button>
+            <Button onClick={downloadCVAction}>
+              {aboutTranslation('btn_dwn_cv')}
+            </Button>
           </div>
         </div>
       </div>
-      <EducationSection title="Education" eduArray={educationInfo.education} />
+      <EducationSection
+        title={aboutTranslation('edu_section_title')}
+        eduArray={educationInfo.education}
+      />
     </section>
   );
 };
