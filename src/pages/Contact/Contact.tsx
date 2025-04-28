@@ -1,27 +1,29 @@
-import React from 'react';
+import React, { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button, TitlePage } from '@/components';
 import './contact.scss';
-import { useTranslation } from 'react-i18next';
 
-const Contact = () => {
+const Contact: FC = () => {
   const { t: contactTranslation } = useTranslation(['contact']);
   const sendMessageAction = () => {};
 
   return (
-    <section id="contact" className="container">
-      <TitlePage
-        title={contactTranslation('title')}
-        subtitle={contactTranslation('subtitle')}
-      />
-      <div className="contact-content">
-        <div className="contact-row simple-row">
-          <div className="describe-contact simple-first-column">
+    <section id="contact" className="contact">
+      <div className="contact-section container">
+        <TitlePage
+          title={contactTranslation('title')}
+          subtitle={contactTranslation('subtitle')}
+        />
+        <div className="contact-content simple-row">
+          <div className="contact-info simple-first-column">
             <h3 className="title-content">
               {contactTranslation('body_title')}
             </h3>
-            <div>
-              <strong>Email:</strong>{' '}
-              <a href="mailto:name@domain.com">name@domain.com</a>
+            <div className="contact-basic-details">
+              <p>
+                <strong>Email:</strong>{' '}
+                <a href="mailto:name@domain.com">name@domain.com</a>
+              </p>
               <p>
                 <strong>{contactTranslation('phone')}:</strong>{' '}
                 <a href="tel:5551234567">(555)123-4567</a>
@@ -31,10 +33,12 @@ const Contact = () => {
                 {contactTranslation('location_data')}
               </p>
             </div>
-            <p>{contactTranslation('description')}</p>
+            <p className="contact-info-description">
+              {contactTranslation('description')}
+            </p>
           </div>
-          <div className="form-contact simple-second-column">
-            <form className="contact_form">
+          <div className="contact-form simple-second-column">
+            <form className="contact-action">
               <div className="input-group">
                 <div className="input-single-item">
                   <input

@@ -1,9 +1,9 @@
-import React, { useRef } from 'react';
-import './languagemenu.scss';
+import React, { FC, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { AvailableLanguages } from '@/language/i18n.types';
+import './language-menu.scss';
 
-export const LanguageMenu = () => {
+export const LanguageMenu: FC = () => {
   const { i18n } = useTranslation(['home']);
   const checkboxRef: React.LegacyRef<HTMLInputElement> | null = useRef(null);
   const langSpanish = i18n.language === AvailableLanguages.es;
@@ -19,8 +19,8 @@ export const LanguageMenu = () => {
 
   return (
     <div className="language-selector">
-      <input type="checkbox" id="language-menu" ref={checkboxRef} />
-      <label className="language-btn" htmlFor="language-menu">
+      <input type="checkbox" id="language-action-btn" ref={checkboxRef} />
+      <label className="language-btn" htmlFor="language-action-btn">
         <i className="fa-solid fa-language"></i>
       </label>
       <div className="language-flags">

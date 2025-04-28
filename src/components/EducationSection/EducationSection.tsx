@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import './education-section.scss';
-import { EducationSectionProps } from './education-section.types';
 import { useTranslation } from 'react-i18next';
+import { EducationSectionProps } from './education-section.types';
+import './education-section.scss';
 
 export const EducationSection: FC<EducationSectionProps> = ({
   title,

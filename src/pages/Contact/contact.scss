@@ -7,14 +7,23 @@
   padding-top: 50px;
 }
 
-.describe-contact {
+.contact-info {
   h3 {
     padding-bottom: 20px;
     font-size: 32px;
   }
+  .contact-info-description {
+    padding-top: 20px;
+  }
 }
 
-.contact_form {
+.contact-basic-details {
+  p {
+    padding: 10px 0;
+  }
+}
+
+.contact-action {
   width: 100%;
   .input-group {
     display: flex;

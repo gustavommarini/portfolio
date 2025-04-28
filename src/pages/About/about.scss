@@ -5,11 +5,11 @@ $font-typewriter-color: #ffb400;
   font-family: 'Lato', sans-serif;
 }
 
-.infos {
+.basic-info-section {
   padding: 60px 0;
 }
 
-.basic-image {
+.profile-image {
   img {
     padding: 15px;
   }
@@ -32,7 +32,7 @@ $font-typewriter-color: #ffb400;
     }
   }
 }
-.basic-info {
+.basic-info-text {
   h3 {
     font-size: 32px;
   }

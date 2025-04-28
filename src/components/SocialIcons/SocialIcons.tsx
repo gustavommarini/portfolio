@@ -1,10 +1,10 @@
-import React from 'react';
-import { socialprofils } from '@/services/data_content';
-import { ICON_MAPPING } from './SocialIcons.types';
-import './socialicons.scss';
+import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
+import { socialprofils } from '@/services/data_content';
+import { ICON_MAPPING } from './social-icons.types';
+import './social-icons.scss';
 
-export const SocialIcons = () => {
+export const SocialIcons: FC = () => {
   const { t: homeTranslation } = useTranslation(['home']);
 
   return (

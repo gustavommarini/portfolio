@@ -1,11 +1,12 @@
-import { useTypewriter } from '@/hooks/useTypewriter';
+import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
-import './home.scss';
-import { Button } from '@/components';
-import { ButtonType } from '@/components/Button/Button.types';
 import { useNavigate } from 'react-router-dom';
+import { Button } from '@/components';
+import { ButtonType } from '@/components/Button/button.types';
+import { useTypewriter } from '@/hooks/useTypewriter';
+import './home.scss';
 
-const Home = () => {
+const Home: FC = () => {
   const { t: homeTranslation } = useTranslation(['home']);
   const navigate = useNavigate();
   const currentText = useTypewriter([

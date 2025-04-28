@@ -1,9 +1,9 @@
 import React, { FC, useEffect, useRef } from 'react';
-import './navbar.scss';
 import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation } from 'react-router-dom';
+import './navbar.scss';
 
-const Navbar: FC = () => {
+export const Navbar: FC = () => {
   const { t: navTranslation } = useTranslation(['navbar']);
   const checkboxRef: React.LegacyRef<HTMLInputElement> | null = useRef(null);
   const location = useLocation();
@@ -19,8 +19,8 @@ const Navbar: FC = () => {
 
   return (
     <>
-      <input type="checkbox" id="active-navmenu" ref={checkboxRef} />
-      <label className="menu-btn" htmlFor="active-navmenu">
+      <input type="checkbox" id="main-navmenu" ref={checkboxRef} />
+      <label className="menu-btn" htmlFor="main-navmenu">
         <i className="fas fa-bars"></i>
       </label>
       <div className="wrapper-navmenu">
@@ -74,5 +74,3 @@ const Navbar: FC = () => {
     </>
   );
 };
-
-export default Navbar;

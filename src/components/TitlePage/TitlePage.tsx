@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import './title-page.scss';
-import { TitlePageProps } from './title-page.types';
 import DOMPurify from 'dompurify';
+import { TitlePageProps } from './title-page.types';
+import './title-page.scss';
 
 export const TitlePage: FC<TitlePageProps> = ({ title, subtitle }) => {
   const sanitizedHtmlTitle = DOMPurify.sanitize(title);

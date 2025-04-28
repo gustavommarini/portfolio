@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 import { WorkCardItemProps } from './work-card-item.types';
 import './work-card-item.scss';
-import { useTranslation } from 'react-i18next';
 
 export const WorkCardItem: FC<WorkCardItemProps> = ({ workItem }) => {
   const { t: workTranslation } = useTranslation(['experience']);

@@ -1,28 +1,28 @@
-import React from 'react';
-import ProfileImage from '../../assets/photos/AA013a.jpg';
-import './about.scss';
+import React, { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button, EducationSection, TitlePage } from '@/components';
 import { educationInfo } from '@/services/data_content';
-import { useTranslation } from 'react-i18next';
+import ProfileImage from '../../assets/photos/AA013a.jpg';
+import './about.scss';
 
-const About = () => {
+const About: FC = () => {
   const downloadCVAction = () => {};
   const { t: aboutTranslation } = useTranslation(['about']);
 
   return (
-    <section id="about" className="container">
+    <section id="about" className="about">
       <TitlePage
         title={aboutTranslation('title')}
         subtitle={aboutTranslation('subtitle')}
       />
-      <div className="container infos">
-        <div className="basic-info-row simple-row">
-          <div className="basic-image simple-first-column">
+      <div className="container basic-info-section">
+        <div className="basic-info-image simple-row">
+          <div className="profile-image simple-first-column">
             <div className="image-container">
               <img src={ProfileImage} alt="" />
             </div>
           </div>
-          <div className="basic-info simple-second-column">
+          <div className="basic-info-text simple-second-column">
             <h3>{aboutTranslation('description.title')}</h3>
             <p>{aboutTranslation('description.subtitle')}</p>
             <div className="detailed-data">

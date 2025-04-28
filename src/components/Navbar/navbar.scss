@@ -1,17 +1,5 @@
 $font-typewriter-color: #ffb400;
 
-.wrapper-navmenu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: #000;
-  clip-path: circle(25px at calc(100% - 45px) 45px);
-  transition: all 0.3s ease-in-out;
-  z-index: 5;
-}
-
 .menu-btn {
   z-index: 6;
   position: fixed;
@@ -29,10 +17,10 @@ $font-typewriter-color: #ffb400;
   transition: all 0.3s ease-in-out;
 }
 
-#active-navmenu:checked ~ .wrapper-navmenu {
+#main-navmenu:checked ~ .wrapper-navmenu {
   clip-path: circle(75%);
 }
-#active-navmenu:checked ~ .menu-btn {
+#main-navmenu:checked ~ .menu-btn {
   color: #fff;
   i:before {
     content: '\f00d';
@@ -43,6 +31,14 @@ input[type='checkbox'] {
 }
 
 .wrapper-navmenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  clip-path: circle(25px at calc(100% - 45px) 45px);
+  transition: all 0.3s ease-in-out;
+  z-index: 5;
   min-height: 100vh;
   display: grid;
   place-items: center;
