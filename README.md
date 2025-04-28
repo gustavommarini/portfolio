@@ -12,6 +12,8 @@ For the menu I used these codepens:
 - [Split animation on hover with single element](https://codepen.io/ggsingla/pen/MWOzxbq)
 - [Navi　Bar](https://codepen.io/yuhomyan/pen/WNwGywp)
 
+[![CV portfolio](src/assets/screenshot.jpg)](https://netlify.url/)
+
 ### Features
 
 - App created with Vite + React + React Router + Sass + i18next + ESLint + Prettier + Husky + Jest + RTL

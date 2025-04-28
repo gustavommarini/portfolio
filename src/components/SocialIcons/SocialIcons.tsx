@@ -11,7 +11,9 @@ export const SocialIcons: FC = () => {
     <div className="stick_follow_icon">
       <ul>
         {Object.entries(socialprofils).map(([platform, url]) => {
-          const IconComponent = ICON_MAPPING[platform] || ICON_MAPPING.default;
+          const IconComponent =
+            ICON_MAPPING[platform as keyof typeof ICON_MAPPING] ||
+            ICON_MAPPING.default;
           return (
             <li key={platform}>
               <a href={url} target="_blank">

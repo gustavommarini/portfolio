@@ -1,5 +1,5 @@
 export enum ICON_MAPPING {
-  default = 'FaCircle',
+  default = 'fa-solid fa-circle',
   facebook = 'fa-facebook',
   github = 'fa-github',
   instagram = 'fa-instagram',
