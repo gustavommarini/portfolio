@@ -3,10 +3,13 @@ import { useTranslation } from 'react-i18next';
 import { Button, EducationSection, TitlePage } from '@/components';
 import { educationInfo } from '@/services/data_content';
 import ProfileImage from '../../assets/photos/AA013a.jpg';
+import gmmCV from '../../assets/Gustavo M. Marini - Resume.pdf';
 import './about.scss';
 
 const About: FC = () => {
-  const downloadCVAction = () => {};
+  const downloadCVAction = () => {
+    window.open(gmmCV, '_blank');
+  };
   const { t: aboutTranslation } = useTranslation(['about']);
 
   return (

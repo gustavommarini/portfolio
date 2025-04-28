@@ -7,7 +7,7 @@
  * TABLE OF CONTENT
  * 
  * COLORS
- * Brand colors...........................These are the main brand colors.
+ * Main colors...........................These are the main brand colors.
  * Neutral colors.........................White, black, gray scale, secondary colors.
  * Utility colors.........................Other colos to represent states: info, warning, success, etc.
  * Social Media colors.....................Colors related to social media networks.
@@ -30,17 +30,18 @@
 =            COLORS            =
 =============================================*/
 
-/*----------  Brand colors  ----------*/
+/*----------  Main colors  ----------*/
 $color-primary: #f3e156;
+$color-background: #111111;
 $orange: #ff8f32;
 $orange-light: #fca900;
 $yellow: #f3e156;
 $red: #fa644d;
 
 /*----------  Neutral colors  ----------*/
-$dark: #211f20;
-$dark-light: #343a3f;
-$gray: #58514c;
+$black: #211f20;
+$black-light: #343a3f;
+$gray: #939393;
 $white: #fdfefe;
 $white-dark: #ededed;
 
@@ -55,6 +56,17 @@ $color-facebook: #3b5998;
 $color-navbar-bg: #000;
 $color-navbar-font: $white;
 $color-navbar-font-selected: #f3e156;
+$color-navbar-icon: #000;
+
+/*----------  Skills Chart colors  ----------*/
+$color-chart-bar-percentage: $color-primary;
+$color-chart-bar-bg-empty: #555;
+$color-chart-bar-bg-completed: $color-primary;
+
+/*----------  Language Menu colors  ----------*/
+$color-langmenu-bg: $white;
+$color-langmenu-color: $black;
+$color-langmenu-shadow: rgba(255, 255, 255, 0.5);
 
 /*=====  End of COLORS  ======*/
 
@@ -81,11 +93,14 @@ $font-primary: 'Fjalla One', sans-serif;
 $font-secundary: 'Lato', sans-serif; /* 3 */
 
 /*----------  Font sizes  ----------*/
-$fs-xs: 0.75rem; //12px
-$fs-sm: 0.875rem; //14px
-$fs-regular: 1rem; //16px
-$fs-lg: 1.125rem; //18px
-$fs-xl: 1.5rem; //24px
+$fs-xs: 0.875rem; //14px
+$fs-sm: 1rem; //16px
+$fs-regular: 1.125rem; //18px
+$fs-lg: 1.5rem; //24px
+$fs-xl: 2rem; //32px
+$fs-xxl: 2.625rem; //42px
+$fs-xxxl: 3.125rem; //50px
+$fs-menu: 5rem; //80px
 
 /*=====  End of TYPOGRAPHY  ======*/
 
@@ -129,12 +144,11 @@ $breakpoints: (
 );
 
 /*=====  End of BREAKPOINTS  ======*/
-$shadows: (
-  base: 0px 4px 11px rgba(157, 157, 157, 0.21),
-);
 
 /*=============================================
 =           TYPEWRITTER            =
 =============================================*/
 $font-typewriter-size: 42px;
 $font-typewriter-size-cursor: 37px;
+
+/*=====  End of TYPEWRITTER  ======*/

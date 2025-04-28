@@ -1,6 +1,6 @@
 @use './variables.scss' as *;
 // html {
-//   font-size: 62.5%; // So when we use rem 16xp = 1.6 rem
+//   font-size: 62.5%; // We can use this for this equivalence 16px = 1.6 rem. But I will not use it, because 16px is the standard
 // }
 
 #root {
@@ -10,7 +10,42 @@
 }
 
 body {
-  background-color: #111111;
+  color: $white;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-primary;
+  p,
+  span,
+  small,
+  blockquote {
+    font-family: $font-primary;
+  }
+}
+
+p,
+span,
+small,
+button,
+blockquote,
+ul,
+li {
+  font-family: $font-secundary;
+}
+
+h1 {
+  font-size: $fs-xxl;
+}
+
+h4 {
+  font-size: $fs-regular;
+}
+
+body {
+  background-color: $color-background;
 }
 
 .container {
@@ -53,7 +88,7 @@ section {
 
 .title-content {
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: $fs-lg;
   font-family: $font-primary;
 }
 
@@ -62,8 +97,8 @@ section {
   position: relative;
   small {
     position: absolute;
-    top: -20px;
-    font-size: 13px;
+    top: -24px;
+    font-size: $fs-xs;
     opacity: 0.8;
     font-weight: 400;
     i {
