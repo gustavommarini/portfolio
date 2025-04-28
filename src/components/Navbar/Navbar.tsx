@@ -28,7 +28,7 @@ export const Navbar: FC = () => {
           <li className="nav-link">
             <NavLink
               to="/"
-              className={(isActive) =>
+              className={({ isActive }) =>
                 'nav-element' + (isActive ? ' selected' : '')
               }
               data-name={navTranslation('home')}
@@ -39,7 +39,7 @@ export const Navbar: FC = () => {
           <li className="nav-link">
             <NavLink
               to="/about"
-              className={(isActive) =>
+              className={({ isActive }) =>
                 'nav-element' + (isActive ? ' selected' : '')
               }
               data-name={navTranslation('about')}
@@ -50,7 +50,7 @@ export const Navbar: FC = () => {
           <li className="nav-link">
             <NavLink
               to="/work-experience"
-              className={(isActive) =>
+              className={({ isActive }) =>
                 'nav-element' + (isActive ? ' selected' : '')
               }
               data-name={navTranslation('experience')}
@@ -61,7 +61,7 @@ export const Navbar: FC = () => {
           <li className="nav-link">
             <NavLink
               to="/contact"
-              className={(isActive) =>
+              className={({ isActive }) =>
                 'nav-element' + (isActive ? ' selected' : '')
               }
               data-name={navTranslation('contact')}

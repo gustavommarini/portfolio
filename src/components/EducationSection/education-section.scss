@@ -1,9 +1,8 @@
-$font-typewriter-color: #ffb400;
-
 .description-education {
+  padding-top: 1.5rem;
   .card-item {
     h4 {
-      border-bottom: 1px solid $font-typewriter-color;
+      border-bottom: 1px solid $color-primary;
     }
   }
 }

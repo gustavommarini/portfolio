@@ -15,6 +15,12 @@
       text-align: center;
       margin-bottom: 10px;
       transition: all 0.3s;
+      &:hover {
+        a i {
+          color: $color-primary;
+          transform: scale(1.5);
+        }
+      }
     }
   }
   i {
@@ -30,10 +36,9 @@
     width: 68px;
     height: 20px;
     // color: var(--text-color);
-    font-family: 'Fjalla One', sans-serif;
+    font-family: $font-primary;
     text-transform: uppercase;
     color: white;
-    font-size: 12px;
     font-weight: 600;
     line-height: 1.2;
     white-space: nowrap;

@@ -1,16 +1,11 @@
 .btn {
   padding: 0;
   border: none;
-  i {
-    transition: transform 0.3s;
-  }
   &:hover {
-    i {
-      color: $color-hover-btn;
-      transform: rotate(45deg);
-    }
+    cursor: pointer;
+    background-color: $color-primary;
     .btn-children {
-      background-color: $color-hover-btn;
+      background-color: $color-primary;
     }
   }
   &.sm {
@@ -29,8 +24,15 @@
       background-color: transparent;
       color: white;
     }
+    &:hover {
+      border-color: $color-primary;
+      .btn-children {
+        color: $color-primary;
+      }
+    }
   }
 }
+
 .btn-children {
   text-transform: uppercase;
   padding: 20px;

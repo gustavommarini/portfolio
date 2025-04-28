@@ -1,9 +1,7 @@
-$font-typewriter-color: #ffb400;
-
 .page-title {
   text-align: center;
   h1 {
-    font-family: 'Fjalla One', sans-serif;
+    font-family: $font-primary;
     font-size: 42px;
     font-weight: 500;
     position: relative;
@@ -11,7 +9,7 @@ $font-typewriter-color: #ffb400;
     white-space: nowrap;
     text-transform: uppercase;
     span {
-      color: $font-typewriter-color;
+      color: $color-primary;
       font-weight: 700;
     }
   }
@@ -21,7 +19,7 @@ $font-typewriter-color: #ffb400;
   position: relative;
   &:before,
   &:after {
-    background-color: $font-typewriter-color;
+    background-color: $color-primary;
     position: absolute;
     content: '';
     height: 2px;

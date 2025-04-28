@@ -14,9 +14,13 @@ For the menu I used these codepens:
 
 [![CV portfolio](src/assets/screenshot.jpg)](https://netlify.url/)
 
+Details:
+
+- rem units were used to make responsive design easier and all conected with the root font-size
+
 ### Features
 
-- App created with Vite + React + React Router + Sass + i18next + ESLint + Prettier + Husky + Jest + RTL
+- App created with Vite + React + React Router + Sass + Typescript + i18next + ESLint + Prettier + Husky + Jest + RTL
 
 ### Setup
 
