@@ -13,7 +13,6 @@
   }
   h5 {
     margin-bottom: 18px;
-    font-size: $fs-xs;
     font-weight: bold;
     text-transform: uppercase;
   }
@@ -32,7 +31,7 @@
   position: absolute;
   top: -30px;
   padding: 0;
-  font-size: $fs-xs;
+  font-size: $fs-sm;
   line-height: 15px;
   font-weight: 600;
   color: $color-chart-bar-percentage;

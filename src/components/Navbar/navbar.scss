@@ -8,7 +8,7 @@
   text-align: center;
   line-height: 50px;
   border-radius: 50%;
-  font-size: $fs-lg;
+  font-size: $is-md;
   cursor: pointer;
   background: $color-navbar-icon;
   transition: all 0.3s ease-in-out;
@@ -50,7 +50,7 @@ input[type='checkbox'] {
   }
   a {
     font-family: $font-primary;
-    font-size: $fs-menu;
+    font-size: $is-xxl;
     position: relative;
     text-transform: uppercase;
     transition: all 300ms ease;
@@ -94,6 +94,6 @@ input[type='checkbox'] {
   }
   a:hover::after {
     width: 120%;
-    outline: 5px solid rgb(2, 0, 36);
+    outline: 5px solid $color-navbar-item-outline;
   }
 }

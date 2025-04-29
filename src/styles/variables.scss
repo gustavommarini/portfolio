@@ -47,6 +47,7 @@ $white-dark: #ededed;
 
 /*----------  Utility colors  ----------*/
 $color-error: #ff654d;
+$color-separator: #555;
 
 /*----------  Social Media colors  ----------*/
 $color-instagram: #bc2a8d;
@@ -57,6 +58,7 @@ $color-navbar-bg: #000;
 $color-navbar-font: $white;
 $color-navbar-font-selected: #f3e156;
 $color-navbar-icon: #000;
+$color-navbar-item-outline: rgb(2, 0, 36);
 
 /*----------  Skills Chart colors  ----------*/
 $color-chart-bar-percentage: $color-primary;
@@ -67,6 +69,18 @@ $color-chart-bar-bg-completed: $color-primary;
 $color-langmenu-bg: $white;
 $color-langmenu-color: $black;
 $color-langmenu-shadow: rgba(255, 255, 255, 0.5);
+
+/*----------  Home colors  ----------*/
+$color-overlay-bg1: #090601;
+$color-overlay-bg2: rgba(1, 2, 18, 0.44);
+$color-overlay-bg3: rgba(9, 6, 1, 0.96);
+$color-overlay-bg4: #010212;
+
+/*----------  Work colors  ----------*/
+$color-work-bullet-shadow: rgba(118, 118, 122, 0.77);
+
+/*----------  Contact colors  ----------*/
+$color-contact-form-bg: #222222;
 
 /*=====  End of COLORS  ======*/
 
@@ -93,14 +107,20 @@ $font-primary: 'Fjalla One', sans-serif;
 $font-secundary: 'Lato', sans-serif; /* 3 */
 
 /*----------  Font sizes  ----------*/
-$fs-xs: 0.875rem; //14px
-$fs-sm: 1rem; //16px
-$fs-regular: 1.125rem; //18px
+$fs-xxs: 0.75rem; //12px
+$fs-sm: 0.875rem; //14px
+$fs-normal: 1rem; //16px
+$fs-md: 1.125rem; //18px
 $fs-lg: 1.5rem; //24px
 $fs-xl: 2rem; //32px
 $fs-xxl: 2.625rem; //42px
-$fs-xxxl: 3.125rem; //50px
-$fs-menu: 5rem; //80px
+
+/*----------  Menu & Icon sizes  ----------*/
+$is-normal: 1.125rem; //18px
+$is-md: 1.5rem; //24px
+$is-lg: 2rem; //32px
+$is-xl: 3.125rem; //50px
+$is-xxl: 5rem; //80px
 
 /*=====  End of TYPOGRAPHY  ======*/
 

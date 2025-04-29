@@ -5,7 +5,6 @@
 .contact-info {
   h3 {
     padding-bottom: 20px;
-    font-size: $fs-xl;
   }
   .contact-info-description {
     padding-top: 20px;
@@ -35,7 +34,7 @@
     color: $white;
     font-weight: 400;
     width: 100%;
-    background-color: #222222;
+    background-color: $color-contact-form-bg;
     border: none;
     border-radius: 0 !important;
     line-height: 1.5;

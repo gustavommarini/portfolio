@@ -8,7 +8,7 @@
   text-align: center;
   line-height: 60px;
   border-radius: 50%;
-  font-size: $fs-xl;
+  font-size: $is-lg;
   cursor: pointer;
   color: $color-langmenu-color;
   background: $color-langmenu-bg;
@@ -43,11 +43,11 @@
   height: 185px;
   .lang-link {
     text-decoration: none;
-    font-size: $fs-xl;
+    font-size: $is-lg;
     line-height: 40px;
     &:hover,
     &.selected {
-      font-size: $fs-xxxl;
+      font-size: $is-xl;
     }
   }
 }

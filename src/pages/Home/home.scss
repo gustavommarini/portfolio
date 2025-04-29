@@ -17,22 +17,19 @@
     bottom: 0;
     content: '';
     opacity: 1;
-    background: #090601;
-    background: rgba(1, 2, 18, 0.44);
+    background: $color-overlay-bg1;
+    background: $color-overlay-bg2;
     background: radial-gradient(
       at 70%,
-      rgba(1, 2, 18, 0.44) 40%,
-      rgba(9, 6, 1, 0.96) 65%,
-      #090601 100%
+      $color-overlay-bg2 40%,
+      $color-overlay-bg3 65%,
+      $color-overlay-bg1 100%
     );
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#010212",endColorstr="#090601",GradientType=1);
   }
 }
 
 .main-text-container {
   height: 100%;
-  //   width: 100%;
-  //   display: table;
   margin-left: 10vw;
   max-width: 550px;
   display: flex;
@@ -41,10 +38,9 @@
 
 .main-text {
   position: relative;
-  h3 {
+  h4 {
     font-family: $font-secundary;
     font-weight: 400;
-    font-size: $fs-regular;
     text-transform: uppercase;
   }
   h1 {

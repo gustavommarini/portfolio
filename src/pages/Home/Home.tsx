@@ -28,7 +28,7 @@ const Home: FC = () => {
       <div className="overlay"></div>
       <div className="main-text-container">
         <div className="main-text">
-          <h3>{homeTranslation('title')}</h3>
+          <h4>{homeTranslation('title')}</h4>
           <h1>
             {homeTranslation('i_am')}{' '}
             <span className="typewriter-cursor-end">{currentText}</span>

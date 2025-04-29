@@ -39,9 +39,17 @@ li {
 h1 {
   font-size: $fs-xxl;
 }
-
+h2 {
+  font-size: 36px;
+}
+h3 {
+  font-size: $fs-xl;
+}
 h4 {
-  font-size: $fs-regular;
+  font-size: $fs-md;
+}
+h5 {
+  font-size: $fs-sm;
 }
 
 body {
@@ -88,7 +96,6 @@ section {
 
 .title-content {
   text-transform: uppercase;
-  font-size: $fs-lg;
   font-family: $font-primary;
 }
 
@@ -98,7 +105,7 @@ section {
   small {
     position: absolute;
     top: -24px;
-    font-size: $fs-xs;
+    font-size: $fs-sm;
     opacity: 0.8;
     font-weight: 400;
     i {
@@ -119,7 +126,7 @@ section {
   .separator {
     display: inline-block;
     width: 10px;
-    background: #555;
+    background: $color-separator;
     height: 2px;
     margin: 0 7px 3px 7px;
     vertical-align: middle;
