@@ -1,3 +1,5 @@
+@use '../../styles/mixins.scss' as *;
+
 #root {
   overflow: hidden;
 }
@@ -6,7 +8,7 @@
   background-image: url(../../assets/photos/home.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center right;
   height: 100vh;
   overflow: hidden;
   .overlay {
@@ -30,10 +32,10 @@
 
 .main-text-container {
   height: 100%;
-  margin-left: 10%;
-  max-width: 550px;
   display: flex;
   align-items: center;
+  margin-left: 50px;
+  max-width: 80%;
 }
 
 .main-text {
@@ -49,15 +51,12 @@
     font-weight: 500;
     position: relative;
     margin: 19px 0px 10px;
-    white-space: nowrap;
+    white-space: normal;
     text-transform: uppercase;
     span {
       color: $color-primary;
       font-weight: 700;
     }
-  }
-  p {
-    max-width: 550px;
   }
 }
 
@@ -83,4 +82,19 @@
   background: $color-primary;
   display: inline-block;
   animation: cursor-blink 1.5s steps(9) infinite;
+}
+
+@include smallIntermediate {
+  .main-text {
+    h1 {
+      white-space: nowrap;
+    }
+    p {
+      max-width: 550px;
+    }
+  }
+  .main-text-container {
+    margin-left: 10%;
+    max-width: 550px;
+  }
 }

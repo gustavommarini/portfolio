@@ -1,3 +1,5 @@
+@use '../../styles/mixins.scss' as *;
+
 .contact-content {
   padding-top: 50px;
 }
@@ -16,6 +18,10 @@
   p {
     padding: 10px 0;
   }
+}
+
+.contact-form {
+  padding-top: 60px;
 }
 
 .contact-action {
@@ -46,6 +52,28 @@
     min-height: 38px;
   }
   button {
-    width: 20%;
+    width: 150px;
+  }
+}
+
+@include smallIntermediate {
+  .contact-info,
+  .contact-form {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@include tablet {
+  .contact-info.portfolio-col-5 {
+    flex: 0 0 41.66%;
+    max-width: 41.66%;
+  }
+  .contact-form.portfolio-col-7 {
+    flex: 0 0 58.33%;
+    max-width: 58.33%;
+  }
+  .contact-form {
+    padding-top: 0;
   }
 }

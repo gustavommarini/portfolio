@@ -10,13 +10,3 @@
 }
 
 @include make-columns();
-
-// Divide a list of items in two equally columns
-.two-columns-row__item {
-  flex: 0 0 48%;
-}
-
-// Divide a list of items in tree equally columns
-.three-columns-row__item {
-  flex: 0 0 32%;
-}

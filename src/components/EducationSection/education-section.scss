@@ -1,8 +1,20 @@
+@use '../../styles/mixins.scss' as *;
+
+.education-section {
+  padding: 80px 0 0 0;
+}
+
 .description-education {
-  padding-top: 24px;
+  padding-top: 50px;
   .card-item {
     h4 {
       border-bottom: 1px solid $color-primary;
     }
+  }
+}
+
+@include smallIntermediate {
+  .description-education {
+    padding-top: 24px;
   }
 }

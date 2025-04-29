@@ -1,11 +1,12 @@
+@use '../../styles/mixins.scss' as *;
+
 .basic-info-section {
   padding-top: 60px;
-  padding-bottom: 60px;
 }
 
 .profile-image {
   img {
-    padding-right: 15px;
+    padding-right: 0;
   }
   .image-container {
     position: relative;
@@ -26,6 +27,7 @@
   }
 }
 .basic-info-text {
+  padding-top: 60px;
   h3 {
     font-family: $font-secundary;
   }
@@ -46,5 +48,36 @@
       }
       color: $gray;
     }
+  }
+}
+
+@include smallIntermediate {
+  .profile-image {
+    img {
+      padding: 0 50px;
+    }
+    .image-container {
+      margin: 0 auto;
+      &:before {
+        transform: translate3d(0, 25px, 0);
+      }
+    }
+  }
+}
+
+@include tablet {
+  .profile-image {
+    img {
+      padding-left: 0;
+      padding-right: 15px;
+    }
+    .image-container {
+      &::before {
+        transform: translate3d(-25px, 25px, 0);
+      }
+    }
+  }
+  .basic-info-text {
+    padding-top: 0;
   }
 }
