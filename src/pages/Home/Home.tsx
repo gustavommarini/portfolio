@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components';
-import { ButtonType } from '@/components/Button/button.types';
+import { ButtonType } from '@/components/Button/Button.types';
 import { useTypewriter } from '@/hooks/useTypewriter';
 import './home.scss';
 

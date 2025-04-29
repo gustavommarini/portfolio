@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { ButtonProps, ButtonSize, ButtonType } from './button.types';
+import { ButtonProps, ButtonSize, ButtonType } from './Button.types';
 import './button.scss';
 
 export const Button: FC<ButtonProps> = ({
