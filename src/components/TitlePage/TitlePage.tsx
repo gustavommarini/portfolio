@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import DOMPurify from 'dompurify';
 import { TitlePageProps } from './title-page.types';
 import './title-page.scss';

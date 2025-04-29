@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { WorkCardItemProps } from './work-card-item.types';
 import './work-card-item.scss';

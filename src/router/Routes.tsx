@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter, Routes as AppRoutes, Route } from 'react-router-dom';
 import { Home, About, Work, Contact } from '../pages';
 import { LanguageMenu, Navbar, SocialIcons } from '@/components';
