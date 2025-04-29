@@ -9,13 +9,13 @@ const Contact: FC = () => {
 
   return (
     <section id="contact" className="contact">
-      <div className="contact-section container">
+      <div className="contact-section container-xxl">
         <TitlePage
           title={contactTranslation('title')}
           subtitle={contactTranslation('subtitle')}
         />
-        <div className="contact-content simple-row">
-          <div className="contact-info simple-first-column">
+        <div className="contact-content portfolio-row">
+          <div className="contact-info portfolio-col-5">
             <h3 className="title-content">
               {contactTranslation('body_title')}
             </h3>
@@ -37,7 +37,7 @@ const Contact: FC = () => {
               {contactTranslation('description')}
             </p>
           </div>
-          <div className="contact-form simple-second-column">
+          <div className="contact-form portfolio-col-7">
             <form className="contact-action">
               <div className="input-group">
                 <div className="input-single-item">

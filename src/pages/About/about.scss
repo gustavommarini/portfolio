@@ -1,16 +1,16 @@
 .basic-info-section {
-  padding: 60px 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .profile-image {
   img {
-    padding: 15px;
+    padding-right: 15px;
   }
   .image-container {
     position: relative;
     display: block;
     max-width: 440px;
-    margin: 0 auto;
     &::before {
       border: 4px solid $color-primary;
       display: inline-block;
@@ -21,7 +21,7 @@
       bottom: 0;
       left: 0;
       z-index: -1;
-      transform: translate3d(-18px, 25px, 0);
+      transform: translate3d(-25px, 25px, 0);
     }
   }
 }

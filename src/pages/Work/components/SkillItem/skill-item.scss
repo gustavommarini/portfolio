@@ -1,9 +1,11 @@
 .skill-chart {
   position: relative;
+  margin-bottom: 15px;
+  padding-right: 15px;
   &:before {
     position: absolute;
     content: '';
-    width: 100%;
+    width: calc(100% - 15px);
     height: 1px;
     bottom: 0;
     left: 0;

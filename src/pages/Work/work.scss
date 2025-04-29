@@ -3,9 +3,9 @@
 }
 
 .experience-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
-  gap: 20px;
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  // gap: 20px;
 }
 
 .skills-section {
@@ -18,8 +18,8 @@
 }
 
 .skills-section-items {
-  display: grid;
-  // grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-  gap: 20px; /* optional: space between items */
+  // display: grid;
+  // // grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  // grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  // gap: 20px; /* optional: space between items */
 }

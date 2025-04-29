@@ -10,12 +10,12 @@ export const EducationSection: FC<EducationSectionProps> = ({
   const { t: eduInfoTranslation } = useTranslation(['education']);
 
   return (
-    <div className="container education-section">
-      <div className="simple-row content-row">
-        <div className="title-content simple-first-column">
+    <div className="education-section">
+      <div className="portfolio-row content-row">
+        <div className="title-content portfolio-col-5">
           <h2>{title}</h2>
         </div>
-        <div className="description-education simple-second-column">
+        <div className="description-education portfolio-col-7">
           {eduArray.map((item) => (
             <div className="card-item" key={item.id}>
               <small>

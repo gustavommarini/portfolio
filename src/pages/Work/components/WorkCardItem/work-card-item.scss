@@ -1,8 +1,6 @@
 .card-item-container {
   position: relative;
-  &:not(:last-child) {
-    padding-bottom: 15px;
-  }
+  padding: 0 15px 50px 0;
   &:before {
     border-left: 1px solid $color-primary;
     content: '';

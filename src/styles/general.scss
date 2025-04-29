@@ -70,28 +70,9 @@ section {
   height: 100%;
 }
 
-.simple-row {
-  display: flex;
-}
-
-.simple-first-column {
-  padding-right: 30px;
-  flex: 0 0 40%;
-  max-width: 40%;
-}
-
-.simple-second-column {
-  flex: 0 0 60%;
-  max-width: 60%;
-}
-
-.simple-equal-column {
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-
 .content-row {
-  padding: 24px 0;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .title-content {

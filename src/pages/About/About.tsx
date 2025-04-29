@@ -13,19 +13,19 @@ const About: FC = () => {
   const { t: aboutTranslation } = useTranslation(['about']);
 
   return (
-    <section id="about" className="about">
+    <section id="about" className="about container-xxl">
       <TitlePage
         title={aboutTranslation('title')}
         subtitle={aboutTranslation('subtitle')}
       />
-      <div className="container basic-info-section">
-        <div className="basic-info-image simple-row">
-          <div className="profile-image simple-first-column">
+      <div className="basic-info-section">
+        <div className="basic-info-image portfolio-row">
+          <div className="profile-image portfolio-col-5">
             <div className="image-container">
               <img src={ProfileImage} alt="" />
             </div>
           </div>
-          <div className="basic-info-text simple-second-column">
+          <div className="basic-info-text portfolio-col-7">
             <h3>{aboutTranslation('description.title')}</h3>
             <p>{aboutTranslation('description.subtitle')}</p>
             <div className="detailed-data">

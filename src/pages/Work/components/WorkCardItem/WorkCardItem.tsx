@@ -7,7 +7,7 @@ export const WorkCardItem: FC<WorkCardItemProps> = ({ workItem }) => {
   const { t: workTranslation } = useTranslation(['experience']);
 
   return (
-    <div className="card-item-container">
+    <div className="card-item-container portfolio-col-6">
       <div className="bullet"></div>
       <div className="card-item">
         <small>

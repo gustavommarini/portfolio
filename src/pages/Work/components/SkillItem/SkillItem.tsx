@@ -4,7 +4,7 @@ import './skill-item.scss';
 
 export const SkillItem: FC<SkillItemProps> = ({ name, value }) => {
   return (
-    <div className="skill-chart">
+    <div className="portfolio-col-4 skill-chart">
       <h5>{name}</h5>
       <div className="skill-bar" style={{ width: `${value}%` }}>
         <span className="skill-percentage">
