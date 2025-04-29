@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
+import { contactConfig } from '@/services/data_content';
 import { Button, TitlePage } from '@/components';
 import './contact.scss';
 
@@ -22,11 +23,15 @@ const Contact: FC = () => {
             <div className="contact-basic-details">
               <p>
                 <strong>Email:</strong>{' '}
-                <a href="mailto:name@domain.com">name@domain.com</a>
+                <a href={`mailto:${contactConfig.email}`}>
+                  {contactConfig.email}
+                </a>
               </p>
               <p>
                 <strong>{contactTranslation('phone')}:</strong>{' '}
-                <a href="tel:5551234567">(555)123-4567</a>
+                <a href={`tel:${contactConfig.phone}`}>
+                  {contactConfig.phone_formated}
+                </a>
               </p>
               <p>
                 <strong>{contactTranslation('location')}:</strong>{' '}

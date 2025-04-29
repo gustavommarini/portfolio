@@ -54,10 +54,10 @@ const contactConfig = {
 };
 
 const socialprofils = {
-  github: 'https://github.com',
-  facebook: 'https://facebook.com',
-  linkedin: 'https://linkedin.com',
-  instagram: 'https://instagram.com',
+  github: 'https://github.com/gustavommarini',
+  facebook: 'https://facebook.com/gustavommarini',
+  linkedin: 'https://linkedin.com/in/gmmarini',
+  instagram: 'https://instagram.com/gustavommarini',
 };
 
 const educationInfo = {
