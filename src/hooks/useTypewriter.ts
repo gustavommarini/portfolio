@@ -25,13 +25,11 @@ export const useTypewriter = (
         setCurrentIndex((prevIndex) => prevIndex + 1);
       }, delay);
     } else if (infinite) {
-      // ADD THIS CHECK
       setCurrentIndex(0);
       setCurrentText(' ');
       setCurrentTextIndex((prevIndex) =>
         prevIndex + 1 < stringArray.length ? prevIndex + 1 : 0
       );
-      //   setCurrentTextIndex(0);
     }
 
     return () => clearTimeout(timeout);

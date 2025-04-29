@@ -49,6 +49,12 @@
   }
 }
 
+@mixin custom($min-pixel-value) {
+  @media (min-width: #{$min-pixel-value}px) {
+    @content;
+  }
+}
+
 /*=============================================
 =            GRID SYSTEM            =
 =============================================*/
@@ -94,10 +100,12 @@ $default_container-padding-right: 15px;
     max-width: 100%;
   }
   @each $column, $value in $columns {
-    @media (min-width: map-get($breakpoints, 'sm')) {
-      .portfolio-col-#{$column} {
-        flex: 0 0 50%;
-        max-width: 50%;
+    @if $column<5 {
+      @media (min-width: map-get($breakpoints, 'sm')) {
+        .portfolio-col-#{$column} {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
       }
     }
 

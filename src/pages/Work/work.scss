@@ -2,12 +2,6 @@
   padding-top: 50px;
 }
 
-.experience-section {
-  // display: grid;
-  // grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
-  // gap: 20px;
-}
-
 .skills-section {
   padding: 80px 0 0 0;
   font-family: $font-secundary;
@@ -15,11 +9,4 @@
 
 .skills-section-title {
   padding-bottom: 20px;
-}
-
-.skills-section-items {
-  // display: grid;
-  // // grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  // grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-  // gap: 20px; /* optional: space between items */
 }

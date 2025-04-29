@@ -34,8 +34,8 @@
 }
 
 .detailed-data {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
   padding: 10px 0 20px 0;
   .detailed-column {
     ul {
@@ -47,6 +47,10 @@
         color: $white;
       }
       color: $gray;
+    }
+    li {
+      display: flex;
+      flex-direction: column;
     }
   }
 }
@@ -60,6 +64,13 @@
       margin: 0 auto;
       &:before {
         transform: translate3d(0, 25px, 0);
+      }
+    }
+  }
+  .detailed-data {
+    .detailed-column {
+      li {
+        flex-direction: row;
       }
     }
   }
@@ -79,5 +90,22 @@
   }
   .basic-info-text {
     padding-top: 0;
+  }
+  .detailed-data {
+    .detailed-column {
+      li {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@include custom(945) {
+  .detailed-data {
+    .detailed-column {
+      li {
+        flex-direction: row;
+      }
+    }
   }
 }
