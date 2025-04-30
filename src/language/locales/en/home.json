@@ -1,5 +1,5 @@
 {
-  "title": "Hey There!!",
+  "title": "Hello!!",
   "i_am": "I'm ",
   "animated": {
     "first": "Gustavo Marini",
@@ -7,7 +7,7 @@
     "third": "a mobile apps developer",
     "fourth": "a website developer"
   },
-  "description": "I'm a Freelance Front End Developer and UI/UX Designer based in Salerno, Italy. I strives to build immersive and beautiful web applications through carefully crafted code and user-centric design.",
+  "description": "I'm a freelance developer based in Salerno, Italy. I build fast, accessible, and user-friendly web apps, adding thoughtful design touches with a pragmatic and minimalist approach.",
   "main_btn": "About Me",
   "secundary_btn": "Get in Touch",
   "follow_me": "Follow Me"
