@@ -79,8 +79,91 @@ const educationInfo = {
       to: '2001',
     },
   ],
-  courses: {},
-  languages: {},
+  courses: [
+    {
+      id: '1',
+      name: 'react',
+      location: 'Mexico',
+      description: 'react_desc',
+      from: '2020',
+    },
+    {
+      id: '1a',
+      name: 'wordpress_course',
+      location: 'Consaca, Colombia',
+      description: 'wordpress_course_desc',
+      from: '2019',
+    },
+    {
+      id: '2a',
+      name: 'css_course',
+      location: 'Bahia Blanca, Argentina',
+      description: 'css_course_desc',
+      from: '2017',
+    },
+    {
+      id: '2',
+      name: 'ux_masterclass',
+      location: 'Brisbane, Australia',
+      description: 'ux_masterclass_desc',
+      from: '2015',
+    },
+    {
+      id: '3',
+      name: 'scipycon',
+      location: 'Puerto Madryn, Argentina',
+      description: 'scipycon_desc',
+      from: '2013',
+    },
+    {
+      id: '4',
+      name: 'free_digital',
+      location: 'Bahia Blanca, Argentina',
+      description: 'free_digital_desc',
+      from: '2010',
+    },
+    {
+      id: '5',
+      name: 'security',
+      location: 'Bahia Blanca, Argentina',
+      description: 'security_desc',
+      from: '2008',
+    },
+    {
+      id: '6',
+      name: 'joomla',
+      location: 'Bahia Blanca, Argentina',
+      description: 'joomla_desc',
+      from: '2005',
+    },
+    {
+      id: '7',
+      name: 'gnu_linux',
+      location: 'Bahia Blanca, Argentina',
+      description: 'gnu_linux_desc',
+      from: '2005',
+    },
+  ],
+  languages: [
+    {
+      id: '1',
+      name: 'spa',
+      location: '',
+      description: 'spa_desc',
+    },
+    {
+      id: '2',
+      name: 'eng',
+      location: '',
+      description: 'eng_desc',
+    },
+    {
+      id: '3',
+      name: 'ita',
+      location: '',
+      description: 'ita_desc',
+    },
+  ],
 };
 
 const jobInfo = [

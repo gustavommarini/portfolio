@@ -18,5 +18,7 @@
     "freelance_data": "Available"
   },
   "btn_dwn_cv": "Download CV",
-  "edu_section_title": "Education"
+  "edu_section_title": "Education",
+  "course_section_title": "Courses",
+  "lang_section_title": "Languages"
 }
