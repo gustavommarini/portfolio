@@ -12,6 +12,10 @@ For the menu I used these codepens:
 - [Split animation on hover with single element](https://codepen.io/ggsingla/pen/MWOzxbq)
 - [Navi　Bar](https://codepen.io/yuhomyan/pen/WNwGywp)
 
+To connect with emailjs on the contact form you can follow this guide:
+
+- [Emailjs on react](https://medium.com/@alagappan.dev/using-emailjs-with-react-to-build-a-contact-form-for-your-website-5040966a814)
+
 [![CV portfolio](src/assets/screenshot.jpg)](https://gmm-portfolio.netlify.app)
 
 Details:
