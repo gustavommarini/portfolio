@@ -1,3 +1,5 @@
+@use '../../styles/mixins.scss' as *;
+
 .page-title {
   text-align: center;
   h1 {
@@ -5,7 +7,6 @@
     font-weight: 500;
     position: relative;
     margin: 19px 0px 10px;
-    white-space: nowrap;
     text-transform: uppercase;
     span {
       color: $color-primary;
@@ -16,6 +17,10 @@
 
 .page-subtitle {
   position: relative;
+
+  display: block;
+  padding: 0 12%;
+
   &:before,
   &:after {
     background-color: $color-primary;
@@ -26,9 +31,22 @@
     width: 30px;
   }
   &:before {
-    right: -50px;
+    right: 0;
   }
   &:after {
-    left: -50px;
+    left: 0;
+  }
+}
+
+@include mobile {
+  .page-subtitle {
+    padding: 0;
+    display: inline;
+    &:before {
+      right: -50px;
+    }
+    &:after {
+      left: -50px;
+    }
   }
 }
