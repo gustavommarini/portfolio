@@ -1,9 +1,5 @@
 @use '../../styles/mixins.scss' as *;
 
-.education-section {
-  padding: 80px 0 0 0;
-}
-
 .description-education {
   padding-top: 50px;
   .card-item {
@@ -13,8 +9,23 @@
   }
 }
 
-@include smallIntermediate {
+.adjust-padding-top {
+  padding-top: 50px;
+  &.description-education {
+    .card-item {
+      h4 {
+        color: $color-primary;
+        border-bottom-color: $white;
+      }
+    }
+  }
+}
+
+@include tablet {
   .description-education {
     padding-top: 24px;
+  }
+  .adjust-padding-top {
+    padding-top: 0;
   }
 }

@@ -71,6 +71,15 @@ const About: FC = () => {
         title={aboutTranslation('edu_section_title')}
         eduArray={educationInfo.education}
       />
+      <EducationSection
+        title={aboutTranslation('course_section_title')}
+        eduArray={educationInfo.courses}
+        useBookIcon
+      />
+      <EducationSection
+        title={aboutTranslation('lang_section_title')}
+        eduArray={educationInfo.languages}
+      />
     </section>
   );
 };
