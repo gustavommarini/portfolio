@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { ChangeEvent, FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { contactConfig } from '@/services/data_content';
 import { Button, TitlePage } from '@/components';
@@ -6,7 +6,27 @@ import './contact.scss';
 
 const Contact: FC = () => {
   const { t: contactTranslation } = useTranslation(['contact']);
-  const sendMessageAction = () => {};
+  const [formData, setFormdata] = useState({
+    email: '',
+    name: '',
+    message: '',
+    loading: false,
+    show: false,
+    alertmessage: '',
+    variant: '',
+  });
+
+  const handleChange = (
+    event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
+  ) => {
+    setFormdata({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  };
+  const sendMessageAction = () => {
+    alert('This is not ready yet. Sorry :(');
+  };
 
   return (
     <section id="contact" className="contact">
@@ -53,7 +73,8 @@ const Contact: FC = () => {
                     placeholder={contactTranslation('form.name')}
                     type="text"
                     required
-                    value=""
+                    value={formData.name || ''}
+                    onChange={handleChange}
                   />
                 </div>
                 <div className="input-single-item">
@@ -64,7 +85,8 @@ const Contact: FC = () => {
                     placeholder={contactTranslation('form.email')}
                     type="email"
                     required
-                    value=""
+                    value={formData.email || ''}
+                    onChange={handleChange}
                   />
                 </div>
               </div>
@@ -75,6 +97,8 @@ const Contact: FC = () => {
                 placeholder={contactTranslation('form.message')}
                 rows={5}
                 required
+                value={formData.message}
+                onChange={handleChange}
               ></textarea>
               <Button onClick={sendMessageAction}>
                 {contactTranslation('form.btn')}
