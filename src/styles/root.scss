@@ -59,18 +59,14 @@
 .dark-theme {
   // ======= GENERAL =======
   --body-bg: var(--gmm-bg);
-  --text-title: var(--gmm-text-base);
-  --text-title-highlighted: var(--gmm-primary);
   --text-item-separator: var(--gmm-gray-dark);
   //SOCIAL BAR
-  --social-color: var(--gmm-text-base);
   --social-hover: var(--gmm-primary);
   //BUTTON
   --btn-base: var(--gmm-btn);
   --btn-base-hover: var(--gmm-primary);
   --btn-outline-font: var(--gmm-btn-outlined);
   //MENU
-  --menu-icon: var(--gmm-text-base);
   --menu-icon-bg: var(--gmm-dark);
   --menu-bg: var(--gmm-dark);
   --menu-text: var(--gmm-text-base);
@@ -79,7 +75,6 @@
   //LANG MENU
   --lang-bg: var(--gmm-langmenu-bg);
   --lang-main-icon: var(--gmm-black);
-  // --lang-main-icon-hover: var(--gmm-XXXX);
   --lang-shadow: var(--gmm-langmenu-shadow);
   //HOME
   --text-base: var(--gmm-text-base);
@@ -114,18 +109,14 @@
 .light-theme {
   // ======= GENERAL =======
   --body-bg: var(--gmm-bg-light);
-  --text-title: var(--gmm-text-base-light);
-  --text-title-highlighted: var(--gmm-primary-light);
   --text-item-separator: var(--gmm-gray-dark);
   //SOCIAL BAR
-  --social-color: var(--gmm-text-base-light);
   --social-hover: var(--gmm-primary-light);
   //BUTTON
   --btn-base: var(--gmm-btn-light);
   --btn-base-hover: var(--gmm-primary-light);
   --btn-outline-font: var(--gmm-btn-outlined-light);
   //MENU
-  --menu-icon: var(--gmm-text-base-light);
   --menu-icon-bg: var(--gmm-white);
   --menu-bg: var(--gmm-white-dark);
   --menu-text: var(--gmm-text-base-light);
@@ -134,7 +125,6 @@
   //LANG MENU
   --lang-bg: var(--gmm-langmenu-bg-light);
   --lang-main-icon: var(--gmm-white);
-  // --lang-main-icon-hover: var(--gmm-XXXX);
   --lang-shadow: var(--gmm-langmenu-shadow);
   //HOME
   --text-base: var(--gmm-text-base-light);
