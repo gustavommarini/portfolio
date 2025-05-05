@@ -7,9 +7,16 @@ export const Button: FC<ButtonProps> = ({
   children,
   type = ButtonType.primary,
   size = ButtonSize.md,
+  isForSubmition = false,
+  disabled = false,
 }) => {
   return (
-    <button className={`btn ${type} ${size}`} onClick={onClick}>
+    <button
+      className={`btn ${type} ${size}`}
+      type={isForSubmition ? 'submit' : 'button'}
+      disabled={disabled}
+      onClick={onClick}
+    >
       <div className="btn-children fjalla-one-regular">{children}</div>
     </button>
   );

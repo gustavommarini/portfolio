@@ -1,8 +1,10 @@
 export interface ButtonProps {
   children: React.ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
   type?: ButtonType;
   size?: ButtonSize;
+  disabled?: boolean;
+  isForSubmition?: boolean;
 }
 
 export enum ButtonSize {

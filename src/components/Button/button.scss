@@ -2,6 +2,13 @@
   padding: 0;
   &.btn-primary {
     border: none !important;
+    &:disabled {
+      cursor: auto;
+      background-color: var(--btn-disabled);
+      .btn-children {
+        background-color: var(--btn-disabled);
+      }
+    }
   }
   &:hover {
     cursor: pointer;
@@ -30,6 +37,13 @@
       border-color: var(--btn-base-hover);
       .btn-children {
         color: var(--btn-base-hover);
+      }
+    }
+    &:disabled {
+      cursor: auto;
+      border-color: var(--btn-disabled);
+      .btn-children {
+        color: var(--btn-disabled);
       }
     }
   }
