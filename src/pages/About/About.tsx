@@ -1,16 +1,19 @@
-import { FC } from 'react';
+import { FC, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button, EducationSection, TitlePage } from '@/components';
 import { educationInfo } from '@/services/data_content';
-import ProfileImage from '../../assets/photos/AA013a.jpg';
+import ProfileImage from '../../assets/photos/about.jpg';
+import ProfileImageLight from '../../assets/photos/about-light.jpg';
 import gmmCV from '../../assets/Gustavo M. Marini - Resume.pdf';
 import './about.scss';
+import { ThemeContext } from '@/theme';
 
 const About: FC = () => {
+  const { t: aboutTranslation } = useTranslation(['about']);
+  const { theme } = useContext(ThemeContext);
   const downloadCVAction = () => {
     window.open(gmmCV, '_blank');
   };
-  const { t: aboutTranslation } = useTranslation(['about']);
 
   return (
     <section id="about" className="about container-xxl">
@@ -22,7 +25,11 @@ const About: FC = () => {
         <div className="basic-info-image portfolio-row">
           <div className="profile-image portfolio-col-5">
             <div className="image-container">
-              <img src={ProfileImage} alt="" />
+              {theme === 'light-theme' ? (
+                <img src={ProfileImageLight} alt="" />
+              ) : (
+                <img src={ProfileImage} alt="" />
+              )}
             </div>
           </div>
           <div className="basic-info-text portfolio-col-7">

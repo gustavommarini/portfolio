@@ -4,7 +4,7 @@
   padding-top: 50px;
   .card-item {
     h4 {
-      border-bottom: 1px solid $color-primary;
+      border-bottom: 1px solid var(--line-item-separator);
     }
   }
 }
@@ -14,8 +14,8 @@
   &.description-education {
     .card-item {
       h4 {
-        color: $color-primary;
-        border-bottom-color: $white;
+        color: var(--lang-title);
+        border-bottom-color: var(--text-base);
       }
     }
   }

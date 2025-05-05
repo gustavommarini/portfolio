@@ -4,7 +4,7 @@
   position: relative;
   padding: 0 15px 50px 0;
   &:before {
-    border-left: 1px solid $color-primary;
+    border-left: 1px solid var(--line-vertical);
     content: '';
     height: 100%;
     left: 7px;
@@ -16,21 +16,21 @@
   }
   .bullet {
     display: none;
-    border: 2px solid $color-primary;
-    background-color: $color-background;
+    border: 2px solid var(--bullet);
+    background-color: var(--body-bg);
     height: 15px;
     left: 0px;
     position: absolute;
     top: 0;
     width: 15px;
     border-radius: 50%;
-    box-shadow: $color-work-bullet-shadow 0px 7px 29px 0px;
+    box-shadow: var(--bullet-shadow) 0px 7px 29px 0px;
   }
   .card-item {
     top: 20px;
     padding-bottom: 0;
     small {
-      color: $color-primary;
+      color: var(--bullet);
     }
   }
 }
@@ -48,7 +48,7 @@
       width: calc(100% - 15px);
       padding-right: 0;
       small {
-        color: $white;
+        color: var(--text-base);
       }
     }
   }

@@ -42,15 +42,8 @@ const contactConfig = {
   phone: '3455256990',
   phone_country_code: '39',
   phone_formated: '(39)345-5256990',
-  address: 'Lancusi, Fisciano, Salerno (84084)',
+  address: 'Salerno, Italia',
   skype: 'gustavommarini',
-  description:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula eu nunc et sollicitudin. Cras pulvinar, nisi at imperdiet pharetra. ',
-  // creat an emailjs.com account
-  // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-  YOUR_SERVICE_ID: 'service_id',
-  YOUR_TEMPLATE_ID: 'template_id',
-  YOUR_USER_ID: 'user_id',
 };
 
 const socialprofils = {

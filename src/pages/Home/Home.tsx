@@ -1,13 +1,17 @@
-import { FC } from 'react';
+import { FC, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components';
 import { ButtonType } from '@/components/Button/Button.types';
 import { useTypewriter } from '@/hooks/useTypewriter';
+import HomeImg from '../../assets/photos/home.jpg';
+import HomeImgLight from '../../assets/photos/home-light.jpg';
 import './home.scss';
+import { ThemeContext } from '@/theme';
 
 const Home: FC = () => {
   const { t: homeTranslation } = useTranslation(['home']);
+  const { theme } = useContext(ThemeContext);
   const navigate = useNavigate();
   const currentText = useTypewriter([
     homeTranslation('animated.first'),
@@ -24,7 +28,13 @@ const Home: FC = () => {
   };
 
   return (
-    <section id="home" className="home">
+    <section
+      id="home"
+      className="home"
+      style={{
+        backgroundImage: `url(${theme === 'light-theme' ? HomeImgLight : HomeImg})`,
+      }}
+    >
       <div className="overlay"></div>
       <div className="main-text-container">
         <div className="main-text">

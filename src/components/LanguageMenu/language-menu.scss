@@ -10,9 +10,9 @@
   border-radius: 50%;
   font-size: $is-lg;
   cursor: pointer;
-  color: $color-langmenu-color;
-  background: $color-langmenu-bg;
-  box-shadow: 0px 0px 10px $color-langmenu-shadow;
+  color: var(--lang-main-icon);
+  background: var(--lang-bg);
+  box-shadow: 0px 0px 10px var(--lang-shadow);
 }
 
 #language-action-btn {
@@ -37,7 +37,7 @@
   position: absolute;
   border-radius: 10px;
   padding-top: 10px;
-  background: $color-langmenu-bg;
+  background: var(--lang-bg);
   width: 100%;
   bottom: -300px;
   height: 185px;

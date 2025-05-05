@@ -9,7 +9,7 @@
     margin: 19px 0px 10px;
     text-transform: uppercase;
     span {
-      color: $color-primary;
+      color: var(--text-highlighted);
       font-weight: 700;
     }
   }
@@ -23,7 +23,7 @@
 
   &:before,
   &:after {
-    background-color: $color-primary;
+    background-color: var(--text-highlighted);
     position: absolute;
     content: '';
     height: 2px;

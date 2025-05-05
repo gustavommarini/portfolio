@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 export const useTypewriter = (
   text: string | string[],
-  delay: number = 110,
+  delay: number = 180,
   infinite: boolean = true
 ) => {
   const [currentText, setCurrentText] = useState('');

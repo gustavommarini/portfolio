@@ -16,7 +16,7 @@
       transition: all 0.3s;
       &:hover {
         a i {
-          color: $color-primary;
+          color: var(--social-hover);
           transform: scale(1.5);
         }
       }
@@ -45,7 +45,7 @@
       content: '';
       display: block;
       position: absolute;
-      background-color: $white;
+      background-color: var(--text-base);
     }
   }
 }

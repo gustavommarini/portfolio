@@ -5,7 +5,6 @@
 }
 
 .home {
-  background-image: url(../../assets/photos/home.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center right;
@@ -19,13 +18,13 @@
     bottom: 0;
     content: '';
     opacity: 1;
-    background: $color-overlay-bg1;
-    background: $color-overlay-bg2;
+    background: var(--overlay-bg1);
+    background: var(--overlay-bg2);
     background: radial-gradient(
       at 70%,
-      $color-overlay-bg2 40%,
-      $color-overlay-bg3 65%,
-      $color-overlay-bg1 100%
+      var(--overlay-bg2) 40%,
+      var(--overlay-bg3) 65%,
+      var(--overlay-bg1) 100%
     );
   }
 }
@@ -54,7 +53,7 @@
     white-space: normal;
     text-transform: uppercase;
     span {
-      color: $color-primary;
+      color: var(--text-highlighted);
       font-weight: 700;
     }
   }
@@ -79,7 +78,7 @@
   top: 1px;
   width: 3px;
   height: $font-typewriter-size-cursor;
-  background: $color-primary;
+  background: ar(--text-highlighted);
   display: inline-block;
   animation: cursor-blink 1.5s steps(9) infinite;
 }

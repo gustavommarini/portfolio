@@ -1,3 +1,4 @@
+@use './variables.scss' as *;
 /**
  *
  * Define the root for the HTML document to set the default css variables.
@@ -5,32 +6,159 @@
  */
 
 :root {
+  --gmm-gray: #{$gray};
+  --gmm-black: #{$black};
+  --gmm-white: #{$white};
+  --gmm-dark: #{$dark};
+  --gmm-white-dark: #{$white-dark};
+  --gmm-gray-dark: #{$gray-dark};
+  --gmm-dark-shadow: #{$dark-shadow};
+  --gmm-dark-bg: #{$dark-bg};
   /*=============================================
-  =            Global colors            =
+  =            Dark colors            =
   =============================================*/
-  //   --nmd-body-text-color: #{$dark};
-  //   --nmd-body-bg-color: #{$white};
-  //   /*=====  End of Global colors  ======*/
+  --gmm-bg: #{$color-background};
+  --gmm-primary: #{$color-primary};
+  --gmm-text-base: #{$white};
+  --gmm-btn: #{$white};
+  --gmm-btn-outlined: #{$black};
+  /*----------  NavBar colors  ----------*/
+  --gmm-navbar-item-outline: #{$menu-item-outline};
+  /*----------  Language Menu colors  ----------*/
+  --gmm-langmenu-bg: #{$white};
+  --gmm-langmenu-shadow: #{$light-shadow};
+  /*----------  Home colors  ----------*/
+  --gmm-overlay-bg1: #{$color-overlay-bg1};
+  --gmm-overlay-bg2: #{$color-overlay-bg2};
+  --gmm-overlay-bg3: #{$color-overlay-bg3};
+  --gmm-overlay-bg4: #{$color-overlay-bg4};
 
-  //   --nmd-btn-primary-color: #{$dark};
-  //   --nmd-btn-primary-bg: #{$orange};
-  //   --nmd-btn-primary-color-hover: #{$dark-light};
-  //   --nmd-btn-primary-bg-hover: #{$yellow};
+  /*=============================================
+  =            Light colors            =
+  =============================================*/
+  --gmm-bg-light: #{$color-background-light};
+  --gmm-primary-light: #{$red};
+  --gmm-text-base-light: #{$black};
+  --gmm-btn-light: #{$black};
+  --gmm-btn-outlined-light: #{$white};
+  /*----------  NavBar colors  ----------*/
+  --gmm-navbar-item-outline-light: #{$menu-item-outline};
+  /*----------  Language Menu colors  ----------*/
+  --gmm-langmenu-bg-light: #{$black};
+  --gmm-langmenu-shadow-light: #{$light-shadow};
+  /*----------  Home colors  ----------*/
+  --gmm-overlay-bg1-light: #{$color-overlay-bg1-light};
+  --gmm-overlay-bg2-light: #{$color-overlay-bg2-light};
+  --gmm-overlay-bg3-light: #{$color-overlay-bg3-light};
+  --gmm-overlay-bg4-light: #{$color-overlay-bg4-light};
+}
 
-  //   --nmd-body-text-size: #{$fs-sm};
-  //   --nmd-body-text-weight: #{$fw-medium};
+/*=============================================
+=            DARK THEME            =
+=============================================*/
+.dark-theme {
+  // ======= GENERAL =======
+  --body-bg: var(--gmm-bg);
+  --text-title: var(--gmm-text-base);
+  --text-title-highlighted: var(--gmm-primary);
+  --text-item-separator: var(--gmm-gray-dark);
+  //SOCIAL BAR
+  --social-color: var(--gmm-text-base);
+  --social-hover: var(--gmm-primary);
+  //BUTTON
+  --btn-base: var(--gmm-btn);
+  --btn-base-hover: var(--gmm-primary);
+  --btn-outline-font: var(--gmm-btn-outlined);
+  //MENU
+  --menu-icon: var(--gmm-text-base);
+  --menu-icon-bg: var(--gmm-dark);
+  --menu-bg: var(--gmm-dark);
+  --menu-text: var(--gmm-text-base);
+  --menu-text-selected: var(--gmm-primary);
+  --menu-text-outline: var(--gmm-navbar-item-outline);
+  //LANG MENU
+  --lang-bg: var(--gmm-langmenu-bg);
+  --lang-main-icon: var(--gmm-black);
+  // --lang-main-icon-hover: var(--gmm-XXXX);
+  --lang-shadow: var(--gmm-langmenu-shadow);
+  //HOME
+  --text-base: var(--gmm-text-base);
+  --text-highlighted: var(--gmm-primary);
+  /*  Home colors  */
+  --overlay-bg1: var(--gmm-overlay-bg1);
+  --overlay-bg2: var(--gmm-overlay-bg2);
+  --overlay-bg3: var(--gmm-overlay-bg3);
+  --overlay-bg4: var(--gmm-overlay-bg4);
+  //ABOUT
+  --img-square: var(--gmm-primary);
+  --about-list-title: var(--gmm-text-base);
+  --about-list-description: var(--gmm-gray);
+  --line-item-separator: var(--gmm-primary);
+  --lang-title: var(--gmm-primary);
+  //EXPERIENCE
+  --bullet: var(--gmm-primary);
+  --bullet-shadow: var(--gmm-dark-shadow);
+  --line-vertical: var(--gmm-primary);
+  --skill-line-completed: var(--gmm-primary);
+  --skill-line-empty: var(--gmm-gray-dark);
+  --skill-percentage: var(--gmm-primary);
+  //CONTACT
+  --form-bg: var(--gmm-dark-bg);
+  --form-text: var(--gmm-text-base);
+  --form-text-placeholder: var(--gmm-gray);
+}
 
-  //   --nmd-h1-text-size: #{$h1};
-  //   --nmd-h2-text-size: #{$h2};
-  //   --nmd-h3-text-size: #{$h3};
-  //   --nmd-h4-text-size: #{$h4};
-  //   --nmd-h5-text-size: #{$h5};
-  //   --nmd-h6-text-size: #{$h6};
-
-  //   --nmd-h1-text-weight: #{$fw-black};
-  //   --nmd-h2-text-weight: #{$fw-semibold};
-  //   --nmd-h3-text-weight: #{$fw-bold};
-  //   --nmd-h4-text-weight: #{$fw-medium};
-  //   --nmd-h5-text-weight: #{$fw-normal};
-  //   --nmd-h6-text-weight: #{$fw-light};
+/*=============================================
+=            LIGHT THEME            =
+=============================================*/
+.light-theme {
+  // ======= GENERAL =======
+  --body-bg: var(--gmm-bg-light);
+  --text-title: var(--gmm-text-base-light);
+  --text-title-highlighted: var(--gmm-primary-light);
+  --text-item-separator: var(--gmm-gray-dark);
+  //SOCIAL BAR
+  --social-color: var(--gmm-text-base-light);
+  --social-hover: var(--gmm-primary-light);
+  //BUTTON
+  --btn-base: var(--gmm-btn-light);
+  --btn-base-hover: var(--gmm-primary-light);
+  --btn-outline-font: var(--gmm-btn-outlined-light);
+  //MENU
+  --menu-icon: var(--gmm-text-base-light);
+  --menu-icon-bg: var(--gmm-white);
+  --menu-bg: var(--gmm-white-dark);
+  --menu-text: var(--gmm-text-base-light);
+  --menu-text-selected: var(--gmm-primary-light);
+  --menu-text-outline: var(--gmm-navbar-item-outline);
+  //LANG MENU
+  --lang-bg: var(--gmm-langmenu-bg-light);
+  --lang-main-icon: var(--gmm-white);
+  // --lang-main-icon-hover: var(--gmm-XXXX);
+  --lang-shadow: var(--gmm-langmenu-shadow);
+  //HOME
+  --text-base: var(--gmm-text-base-light);
+  --text-highlighted: var(--gmm-primary-light);
+  /*  Home colors  */
+  --overlay-bg1: var(--gmm-overlay-bg1-light);
+  --overlay-bg2: var(--gmm-overlay-bg2-light);
+  --overlay-bg3: var(--gmm-overlay-bg3-light);
+  --overlay-bg4: var(--gmm-overlay-bg4-light);
+  //ABOUT
+  --img-square: var(--gmm-primary-light);
+  --about-list-title: var(--gmm-text-base-light);
+  --about-list-description: var(--gmm-gray-dark);
+  --line-item-separator: var(--gmm-primary-light);
+  --lang-title: var(--gmm-primary-light);
+  //EXPERIENCE
+  --bullet: var(--gmm-primary-light);
+  --bullet-shadow: var(--gmm-dark-shadow);
+  --line-vertical: var(--gmm-primary-light);
+  --skill-line-completed: var(--gmm-primary-light);
+  --skill-line-empty: var(--gmm-gray-dark);
+  --skill-percentage: var(--gmm-primary-light);
+  //CONTACT
+  --form-bg: var(--gmm-white-dark);
+  --form-text: var(--gmm-text-base-light);
+  --form-text-placeholder: var(--gmm-gray);
 }

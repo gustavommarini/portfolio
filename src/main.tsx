@@ -3,9 +3,12 @@ import { createRoot } from 'react-dom/client';
 import './styles/index.scss';
 import './language/i18n.ts';
 import { Routes } from './router';
+import { ThemeProvider } from './theme';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Routes />
+    <ThemeProvider>
+      <Routes />
+    </ThemeProvider>
   </StrictMode>
 );

@@ -1,11 +1,13 @@
 .btn {
   padding: 0;
-  border: none;
+  &.btn-primary {
+    border: none !important;
+  }
   &:hover {
     cursor: pointer;
-    background-color: $color-primary;
+    background-color: var(--btn-base-hover);
     .btn-children {
-      background-color: $color-primary;
+      background-color: var(--btn-base-hover);
     }
   }
   &.sm {
@@ -19,15 +21,15 @@
   }
   &.btn-outlined {
     background-color: transparent;
-    border: 1px solid $white;
+    border: 1px solid var(--btn-base);
     .btn-children {
       background-color: transparent;
-      color: $white;
+      color: var(--btn-base);
     }
     &:hover {
-      border-color: $color-primary;
+      border-color: var(--btn-base-hover);
       .btn-children {
-        color: $color-primary;
+        color: var(--btn-base-hover);
       }
     }
   }
@@ -36,6 +38,6 @@
 .btn-children {
   text-transform: uppercase;
   padding: 20px;
-  background-color: $white;
-  color: $black;
+  background-color: var(--btn-base);
+  color: var(--btn-outline-font);
 }

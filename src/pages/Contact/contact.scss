@@ -38,15 +38,18 @@
     appearance: none;
     background-clip: padding-box;
     display: block;
-    color: $white;
+    color: var(--form-text);
     font-weight: 400;
     width: 100%;
-    background-color: $color-contact-form-bg;
+    background-color: var(--form-bg);
     border: none;
     border-radius: 0 !important;
     line-height: 1.5;
     padding: 22px 12px;
     margin-bottom: 32px;
+    &::placeholder {
+      color: var(--form-text-placeholder);
+    }
   }
   textarea {
     min-height: 38px;

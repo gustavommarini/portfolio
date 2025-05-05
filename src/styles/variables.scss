@@ -9,7 +9,6 @@
  * Main colors...........................These are the main brand colors.
  * Neutral colors.........................White, black, gray scale, secondary colors.
  * Utility colors.........................Other colos to represent states: info, warning, success, etc.
- * Social Media colors.....................Colors related to social media networks.
  *
  * TYPOGRAPHY
  * Font families..........................The fonts for the design system.
@@ -32,15 +31,18 @@
 /*----------  Main colors  ----------*/
 $color-primary: #f3e156;
 $color-background: #111111;
+$color-background-light: #f8f6ea;
 $orange: #ff8f32;
 $orange-light: #fca900;
-$yellow: #f3e156;
 $red: #fa644d;
 
 /*----------  Neutral colors  ----------*/
+$dark: #000;
+$dark-bg: #222222;
 $black: #211f20;
 $black-light: #343a3f;
 $gray: #939393;
+$gray-dark: #555;
 $white: #fdfefe;
 $white-dark: #ededed;
 
@@ -48,40 +50,20 @@ $white-dark: #ededed;
 $color-error: #ff654d;
 $color-separator: #555;
 
-/*----------  Social Media colors  ----------*/
-$color-instagram: #bc2a8d;
-$color-facebook: #3b5998;
-
-/*----------  NavBar colors  ----------*/
-$color-navbar-bg: #000;
-$color-navbar-font: $white;
-$color-navbar-font-selected: #f3e156;
-$color-navbar-icon: #000;
-$color-navbar-item-outline: rgb(2, 0, 36);
-
-/*----------  Skills Chart colors  ----------*/
-$color-chart-bar-percentage: $color-primary;
-$color-chart-bar-bg-empty: #555;
-$color-chart-bar-bg-completed: $color-primary;
-
-/*----------  Language Menu colors  ----------*/
-$color-langmenu-bg: $white;
-$color-langmenu-color: $black;
-$color-langmenu-shadow: rgba(255, 255, 255, 0.5);
-
-/*----------  Home colors  ----------*/
+/*----------  Decorator colors  ----------*/
+$menu-item-outline: rgb(29, 36, 0);
+$light-shadow: rgba(255, 255, 255, 0.5);
+$dark-shadow: rgba(118, 118, 122, 0.77);
+//Overlay
 $color-overlay-bg1: #090601;
 $color-overlay-bg2: rgba(1, 2, 18, 0.44);
 $color-overlay-bg3: rgba(9, 6, 1, 0.96);
 $color-overlay-bg4: #010212;
-
-/*----------  Work colors  ----------*/
-$color-work-bullet-shadow: rgba(118, 118, 122, 0.77);
-
-/*----------  Contact colors  ----------*/
-$color-contact-form-bg: #222222;
-
-/*=====  End of COLORS  ======*/
+//Overlay
+$color-overlay-bg1-light: #fdf8f0;
+$color-overlay-bg2-light: rgba(236, 237, 245, 0.44);
+$color-overlay-bg3-light: rgba(253, 248, 239, 0.96);
+$color-overlay-bg4-light: #ecedf4;
 
 /*=============================================
 =            TYPOGRAPHY            =
