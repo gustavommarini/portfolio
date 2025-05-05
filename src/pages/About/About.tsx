@@ -4,7 +4,7 @@ import { Button, EducationSection, TitlePage } from '@/components';
 import { educationInfo } from '@/services/data_content';
 import ProfileImage from '../../assets/photos/about.jpg';
 import ProfileImageLight from '../../assets/photos/about-light.jpg';
-import gmmCV from '../../assets/Gustavo M. Marini - Resume.pdf';
+import gmmCV from '../../assets/Gustavo M Marini -  CV.pdf';
 import './about.scss';
 import { ThemeContext } from '@/theme';
 

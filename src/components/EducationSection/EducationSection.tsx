@@ -30,7 +30,11 @@ export const EducationSection: FC<EducationSectionProps> = ({
                   {item.from} {item.to ? `- ${item.to}` : ''}
                 </small>
               )}
-              <h4 style={useBookIcon ? { borderBottomColor: 'white' } : {}}>
+              <h4
+                style={
+                  useBookIcon ? { borderBottomColor: 'var(--text-base)' } : {}
+                }
+              >
                 {eduInfoTranslation(item.name)}
                 {item.location && (
                   <>
