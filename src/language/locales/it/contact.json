@@ -11,5 +11,10 @@
     "email": "Email",
     "message": "Messaggio",
     "btn": "Invia"
+  },
+  "error": {
+    "name": "Il nome non può essere vuoto.",
+    "email": "L'email non può essere vuoto e deve essere ben formato.",
+    "message": "Il messaggio non può essere vuoto."
   }
 }

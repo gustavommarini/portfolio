@@ -11,5 +11,10 @@
     "email": "Email",
     "message": "Message",
     "btn": "Send"
+  },
+  "error": {
+    "name": "The name couldn't be empty.",
+    "email": "The email couldn't be empty and should be well formed.",
+    "message": "The message couldn't be empty."
   }
 }

@@ -1,5 +1,6 @@
 import { ChangeEvent, FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import emailjs from '@emailjs/browser';
 import { contactConfig } from '@/services/data_content';
 import { Button, TitlePage } from '@/components';
 import './contact.scss';
@@ -10,11 +11,26 @@ const Contact: FC = () => {
     email: '',
     name: '',
     message: '',
+    error_email: false,
+    error_name: false,
+    error_message: false,
     loading: false,
-    show: false,
-    alertmessage: '',
-    variant: '',
   });
+
+  const validateForm = () => {
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    const isValidEmail = emailPattern.test(formData.email);
+    const isValidName = !!formData.name.trim();
+    const isValidMessage = !!formData.message.trim();
+    setFormdata({
+      ...formData,
+      error_name: !isValidName,
+      error_email: !isValidEmail,
+      error_message: !isValidMessage,
+    });
+
+    return isValidEmail && isValidMessage && isValidName;
+  };
 
   const handleChange = (
     event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
@@ -24,8 +40,51 @@ const Contact: FC = () => {
       [event.target.name]: event.target.value,
     });
   };
-  const sendMessageAction = () => {
-    alert('This is not ready yet. Sorry :(');
+
+  const sendMessageAction = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (!validateForm()) {
+      return;
+    }
+    setFormdata({
+      ...formData,
+      loading: true,
+    });
+    const templateParams = {
+      email: formData.email,
+      name: formData.name,
+      message: formData.message,
+    };
+    emailjs
+      .send(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        templateParams,
+        {
+          publicKey: import.meta.env.VITE_PUBLIC_KEY,
+        }
+      )
+      .then(
+        () => {
+          setFormdata({
+            email: '',
+            name: '',
+            message: '',
+            error_email: false,
+            error_name: false,
+            error_message: false,
+            loading: false,
+          });
+          alert('Message Sent Successfully');
+        },
+        () => {
+          setFormdata({
+            ...formData,
+            loading: true,
+          });
+          alert('Something went wrong!');
+        }
+      );
   };
 
   return (
@@ -63,11 +122,11 @@ const Contact: FC = () => {
             </p>
           </div>
           <div className="contact-form portfolio-col-7">
-            <form className="contact-action">
+            <form className="contact-action" onSubmit={sendMessageAction}>
               <div className="input-group">
                 <div className="input-single-item">
                   <input
-                    className="form-control"
+                    className={`form-control ${formData.error_name ? 'error' : ''}`}
                     id="name"
                     name="name"
                     placeholder={contactTranslation('form.name')}
@@ -79,7 +138,7 @@ const Contact: FC = () => {
                 </div>
                 <div className="input-single-item">
                   <input
-                    className="form-control rounded-0"
+                    className={`form-control ${formData.error_email ? 'error' : ''}`}
                     id="email"
                     name="email"
                     placeholder={contactTranslation('form.email')}
@@ -91,7 +150,7 @@ const Contact: FC = () => {
                 </div>
               </div>
               <textarea
-                className="form-control rounded-0"
+                className={`form-control ${formData.error_message ? 'error' : ''}`}
                 id="message"
                 name="message"
                 placeholder={contactTranslation('form.message')}
@@ -100,7 +159,18 @@ const Contact: FC = () => {
                 value={formData.message}
                 onChange={handleChange}
               ></textarea>
-              <Button onClick={sendMessageAction}>
+              <div className="error-messages">
+                {formData.error_name && (
+                  <small>{contactTranslation('error.name')}</small>
+                )}
+                {formData.error_email && (
+                  <small>{contactTranslation('error.email')}</small>
+                )}
+                {formData.error_message && (
+                  <small>{contactTranslation('error.message')}</small>
+                )}
+              </div>
+              <Button disabled={formData.loading} isForSubmition>
                 {contactTranslation('form.btn')}
               </Button>
             </form>

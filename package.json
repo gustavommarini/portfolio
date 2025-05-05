@@ -13,6 +13,7 @@
     "coverage": "npm test --coverage --watchAll --collectCoverageFrom='src/components/**/*.{ts,tsx}'"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "dompurify": "^3.2.5",
     "i18next": "^24.2.3",
     "i18next-browser-languagedetector": "^8.0.4",
