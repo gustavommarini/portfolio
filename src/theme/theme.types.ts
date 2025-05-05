@@ -7,3 +7,10 @@ export interface ThemeContextProps {
   setTheme: (theme: string) => void;
   toggleTheme: () => void;
 }
+
+export enum ThemeItems {
+  darkTheme = 'dark-theme',
+  lightTheme = 'light-theme',
+}
+
+export const STORED_NAME = 'theme';

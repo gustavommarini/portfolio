@@ -1,14 +1,19 @@
 import { useEffect, createContext, useState, FC } from 'react';
-import { ThemeContextProps, ThemeProviderProps } from './theme.types';
+import {
+  STORED_NAME,
+  ThemeContextProps,
+  ThemeItems,
+  ThemeProviderProps,
+} from './theme.types';
 
 const ThemeContext = createContext<ThemeContextProps>(null!);
 
 const getTheme = () => {
-  const theme = localStorage.getItem('theme');
+  const theme = localStorage.getItem(STORED_NAME);
   if (!theme) {
     // Default theme is taken as dark-theme
-    localStorage.setItem('theme', 'dark-theme');
-    return 'dark-theme';
+    localStorage.setItem(STORED_NAME, ThemeItems.darkTheme);
+    return ThemeItems.darkTheme;
   } else {
     return theme;
   }
@@ -18,16 +23,16 @@ const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
   const [theme, setTheme] = useState(getTheme);
 
   function toggleTheme() {
-    if (theme === 'dark-theme') {
-      setTheme('light-theme');
+    if (theme === ThemeItems.darkTheme) {
+      setTheme(ThemeItems.lightTheme);
     } else {
-      setTheme('dark-theme');
+      setTheme(ThemeItems.darkTheme);
     }
   }
 
   useEffect(() => {
     const refreshTheme = () => {
-      localStorage.setItem('theme', theme);
+      localStorage.setItem(STORED_NAME, theme);
     };
 
     refreshTheme();
