@@ -16,5 +16,10 @@
     "name": "The name couldn't be empty.",
     "email": "The email couldn't be empty and should be well formed.",
     "message": "The message couldn't be empty."
+  },
+  "messages": {
+    "info": "The form is not valid. Please be sure that the fields are not empty and that the email is correct.",
+    "error": "Oh oh... something went wrong. Please try again and if the error persist send me an email or call me.",
+    "success": "The message was sent successfully. I will contact you as soon as possible. Thanks!"
   }
 }

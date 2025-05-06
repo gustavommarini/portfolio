@@ -16,5 +16,10 @@
     "name": "El nombre no puede ser vacio.",
     "email": "El email no puede ser vacio y debe estar bien formado.",
     "message": "El mensaje no puede ser vacio."
+  },
+  "messages": {
+    "info": "El formulario no es valido. Por favor asegurese que los campos esten completos y que el email es correcto.",
+    "error": "Mmmmm... algo salio mal. Por favor intentalo nuevamente y si el error persiste enviame un email o llamame.",
+    "success": "El mensaje se envio correctamente. Te contactare lo mas pronto posible. Gracias!"
   }
 }

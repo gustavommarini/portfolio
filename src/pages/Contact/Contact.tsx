@@ -56,7 +56,7 @@ const Contact: FC = () => {
       setToastModal({
         visible: true,
         type: ToastTypes.info,
-        message: 'The form is not valid',
+        message: contactTranslation('messages.info'),
       });
       return;
     }
@@ -92,8 +92,7 @@ const Contact: FC = () => {
           setToastModal({
             visible: true,
             type: ToastTypes.success,
-            message:
-              'The message was sent successfully. I will contact you as soon as possible. Thanks!',
+            message: contactTranslation('messages.success'),
           });
         },
         () => {
@@ -104,8 +103,7 @@ const Contact: FC = () => {
           setToastModal({
             visible: true,
             type: ToastTypes.error,
-            message:
-              'Oh oh... something went wrong. Please try again and if the error persist send me an email or text me.',
+            message: contactTranslation('messages.error'),
           });
         }
       );
