@@ -1,19 +1,12 @@
 @use '../../styles/mixins.scss' as *;
 
 .menu-btn {
-  z-index: 6;
-  position: fixed;
+  @include basic-float;
   right: 20px;
   top: 20px;
   height: 50px;
   width: 50px;
-  text-align: center;
-  line-height: 50px;
-  border-radius: 50%;
-  font-size: $is-md;
-  cursor: pointer;
   background: var(--menu-icon-bg);
-  transition: all 0.3s ease-in-out;
 }
 
 #main-navmenu:checked ~ .wrapper-navmenu {
