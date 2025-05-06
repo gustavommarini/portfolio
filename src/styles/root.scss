@@ -22,7 +22,9 @@
   --gmm-text-base: #{$white};
   --gmm-btn: #{$white};
   --gmm-btn-outlined: #{$black};
-  --gmm-error: #{$color-error};
+  --gmm-error: #{$color-error-light};
+  --gmm-success: #{$color-success};
+  --gmm-info: #{$color-info};
   /*----------  NavBar colors  ----------*/
   --gmm-navbar-item-outline: #{$menu-item-outline};
   /*----------  Language Menu colors  ----------*/
@@ -43,6 +45,8 @@
   --gmm-btn-light: #{$black};
   --gmm-btn-outlined-light: #{$white};
   --gmm-error-light: #{$color-error};
+  --gmm-success-light: #{$color-success-dark};
+  --gmm-info-light: #{$color-info};
   /*----------  NavBar colors  ----------*/
   --gmm-navbar-item-outline-light: #{$menu-item-outline};
   /*----------  Language Menu colors  ----------*/
@@ -63,6 +67,8 @@
   --body-bg: var(--gmm-bg);
   --text-item-separator: var(--gmm-gray-dark);
   --error-color: var(--gmm-error);
+  --success-color: var(--gmm-success);
+  --info-color: var(--gmm-info);
   //SOCIAL BAR
   --social-hover: var(--gmm-primary);
   //BUTTON
@@ -115,6 +121,8 @@
   --body-bg: var(--gmm-bg-light);
   --text-item-separator: var(--gmm-gray-dark);
   --error-color: var(--gmm-error-light);
+  --success-color: var(--gmm-success-light);
+  --info-color: var(--gmm-info-light);
   //SOCIAL BAR
   --social-hover: var(--gmm-primary-light);
   //BUTTON
