@@ -2,11 +2,16 @@ import { ChangeEvent, FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
 import { contactConfig } from '@/services/data_content';
-import { Button, TitlePage } from '@/components';
+import { Button, TitlePage, Toast, ToastTypes } from '@/components';
 import './contact.scss';
 
 const Contact: FC = () => {
   const { t: contactTranslation } = useTranslation(['contact']);
+  const [toastModal, setToastModal] = useState({
+    visible: false,
+    type: ToastTypes.info,
+    message: '',
+  });
   const [formData, setFormdata] = useState({
     email: '',
     name: '',
@@ -16,6 +21,10 @@ const Contact: FC = () => {
     error_message: false,
     loading: false,
   });
+
+  const closeModal = () => {
+    setToastModal({ ...toastModal, visible: false });
+  };
 
   const validateForm = () => {
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
@@ -44,6 +53,11 @@ const Contact: FC = () => {
   const sendMessageAction = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!validateForm()) {
+      setToastModal({
+        visible: true,
+        type: ToastTypes.info,
+        message: 'The form is not valid',
+      });
       return;
     }
     setFormdata({
@@ -75,14 +89,24 @@ const Contact: FC = () => {
             error_message: false,
             loading: false,
           });
-          alert('Message Sent Successfully');
+          setToastModal({
+            visible: true,
+            type: ToastTypes.success,
+            message:
+              'The message was sent successfully. I will contact you as soon as possible. Thanks!',
+          });
         },
         () => {
           setFormdata({
             ...formData,
-            loading: true,
+            loading: false,
           });
-          alert('Something went wrong!');
+          setToastModal({
+            visible: true,
+            type: ToastTypes.error,
+            message:
+              'Oh oh... something went wrong. Please try again and if the error persist send me an email or text me.',
+          });
         }
       );
   };
@@ -177,6 +201,13 @@ const Contact: FC = () => {
           </div>
         </div>
       </div>
+      <Toast
+        type={toastModal.type}
+        show={toastModal.visible}
+        onClose={closeModal}
+      >
+        {toastModal.message}
+      </Toast>
     </section>
   );
 };
