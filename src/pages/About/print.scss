@@ -1,6 +1,16 @@
 @page {
   size: A4;
 }
+@page:right {
+  @bottom-right {
+    content: counter(page);
+  }
+}
+@page:left {
+  @bottom-left {
+    content: counter(page);
+  }
+}
 /* override styles when printing */
 @media print {
   html {
