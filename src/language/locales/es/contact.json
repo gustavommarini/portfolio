@@ -13,9 +13,9 @@
     "btn": "Enviar"
   },
   "error": {
-    "name": "El nombre no puede ser vacio.",
+    "name": "El nombre no puede ser vacio y debe tener mas de 4 letras.",
     "email": "El email no puede ser vacio y debe estar bien formado.",
-    "message": "El mensaje no puede ser vacio."
+    "message": "El mensaje no puede ser vacio y debe tener mas de 4 letras."
   },
   "messages": {
     "info": "El formulario no es valido. Por favor asegurese que los campos esten completos y que el email es correcto.",

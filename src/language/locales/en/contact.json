@@ -13,9 +13,9 @@
     "btn": "Send"
   },
   "error": {
-    "name": "The name couldn't be empty.",
+    "name": "The name couldn't be empty and should have more than 4 letters.",
     "email": "The email couldn't be empty and should be well formed.",
-    "message": "The message couldn't be empty."
+    "message": "The message couldn't be empty and should have more than 4 letters."
   },
   "messages": {
     "info": "The form is not valid. Please be sure that the fields are not empty and that the email is correct.",

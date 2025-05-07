@@ -1,110 +1,50 @@
-import { ChangeEvent, FC, useState } from 'react';
+import { FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
 import { contactConfig } from '@/services/data_content';
+import { useToast } from '@/hooks/useToast';
+import { useForm } from '@/hooks/useForm';
 import { Button, TitlePage, Toast, ToastTypes } from '@/components';
 import './contact.scss';
 
 const Contact: FC = () => {
   const { t: contactTranslation } = useTranslation(['contact']);
-  const [toastModal, setToastModal] = useState({
-    visible: false,
-    type: ToastTypes.info,
-    message: '',
-  });
-  const [formData, setFormdata] = useState({
-    email: '',
-    name: '',
-    message: '',
-    error_email: false,
-    error_name: false,
-    error_message: false,
-    loading: false,
-  });
-
-  const closeModal = () => {
-    setToastModal({ ...toastModal, visible: false });
-  };
-
-  const validateForm = () => {
-    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    const isValidEmail = emailPattern.test(formData.email);
-    const isValidName = !!formData.name.trim();
-    const isValidMessage = !!formData.message.trim();
-    setFormdata({
-      ...formData,
-      error_name: !isValidName,
-      error_email: !isValidEmail,
-      error_message: !isValidMessage,
-    });
-
-    return isValidEmail && isValidMessage && isValidName;
-  };
-
-  const handleChange = (
-    event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
-  ) => {
-    setFormdata({
-      ...formData,
-      [event.target.name]: event.target.value,
-    });
-  };
+  const [loading, setLoading] = useState(false);
+  const { closeToast, addToastOptions, toastMsg, toastType, toastVisible } =
+    useToast();
+  const { resetFormStates, handleChange, formData, formErrors } = useForm();
+  const isFormValid = Object.values(formErrors).every(
+    (error) => error === false
+  );
 
   const sendMessageAction = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (!validateForm()) {
-      setToastModal({
-        visible: true,
-        type: ToastTypes.info,
-        message: contactTranslation('messages.info'),
-      });
-      return;
-    }
-    setFormdata({
-      ...formData,
-      loading: true,
-    });
-    const templateParams = {
-      email: formData.email,
-      name: formData.name,
-      message: formData.message,
-    };
+    setLoading(true);
+    const { email, name, message } = formData;
     emailjs
       .send(
         import.meta.env.VITE_SERVICE_ID,
         import.meta.env.VITE_TEMPLATE_ID,
-        templateParams,
+        { email, name, message },
         {
           publicKey: import.meta.env.VITE_PUBLIC_KEY,
         }
       )
       .then(
         () => {
-          setFormdata({
-            email: '',
-            name: '',
-            message: '',
-            error_email: false,
-            error_name: false,
-            error_message: false,
-            loading: false,
-          });
-          setToastModal({
-            visible: true,
-            type: ToastTypes.success,
-            message: contactTranslation('messages.success'),
-          });
+          resetFormStates();
+          setLoading(false);
+          addToastOptions(
+            contactTranslation('messages.success'),
+            ToastTypes.success
+          );
         },
         () => {
-          setFormdata({
-            ...formData,
-            loading: false,
-          });
-          setToastModal({
-            visible: true,
-            type: ToastTypes.error,
-            message: contactTranslation('messages.error'),
-          });
+          setLoading(false);
+          addToastOptions(
+            contactTranslation('messages.error'),
+            ToastTypes.error
+          );
         }
       );
   };
@@ -148,7 +88,7 @@ const Contact: FC = () => {
               <div className="input-group">
                 <div className="input-single-item">
                   <input
-                    className={`form-control ${formData.error_name ? 'error' : ''}`}
+                    className={`form-control ${formErrors.name ? 'error' : ''}`}
                     id="name"
                     name="name"
                     placeholder={contactTranslation('form.name')}
@@ -160,7 +100,7 @@ const Contact: FC = () => {
                 </div>
                 <div className="input-single-item">
                   <input
-                    className={`form-control ${formData.error_email ? 'error' : ''}`}
+                    className={`form-control ${formErrors.email ? 'error' : ''}`}
                     id="email"
                     name="email"
                     placeholder={contactTranslation('form.email')}
@@ -172,7 +112,7 @@ const Contact: FC = () => {
                 </div>
               </div>
               <textarea
-                className={`form-control ${formData.error_message ? 'error' : ''}`}
+                className={`form-control ${formErrors.message ? 'error' : ''}`}
                 id="message"
                 name="message"
                 placeholder={contactTranslation('form.message')}
@@ -182,29 +122,25 @@ const Contact: FC = () => {
                 onChange={handleChange}
               ></textarea>
               <div className="error-messages">
-                {formData.error_name && (
+                {formErrors.name && (
                   <small>{contactTranslation('error.name')}</small>
                 )}
-                {formData.error_email && (
+                {formErrors.email && (
                   <small>{contactTranslation('error.email')}</small>
                 )}
-                {formData.error_message && (
+                {formErrors.message && (
                   <small>{contactTranslation('error.message')}</small>
                 )}
               </div>
-              <Button disabled={formData.loading} isForSubmition>
+              <Button disabled={loading || !isFormValid} isForSubmition>
                 {contactTranslation('form.btn')}
               </Button>
             </form>
           </div>
         </div>
       </div>
-      <Toast
-        type={toastModal.type}
-        show={toastModal.visible}
-        onClose={closeModal}
-      >
-        {toastModal.message}
+      <Toast type={toastType} show={toastVisible} onClose={closeToast}>
+        {toastMsg}
       </Toast>
     </section>
   );

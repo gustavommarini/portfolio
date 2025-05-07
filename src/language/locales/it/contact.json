@@ -13,9 +13,9 @@
     "btn": "Invia"
   },
   "error": {
-    "name": "Il nome non può essere vuoto.",
+    "name": "Il nome non può essere vuoto e deve avere più di 4 lettere.",
     "email": "L'email non può essere vuoto e deve essere ben formato.",
-    "message": "Il messaggio non può essere vuoto."
+    "message": "Il messaggio non può essere vuoto e deve avere più di 4 lettere."
   },
   "messages": {
     "info": "Il form non è valido. Assicurarsi che i campi non siano vuoti e che l'e-mail sia corretta.",
