@@ -13,9 +13,9 @@ const Contact: FC = () => {
   const { closeToast, addToastOptions, toastMsg, toastType, toastVisible } =
     useToast();
   const { resetFormStates, handleChange, formData, formErrors } = useForm();
-  const isFormValid = Object.values(formErrors).every(
-    (error) => error === false
-  );
+  const isFormValid =
+    Object.values(formErrors).every((error) => error === false) &&
+    Object.values(formData).every((field) => field !== '');
 
   const sendMessageAction = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
