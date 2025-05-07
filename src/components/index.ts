@@ -6,3 +6,4 @@ export * from './Button';
 export * from './Toast';
 export * from './TitlePage';
 export * from './EducationSection';
+export * from './WorkCardItem';

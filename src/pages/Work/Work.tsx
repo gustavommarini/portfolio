@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
-import { TitlePage } from '@/components';
+import { TitlePage, WorkCardItem } from '@/components';
 import { jobInfo, skills } from '@/services/data_content';
-import { SkillItem, WorkCardItem } from './components';
+import { SkillItem } from './components';
 import './work.scss';
 
 const Work: FC = () => {

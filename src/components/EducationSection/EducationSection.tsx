@@ -12,7 +12,7 @@ export const EducationSection: FC<EducationSectionProps> = ({
   const noDates = eduArray.every((item) => !item.from && !item.to);
 
   return (
-    <div className="education-section">
+    <>
       <div className="portfolio-row content-row">
         <div className="title-content portfolio-col-5">
           <h2>{title}</h2>
@@ -48,6 +48,6 @@ export const EducationSection: FC<EducationSectionProps> = ({
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 };

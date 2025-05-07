@@ -41,9 +41,10 @@ const contactConfig = {
   email: 'gustavommarini@gmail.com',
   phone: '3455256990',
   phone_country_code: '39',
-  phone_formated: '(39)345-5256990',
+  phone_formated: '(+39)345-5256990',
   address: 'Salerno, Italia',
   skype: 'gustavommarini',
+  site: 'https://gmm-portfolio.netlify.app',
 };
 
 const socialprofils = {

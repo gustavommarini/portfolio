@@ -1,26 +1,39 @@
-import { FC, useContext } from 'react';
+import React, { FC, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button, EducationSection, TitlePage } from '@/components';
-import { educationInfo } from '@/services/data_content';
+import {
+  Button,
+  EducationSection,
+  TitlePage,
+  WorkCardItem,
+} from '@/components';
+import { ThemeContext } from '@/theme';
+import { contactConfig, educationInfo, jobInfo } from '@/services/data_content';
 import ProfileImage from '../../assets/photos/about.jpg';
 import ProfileImageLight from '../../assets/photos/about-light.jpg';
-import gmmCV from '../../assets/Gustavo M Marini -  CV.pdf';
 import './about.scss';
-import { ThemeContext } from '@/theme';
+import './print.scss';
 
 const About: FC = () => {
   const { t: aboutTranslation } = useTranslation(['about']);
   const { theme } = useContext(ThemeContext);
   const downloadCVAction = () => {
-    window.open(gmmCV, '_blank');
+    window.print();
   };
 
   return (
     <section id="about" className="about container-xxl">
-      <TitlePage
-        title={aboutTranslation('title')}
-        subtitle={aboutTranslation('subtitle')}
-      />
+      <div className="no-print">
+        <TitlePage
+          title={aboutTranslation('title')}
+          subtitle={aboutTranslation('subtitle')}
+        />
+      </div>
+      <div className="print-only">
+        <TitlePage
+          title={'Gustavo <span>Marini</span>'}
+          subtitle={aboutTranslation('subtitle')}
+        />
+      </div>
       <div className="basic-info-section">
         <div className="basic-info-image portfolio-row">
           <div className="profile-image portfolio-col-5">
@@ -50,6 +63,14 @@ const About: FC = () => {
                     <span>{aboutTranslation('details.languages')}:</span>{' '}
                     {aboutTranslation('details.languages_data')}
                   </li>
+                  <li className="hidden-col">
+                    <span>Email:</span>
+                    {contactConfig.email}
+                  </li>
+                  <li className="hidden-col">
+                    <span>Web:</span>
+                    {contactConfig.site}
+                  </li>
                 </ul>
               </div>
               <div className="detailed-column">
@@ -65,6 +86,10 @@ const About: FC = () => {
                     <span>{aboutTranslation('details.freelance')}:</span>{' '}
                     {aboutTranslation('details.freelance_data')}
                   </li>
+                  <li className="hidden-col">
+                    <span>{aboutTranslation('details.phone')}:</span>
+                    {contactConfig.phone_formated}
+                  </li>
                 </ul>
               </div>
             </div>
@@ -74,19 +99,37 @@ const About: FC = () => {
           </div>
         </div>
       </div>
-      <EducationSection
-        title={aboutTranslation('edu_section_title')}
-        eduArray={educationInfo.education}
-      />
-      <EducationSection
-        title={aboutTranslation('course_section_title')}
-        eduArray={educationInfo.courses}
-        useBookIcon
-      />
-      <EducationSection
-        title={aboutTranslation('lang_section_title')}
-        eduArray={educationInfo.languages}
-      />
+      <div className="work-on-about">
+        <div className="title-content about-work-section-title">
+          <h2>{aboutTranslation('title-work')}</h2>
+        </div>
+        <div className="portfolio-row experience-section">
+          {jobInfo.map((item) => (
+            <React.Fragment key={item.id}>
+              <WorkCardItem workItem={item} />
+            </React.Fragment>
+          ))}
+        </div>
+      </div>
+      <div className="education-section">
+        <EducationSection
+          title={aboutTranslation('edu_section_title')}
+          eduArray={educationInfo.education}
+        />
+      </div>
+      <div className="courses-section">
+        <EducationSection
+          title={aboutTranslation('course_section_title')}
+          eduArray={educationInfo.courses}
+          useBookIcon
+        />
+      </div>
+      <div className="languages-section">
+        <EducationSection
+          title={aboutTranslation('lang_section_title')}
+          eduArray={educationInfo.languages}
+        />
+      </div>
     </section>
   );
 };

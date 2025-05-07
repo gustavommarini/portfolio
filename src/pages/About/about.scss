@@ -1,5 +1,8 @@
 @use '../../styles/mixins.scss' as *;
 
+.print-only {
+  display: none;
+}
 .basic-info-section {
   padding-top: 60px;
   padding-bottom: 80px;
@@ -52,8 +55,15 @@
     li {
       display: flex;
       flex-direction: column;
+      &.hidden-col {
+        display: none;
+      }
     }
   }
+}
+
+.work-on-about {
+  display: none;
 }
 
 @include smallIntermediate {

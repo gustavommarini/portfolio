@@ -1,0 +1,149 @@
+@page {
+  size: A4;
+}
+/* override styles when printing */
+@media print {
+  html {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    margin: 0;
+    color: var(--gmm-dark);
+    background-color: var(--gmm-white);
+  }
+  .print-only {
+    display: block;
+  }
+  //Hide unnecesary things
+  .menu-btn,
+  .wrapper-navmenu,
+  .no-print,
+  .stick_follow_icon,
+  .language-selector,
+  .theme-selector,
+  .courses-section,
+  #about .btn {
+    display: none;
+  }
+
+  .page-title h1 span {
+    color: var(--highlight-color-print);
+  }
+  .page-subtitle:before,
+  .page-subtitle:after {
+    background-color: var(--highlight-color-print);
+  }
+
+  .card-item {
+    padding-bottom: 15px !important;
+  }
+
+  .education-section {
+    padding-top: 50px;
+    .card-item {
+      padding-bottom: 50px !important;
+    }
+  }
+
+  #about {
+    padding: 10px;
+    .basic-info-image {
+      display: block;
+    }
+  }
+
+  .profile-image {
+    display: block;
+    max-width: 200px;
+    float: left;
+    .image-container {
+      margin: 0;
+      margin-right: 15px;
+      &:before {
+        content: none;
+      }
+    }
+    img {
+      padding: 0;
+      border: 4px solid var(--highlight-color-print);
+    }
+  }
+
+  .basic-info-text {
+    padding: 0;
+  }
+
+  .education-section,
+  .languages-section {
+    .title-content {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+    .description-education {
+      flex: 0 0 70%;
+      max-width: 70%;
+      padding-top: 24px;
+      .card-item {
+        h4 {
+          border-color: var(--highlight-color-print);
+        }
+      }
+    }
+  }
+
+  .languages-section {
+    .description-education {
+      padding-top: 0 !important;
+      .card-item {
+        h4 {
+          color: var(--highlight-color-print);
+        }
+      }
+    }
+  }
+  .detailed-data {
+    .detailed-column {
+      ul {
+        li,
+        span {
+          color: var(--gmm-dark);
+        }
+        li {
+          &.hidden-col {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+
+  .work-on-about {
+    display: block;
+    .about-work-section-title {
+      padding-bottom: 40px;
+    }
+    .card-item-container {
+      flex: 0 0 50%;
+      max-width: 50%;
+      &:before {
+        display: block;
+        border-left: 1px solid var(--highlight-color-print);
+      }
+      .bullet {
+        display: block;
+        border: 2px solid var(--highlight-color-print);
+        background-color: var(--gmm-white);
+        box-shadow: none;
+      }
+      .card-item {
+        margin-left: 20px;
+        width: calc(100% - 15px);
+        padding-right: 15px;
+        small {
+          color: var(--gmm-dark);
+        }
+      }
+    }
+  }
+}

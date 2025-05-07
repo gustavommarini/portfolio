@@ -15,10 +15,12 @@
     "experience": "Esperienza",
     "nationality": "Nazionalità",
     "freelance": "Freelance",
-    "freelance_data": "Disponibile"
+    "freelance_data": "Disponibile",
+    "phone": "Telefono"
   },
   "btn_dwn_cv": "Scarica CV",
   "edu_section_title": "Educazione",
   "course_section_title": "Corsi",
-  "lang_section_title": "Lingue"
+  "lang_section_title": "Lingue",
+  "title-work": "esperienza lavorativa"
 }
