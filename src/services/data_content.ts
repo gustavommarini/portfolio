@@ -199,7 +199,7 @@ const jobInfo = [
     location: 'Argentina',
     description: 'job5_desc',
     from: '2015',
-    to: '20217',
+    to: '2017',
   },
   {
     id: '6',
@@ -207,7 +207,7 @@ const jobInfo = [
     location: 'Australia',
     description: 'job6_desc',
     from: '2014',
-    to: '20215',
+    to: '2015',
   },
   {
     id: '7',
@@ -215,7 +215,7 @@ const jobInfo = [
     location: 'Australia',
     description: 'job7_desc',
     from: '2014',
-    to: '20215',
+    to: '2015',
   },
   {
     id: '8',
