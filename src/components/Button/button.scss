@@ -1,5 +1,6 @@
 .btn {
   padding: 0;
+  background-color: var(--btn-base);
   &.btn-primary {
     border: none !important;
     &:disabled {
