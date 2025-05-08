@@ -30,6 +30,7 @@ const Home: FC = () => {
   return (
     <section
       id="home"
+      data-testid="home"
       className="home"
       style={{
         backgroundImage: `url(${theme === 'light-theme' ? HomeImgLight : HomeImg})`,

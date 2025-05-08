@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { TitlePage, WorkCardItem } from '@/components';
-import { jobInfo, skills } from '@/services/data_content';
+import { jobInfo, skills } from '@/services';
 import { SkillItem } from './components';
 import './work.scss';
 

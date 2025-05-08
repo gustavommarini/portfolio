@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
-import { socialprofils } from '@/services/data_content';
+import { socialprofils } from '@/services';
 import { ICON_MAPPING } from './social-icons.types';
 import './social-icons.scss';
 

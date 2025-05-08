@@ -1,6 +1,7 @@
 import { renderHook, act } from '@testing-library/react';
-import { useToast } from './useToast';
+import '@/test-utils/envMock';
 import { ToastTypes } from '@/components';
+import { useToast } from './useToast';
 
 describe('useToast', () => {
   beforeEach(() => {

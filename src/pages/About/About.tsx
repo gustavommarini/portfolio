@@ -7,7 +7,7 @@ import {
   WorkCardItem,
 } from '@/components';
 import { ThemeContext } from '@/theme';
-import { contactConfig, educationInfo, jobInfo } from '@/services/data_content';
+import { contactConfig, educationInfo, jobInfo } from '@/services';
 import ProfileImage from '../../assets/photos/about.jpg';
 import ProfileImageLight from '../../assets/photos/about-light.jpg';
 import './about.scss';
@@ -39,9 +39,9 @@ const About: FC = () => {
           <div className="profile-image portfolio-col-5">
             <div className="image-container">
               {theme === 'light-theme' ? (
-                <img src={ProfileImageLight} alt="" />
+                <img src={ProfileImageLight} alt="profile-image-light" />
               ) : (
-                <img src={ProfileImage} alt="" />
+                <img src={ProfileImage} alt="profile-image" />
               )}
             </div>
           </div>
@@ -99,7 +99,7 @@ const About: FC = () => {
           </div>
         </div>
       </div>
-      <div className="work-on-about">
+      <div className="work-on-about print-only" data-testid="work-only-print">
         <div className="title-content about-work-section-title">
           <h2>{aboutTranslation('title-work')}</h2>
         </div>

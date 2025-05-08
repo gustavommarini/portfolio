@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
-import { contactConfig } from '@/services/data_content';
+import { contactConfig, PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from '@/services';
 import { useToast } from '@/hooks/useToast';
 import { useForm } from '@/hooks/useForm';
 import { Button, TitlePage, Toast, ToastTypes } from '@/components';
@@ -23,11 +23,11 @@ const Contact: FC = () => {
     const { email, name, message } = formData;
     emailjs
       .send(
-        import.meta.env.VITE_SERVICE_ID,
-        import.meta.env.VITE_TEMPLATE_ID,
+        SERVICE_ID,
+        TEMPLATE_ID,
         { email, name, message },
         {
-          publicKey: import.meta.env.VITE_PUBLIC_KEY,
+          publicKey: PUBLIC_KEY,
         }
       )
       .then(

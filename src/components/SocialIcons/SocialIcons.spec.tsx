@@ -1,7 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import { SocialIcons } from './SocialIcons';
-import { socialprofils } from '@/services/data_content';
 import { useTranslation } from 'react-i18next';
+import '@/test-utils/envMock';
+import { socialprofils } from '@/services';
+import { SocialIcons } from './SocialIcons';
 
 // Mock the translation hook
 jest.mock('react-i18next', () => ({
