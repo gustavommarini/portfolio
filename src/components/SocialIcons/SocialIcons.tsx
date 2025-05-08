@@ -16,7 +16,11 @@ export const SocialIcons: FC = () => {
             ICON_MAPPING.default;
           return (
             <li key={platform}>
-              <a href={url} target="_blank">
+              <a
+                href={url}
+                target="_blank"
+                aria-label={`Visit my ${platform} profile`}
+              >
                 <i className={`fa-brands ${IconComponent}`}></i>
               </a>
             </li>

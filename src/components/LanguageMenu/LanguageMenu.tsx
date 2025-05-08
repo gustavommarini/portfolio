@@ -20,7 +20,11 @@ export const LanguageMenu: FC = () => {
   return (
     <div className="language-selector">
       <input type="checkbox" id="language-action-btn" ref={checkboxRef} />
-      <label className="language-btn" htmlFor="language-action-btn">
+      <label
+        data-testid="language-btn"
+        className="language-btn"
+        htmlFor="language-action-btn"
+      >
         <i className="fa-solid fa-language"></i>
       </label>
       <div className="language-flags">

@@ -20,7 +20,7 @@ export const Navbar: FC = () => {
   return (
     <>
       <input type="checkbox" id="main-navmenu" ref={checkboxRef} />
-      <label className="menu-btn" htmlFor="main-navmenu">
+      <label className="menu-btn" data-testid="menu-btn" htmlFor="main-navmenu">
         <i className="fas fa-bars"></i>
       </label>
       <div className="wrapper-navmenu">

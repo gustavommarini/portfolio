@@ -23,9 +23,16 @@ export const Toast: FC<ToastProps> = ({
     [ToastTypes.success]: 'check',
   };
   return (
-    <div id="toast-message" className={`toast-${type}${show ? ' show' : ''}`}>
+    <div
+      id="toast-message"
+      data-testid="toast-message"
+      className={`toast-${type}${show ? ' show' : ''}`}
+    >
       <div className="body-message">
-        <i className={`fa-regular fa-circle-${iconHelper[type]}`}></i>
+        <i
+          role="icon"
+          className={`fa-regular fa-circle-${iconHelper[type]}`}
+        ></i>
         <p>{children}</p>
       </div>
     </div>

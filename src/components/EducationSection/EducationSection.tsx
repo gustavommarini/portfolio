@@ -18,6 +18,7 @@ export const EducationSection: FC<EducationSectionProps> = ({
           <h2>{title}</h2>
         </div>
         <div
+          data-testid="description-education"
           className={`description-education portfolio-col-7 ${noDates ? 'adjust-padding-top' : ''}`}
         >
           {eduArray.map((item) => (
@@ -25,6 +26,7 @@ export const EducationSection: FC<EducationSectionProps> = ({
               {item.from && (
                 <small>
                   <i
+                    role="icon"
                     className={`fa-solid ${useBookIcon ? 'fa-book' : 'fa-graduation-cap'}`}
                   ></i>{' '}
                   {item.from} {item.to ? `- ${item.to}` : ''}

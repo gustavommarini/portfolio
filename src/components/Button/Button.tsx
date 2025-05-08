@@ -17,7 +17,7 @@ export const Button: FC<ButtonProps> = ({
       disabled={disabled}
       onClick={onClick}
     >
-      <div className="btn-children fjalla-one-regular">{children}</div>
+      <div className="btn-children">{children}</div>
     </button>
   );
 };
