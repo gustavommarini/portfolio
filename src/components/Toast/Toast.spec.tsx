@@ -1,7 +1,6 @@
 import { render, screen, act } from '@testing-library/react';
 import { Toast } from './Toast';
 import { ToastTypes } from './toast.types';
-import { PageWrapper } from '@/test-utils';
 
 describe('Toast', () => {
   const mockOnClose = jest.fn();
