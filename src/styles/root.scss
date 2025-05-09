@@ -14,7 +14,7 @@
   --gmm-gray-dark: #{$gray-dark};
   --gmm-dark-shadow: #{$dark-shadow};
   --gmm-dark-bg: #{$dark-bg};
-  --highlight-color-print: #{$color-print-primary};
+  --gmm-color-print: #{$color-print-primary};
   /*=============================================
   =            Dark colors            =
   =============================================*/
@@ -112,6 +112,8 @@
   --form-bg: var(--gmm-dark-bg);
   --form-text: var(--gmm-text-base);
   --form-text-placeholder: var(--gmm-gray);
+  //PRINT
+  --highlight-color-print: var(--gmm-color-print);
 }
 
 /*=============================================
@@ -166,4 +168,6 @@
   --form-bg: var(--gmm-white-dark);
   --form-text: var(--gmm-text-base-light);
   --form-text-placeholder: var(--gmm-gray);
+  //PRINT
+  --highlight-color-print: var(--gmm-primary-light);
 }
