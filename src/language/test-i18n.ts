@@ -1,7 +1,7 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import enHome from './locales/en/home.json';
-import esHome from './locales/es/home.json';
+import enHome from '../../public/locales/en/home.json';
+import esHome from '../../public/locales/es/home.json';
 
 i18n.use(initReactI18next).init({
   lng: 'es',
