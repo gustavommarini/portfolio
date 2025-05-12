@@ -20,6 +20,8 @@ For the useApiHook I took the idea from here:
 
 - [Creating a custom Hook to make requests using React + Axios + TypeScript](https://danilorivera95.medium.com/creating-a-custom-hook-to-make-requests-using-react-axios-typescript-ca591c6c25fc)
 
+To upload a JSON file directly to firebase you can use the function `initializeProfileData` that you can find on the file `src/services/fillFirebaseFromJSON.ts` that will take the info from `data_content.ts` under the same folder.
+
 [![CV portfolio](src/assets/screenshot.jpg)](https://gmm-portfolio.netlify.app)
 
 Details:
