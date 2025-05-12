@@ -1,16 +1,17 @@
-import { FC } from 'react';
+import { FC, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
-import { socialprofils } from '@/services';
 import { ICON_MAPPING } from './social-icons.types';
 import './social-icons.scss';
+import { DataContext } from '@/context/dataContext';
 
 export const SocialIcons: FC = () => {
   const { t: homeTranslation } = useTranslation(['home']);
+  const { data } = useContext(DataContext);
 
   return (
     <div className="stick_follow_icon">
       <ul>
-        {Object.entries(socialprofils).map(([platform, url]) => {
+        {Object.entries(data?.socialProfiles || {}).map(([platform, url]) => {
           const IconComponent =
             ICON_MAPPING[platform as keyof typeof ICON_MAPPING] ||
             ICON_MAPPING.default;

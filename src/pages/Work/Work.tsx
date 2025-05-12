@@ -1,12 +1,13 @@
-import React, { FC } from 'react';
+import React, { FC, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import { TitlePage, WorkCardItem } from '@/components';
-import { jobInfo, skills } from '@/services';
 import { SkillItem } from './components';
 import './work.scss';
+import { DataContext } from '@/context/dataContext';
 
 const Work: FC = () => {
   const { t: workTranslation } = useTranslation(['experience']);
+  const { data } = useContext(DataContext);
 
   return (
     <section id="work" className="work container-xxl">
@@ -16,7 +17,7 @@ const Work: FC = () => {
       />
       <div className="work-body">
         <div className="portfolio-row experience-section">
-          {jobInfo.map((item) => (
+          {data?.jobInfo.map((item) => (
             <React.Fragment key={item.id}>
               <WorkCardItem workItem={item} />
             </React.Fragment>
@@ -27,7 +28,7 @@ const Work: FC = () => {
             <h2>{workTranslation('skills_title')}</h2>
           </div>
           <div className="portfolio-row skills-section-items">
-            {skills.map((item) => (
+            {data?.skills.map((item) => (
               <SkillItem name={item.name} value={item.value} key={item.name} />
             ))}
           </div>

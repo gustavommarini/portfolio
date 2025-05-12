@@ -1,14 +1,16 @@
-import { FC, useState } from 'react';
+import { FC, useContext, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
-import { contactConfig, PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from '@/services';
+import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from '@/services';
 import { useToast } from '@/hooks/useToast';
 import { useForm } from '@/hooks/useForm';
 import { Button, TitlePage, Toast, ToastTypes } from '@/components';
 import './contact.scss';
+import { DataContext } from '@/context/dataContext';
 
 const Contact: FC = () => {
   const { t: contactTranslation } = useTranslation(['contact']);
+  const { data } = useContext(DataContext);
   const [loading, setLoading] = useState(false);
   const { closeToast, addToastOptions, toastMsg, toastType, toastVisible } =
     useToast();
@@ -64,14 +66,14 @@ const Contact: FC = () => {
             <div className="contact-basic-details">
               <p>
                 <strong>Email:</strong>{' '}
-                <a href={`mailto:${contactConfig.email}`}>
-                  {contactConfig.email}
+                <a href={`mailto:${data?.contactConfig.email}`}>
+                  {data?.contactConfig.email}
                 </a>
               </p>
               <p>
                 <strong>{contactTranslation('phone')}:</strong>{' '}
-                <a href={`tel:${contactConfig.phone}`}>
-                  {contactConfig.phone_formated}
+                <a href={`tel:${data?.contactConfig.phone}`}>
+                  {data?.contactConfig.phone_formated}
                 </a>
               </p>
               <p>
