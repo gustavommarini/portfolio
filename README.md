@@ -16,6 +16,10 @@ To connect with emailjs on the contact form you can follow this guide:
 
 - [Emailjs on react](https://medium.com/@alagappan.dev/using-emailjs-with-react-to-build-a-contact-form-for-your-website-5040966a814)
 
+For the useApiHook I took the idea from here:
+
+- [Creating a custom Hook to make requests using React + Axios + TypeScript](https://danilorivera95.medium.com/creating-a-custom-hook-to-make-requests-using-react-axios-typescript-ca591c6c25fc)
+
 [![CV portfolio](src/assets/screenshot.jpg)](https://gmm-portfolio.netlify.app)
 
 Details:
