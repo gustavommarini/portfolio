@@ -1,6 +1,7 @@
 import { render, screen, fireEvent, renderHook } from '@testing-library/react';
-import { Navbar } from './Navbar';
+import '@/test-utils/envMock';
 import { PageWrapper } from '@/test-utils';
+import { Navbar } from './Navbar';
 import { useTranslation } from 'react-i18next';
 
 // Mock window.scrollTo

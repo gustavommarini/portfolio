@@ -4,7 +4,7 @@ import { db } from './firebaseConfig';
 import {
   skills,
   contactConfig,
-  socialprofils,
+  socialprofiles,
   educationInfo,
   jobInfo,
 } from './data_content';
@@ -13,7 +13,7 @@ import { FIREBASE_COLLECTION, FIREBASE_DOCUMENT } from './constants';
 const profileData: ProfileData = {
   skills,
   contactConfig,
-  socialProfiles: socialprofils,
+  socialProfiles: socialprofiles,
   educationInfo,
   jobInfo,
 };

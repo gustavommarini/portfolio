@@ -6,8 +6,8 @@ import {
   within,
 } from '@testing-library/react';
 import { useTranslation } from 'react-i18next';
-import { PageWrapper } from '@/test-utils';
 import '@/test-utils/envMock';
+import { PageWrapper } from '@/test-utils';
 import { contactConfig } from '@/services';
 import ProfileImage from '../../assets/photos/about.jpg';
 import ProfileImageLight from '../../assets/photos/about-light.jpg';

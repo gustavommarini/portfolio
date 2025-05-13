@@ -27,7 +27,7 @@ const contactConfig = {
   site: 'https://website.com',
 };
 
-const socialprofils = {
+const socialprofiles = {
   github: 'https://github.com',
   facebook: 'https://facebook.com',
   linkedin: 'https://linkedin.com',
@@ -133,4 +133,4 @@ const jobInfo = [
   },
 ];
 
-export { skills, contactConfig, socialprofils, educationInfo, jobInfo };
+export { skills, contactConfig, socialprofiles, educationInfo, jobInfo };

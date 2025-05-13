@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { ThemeButton } from './ThemeButton';
+import '@/test-utils/envMock';
 import { PageWrapper } from '@/test-utils';
+import { ThemeButton } from './ThemeButton';
 
 describe('ThemeButton', () => {
   const mockToggleTheme = jest.fn();

@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { LanguageMenu } from './LanguageMenu';
+import '@/test-utils/envMock';
 import { PageWrapper } from '@/test-utils';
+import { LanguageMenu } from './LanguageMenu';
 import { AvailableLanguages } from '@/language/i18n.types';
 
 // Mock i18n

@@ -1,8 +1,7 @@
 // firebaseConfig.ts
 
 import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
-import { getAnalytics } from 'firebase/analytics';
+import { connectFirestoreEmulator, getFirestore } from 'firebase/firestore';
 import {
   FIREBASE_API_KEY,
   FIREBASE_PROJECT_ID,
@@ -24,7 +23,11 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 const db = getFirestore(app);
 
-export { db, analytics };
+// 🔧 Connect to emulator if running locally
+if (typeof window !== 'undefined' && location.hostname === 'localhost') {
+  connectFirestoreEmulator(db, 'localhost', 8080);
+}
+
+export { db };

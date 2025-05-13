@@ -1,7 +1,8 @@
 import { render, screen, renderHook } from '@testing-library/react';
 import { useTranslation } from 'react-i18next';
-import { EducationSection } from './EducationSection';
+import '@/test-utils/envMock';
 import { PageWrapper } from '@/test-utils';
+import { EducationSection } from './EducationSection';
 
 describe('EducationSection', () => {
   const mockEducationItems = [
