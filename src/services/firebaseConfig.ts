@@ -10,6 +10,7 @@ import {
   FIREBASE_MSG_SENDER_ID,
   FIREBASE_APP_ID,
   FIREBASE_MEASUREMENT_ID,
+  FIREBASE_USE_EMULATOR,
 } from './constants';
 
 const firebaseConfig = {
@@ -26,7 +27,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 // 🔧 Connect to emulator if running locally
-if (typeof window !== 'undefined' && location.hostname === 'localhost') {
+if (FIREBASE_USE_EMULATOR === 'true') {
   connectFirestoreEmulator(db, 'localhost', 8080);
 }
 
