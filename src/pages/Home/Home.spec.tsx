@@ -1,5 +1,11 @@
 import '@testing-library/jest-dom';
-import { render, renderHook, screen, fireEvent } from '@testing-library/react';
+import {
+  render,
+  renderHook,
+  screen,
+  fireEvent,
+  waitFor,
+} from '@testing-library/react';
 import { useTranslation } from 'react-i18next';
 import { PageWrapper } from '@/test-utils';
 import '@/test-utils/envMock';
@@ -14,9 +20,16 @@ jest.mock('react-router-dom', () => ({
   useNavigate: () => mockedUsedNavigate,
 }));
 
+// Mock timers for animation delays
+jest.useFakeTimers();
+
 describe('Home', () => {
   beforeEach(() => {
     mockedUsedNavigate.mockClear();
+  });
+
+  afterEach(() => {
+    jest.clearAllTimers();
   });
 
   test('renders all main content elements', async () => {
@@ -50,13 +63,20 @@ describe('Home', () => {
         <Home />
       </PageWrapper>
     );
+
     // Click profile button
     fireEvent.click(screen.getByText(t.result.current.t('home:main_btn')));
-    expect(mockedUsedNavigate).toHaveBeenCalledWith('/about');
+    jest.advanceTimersByTime(300); // Advance timers by animation duration
+    await waitFor(() => {
+      expect(mockedUsedNavigate).toHaveBeenCalledWith('/about');
+    });
 
     // Click contact button
     fireEvent.click(screen.getByText(t.result.current.t('home:secundary_btn')));
-    expect(mockedUsedNavigate).toHaveBeenCalledWith('/contact');
+    jest.advanceTimersByTime(300); // Advance timers by animation duration
+    await waitFor(() => {
+      expect(mockedUsedNavigate).toHaveBeenCalledWith('/contact');
+    });
   });
 
   test('changes background image based on theme', async () => {
