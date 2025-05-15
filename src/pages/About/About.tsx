@@ -106,7 +106,7 @@ const About: FC = () => {
         <div className="portfolio-row experience-section">
           {jobInfo.map((item) => (
             <React.Fragment key={item.id}>
-              <WorkCardItem workItem={item} />
+              <WorkCardItem showExtraSection={false} workItem={item} />
             </React.Fragment>
           ))}
         </div>
