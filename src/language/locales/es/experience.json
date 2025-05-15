@@ -11,5 +11,7 @@
   "job8_desc": "Configuré un WordPress multisitio, verifique y resolví problemas en sitios existentes. También realizé tareas de mantenimiento. Tecnologías: PHP, HTML, CSS, WordPress.",
   "job9_desc": "Dirigí proyectos de desarrollo web, creando sitios responsivos en Drupal y WordPress para varios departamentos. Diseñé interfaces de usuario para aplicaciones de cara al público, incluido el portal Wi-Fi de la ciudad y una herramienta de localización basada en QR que utiliza Google Maps. Colaboré con diseñadores, me encargué del desarrollo de plugins, optimicé la experiencia del usuario y aseguré la accesibilidad. También trabajé en un sistema basado en Java/Spring para uso interno.",
   "job10_desc": "Realicé tareas de administrador de redes, como soporte y mantenimiento de las redes de la escuela. Además estuve a cargo de la selección y actualización del software adecuado para el programa «Conectar Igualdad» en la Escuela 728 - Alfonsina Storni, de la ciudad de Puerto Madryn, Chubut, Argentina.",
-  "skills_title": "Habilidades"
+  "skills_title": "Habilidades",
+  "development_stack": "Stack Tecnológico",
+  "coding_environment": "Entorno de Desarrollo"
 }

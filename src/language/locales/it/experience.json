@@ -11,5 +11,7 @@
   "job8_desc": "Ho configurato WordPress multisito, risolto problemi su siti esistenti ed eseguito la manutenzione.Tecnologie: PHP, HTML, CSS, WordPress.",
   "job9_desc": "Ho diretto progetti di sviluppo web, realizzando siti responsive in Drupal e WordPress per vari dipartimenti. Ho progettato interfacce utente per applicazioni rivolte al pubblico, tra cui il portale Wi-Fi della città e uno strumento di localizzazione basato su QR che utilizza Google Maps.Ho collaborato con i designer, gestito lo sviluppo di plugin, ottimizzato la UX e garantito l'accessibilità. Ho lavorato anche a un sistema basato su Java/Spring per uso interno.",
   "job10_desc": "Ho svolto compiti di Net Administrator, come il supporto e la manutenzione delle reti scolastiche. Inoltre, mi sono occupato della selezione e dell'aggiornamento del software adatto al programma “Conectar Igualdad” nella scuola 728 - Alfonsina Storni, nella città di Puerto Madryn, Chubut, Argentina.",
-  "skills_title": "Competenze"
+  "skills_title": "Competenze",
+  "development_stack": "Stack Tecnologico",
+  "coding_environment": "Ambiente di Sviluppo"
 }
