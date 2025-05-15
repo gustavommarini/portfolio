@@ -15,6 +15,8 @@
   --gmm-dark-shadow: #{$dark-shadow};
   --gmm-dark-bg: #{$dark-bg};
   --gmm-color-print: #{$color-print-primary};
+  --gmm-primary-smooth: #{$color-primary-smooth};
+  --gmm-red-smooth: #{$red-smooth};
   /*=============================================
   =            Dark colors            =
   =============================================*/
@@ -90,6 +92,7 @@
   //HOME
   --text-base: var(--gmm-text-base);
   --text-highlighted: var(--gmm-primary);
+  --text-light-highlight: var(--gmm-primary-smooth);
   /*  Home colors  */
   --overlay-bg1: var(--gmm-overlay-bg1);
   --overlay-bg2: var(--gmm-overlay-bg2);
@@ -146,6 +149,7 @@
   //HOME
   --text-base: var(--gmm-text-base-light);
   --text-highlighted: var(--gmm-primary-light);
+  --text-light-highlight: var(--gmm-red-smooth);
   /*  Home colors  */
   --overlay-bg1: var(--gmm-overlay-bg1-light);
   --overlay-bg2: var(--gmm-overlay-bg2-light);

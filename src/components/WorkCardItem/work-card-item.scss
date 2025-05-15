@@ -32,11 +32,95 @@
     small {
       color: var(--bullet);
     }
+    .extra-details {
+      display: none;
+      text-align: center;
+      padding-top: 20px;
+      color: $gray;
+      .tech-items {
+        width: 80%;
+        flex-wrap: wrap;
+        row-gap: 5px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+      }
+      a {
+        color: $gray;
+        transform: scale(1);
+        transition: all 0.3s ease-out;
+        &:hover {
+          transform: scale(1.5);
+        }
+        @each $brand-name, $brand-color in $brand-icon-colors {
+          &.color-icon-#{$brand-name}:hover {
+            color: if($brand-color == $gray, var(--text-base), $brand-color);
+          }
+        }
+      }
+      i {
+        font-size: $is-lg;
+      }
+    }
+    .tech-items {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.extra-details {
+  input[type='checkbox'] {
+    display: none;
+  }
+  .lbl-toggle {
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    @include meta-title;
+    position: relative;
+    color: var(--bullet);
+
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    &:before {
+      right: 30%;
+    }
+    &:after {
+      left: 30%;
+    }
+  }
+
+  .lbl-toggle:hover {
+    i {
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  .collapsible-content {
+    max-height: 0px;
+    overflow: hidden;
+    margin: 15px 0;
+    transition: max-height 0.3s ease-in-out;
+  }
+  .toggle:checked + .lbl-toggle {
+    & + .collapsible-content {
+      max-height: 500px;
+    }
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    i {
+      transform: rotate(180deg);
+    }
   }
 }
 
 @include tablet {
   .card-item-container {
+    padding: 0 15px 20px 0;
     &:before {
       display: block;
     }
@@ -59,5 +143,11 @@
       width: calc(100% - 60px);
       padding-right: 20px;
     }
+  }
+}
+
+@include smallIntermediate {
+  .extra-details {
+    display: block !important;
   }
 }

@@ -1,5 +1,12 @@
 import '@testing-library/jest-dom';
-import { render, renderHook, screen, fireEvent } from '@testing-library/react';
+import {
+  render,
+  renderHook,
+  screen,
+  fireEvent,
+  waitFor,
+  act,
+} from '@testing-library/react';
 import { useTranslation } from 'react-i18next';
 import '@/test-utils/envMock';
 import { PageWrapper } from '@/test-utils';
@@ -14,9 +21,16 @@ jest.mock('react-router-dom', () => ({
   useNavigate: () => mockedUsedNavigate,
 }));
 
+// Mock timers for animation delays
+jest.useFakeTimers();
+
 describe('Home', () => {
   beforeEach(() => {
     mockedUsedNavigate.mockClear();
+  });
+
+  afterEach(() => {
+    jest.clearAllTimers();
   });
 
   test('renders all main content elements', async () => {
@@ -50,13 +64,30 @@ describe('Home', () => {
         <Home />
       </PageWrapper>
     );
+
     // Click profile button
-    fireEvent.click(screen.getByText(t.result.current.t('home:main_btn')));
-    expect(mockedUsedNavigate).toHaveBeenCalledWith('/about');
+    await act(async () => {
+      fireEvent.click(screen.getByText(t.result.current.t('home:main_btn')));
+    });
+    await act(async () => {
+      jest.advanceTimersByTime(300); // Advance timers by animation duration
+    });
+    await waitFor(() => {
+      expect(mockedUsedNavigate).toHaveBeenCalledWith('/about');
+    });
 
     // Click contact button
-    fireEvent.click(screen.getByText(t.result.current.t('home:secundary_btn')));
-    expect(mockedUsedNavigate).toHaveBeenCalledWith('/contact');
+    await act(async () => {
+      fireEvent.click(
+        screen.getByText(t.result.current.t('home:secundary_btn'))
+      );
+    });
+    await act(async () => {
+      jest.advanceTimersByTime(300); // Advance timers by animation duration
+    });
+    await waitFor(() => {
+      expect(mockedUsedNavigate).toHaveBeenCalledWith('/contact');
+    });
   });
 
   test('changes background image based on theme', async () => {

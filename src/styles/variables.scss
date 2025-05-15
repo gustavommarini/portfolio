@@ -1,6 +1,7 @@
 /* ################################################################## 
     VARIABLES 
 ################################################################## */
+@use '../assets/fonts/css/DevBrands.css' as *;
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 /**
  * TABLE OF CONTENT
@@ -9,6 +10,7 @@
  * Main colors...........................These are the main brand colors.
  * Neutral colors.........................White, black, gray scale, secondary colors.
  * Utility colors.........................Other colos to represent states: info, warning, success, etc.
+ * Brand colors.........................The color for all the brands used on the site
  *
  * TYPOGRAPHY
  * Font families..........................The fonts for the design system.
@@ -30,12 +32,14 @@
 
 /*----------  Main colors  ----------*/
 $color-primary: #f3e156;
+$color-primary-smooth: #f0e7a6;
 $color-print-primary: #fed700;
 $color-background: #111111;
 $color-background-light: #f8f6ea;
 $orange: #ff8f32;
 $orange-light: #fca900;
 $red: #fa644d;
+$red-smooth: #b84938;
 
 /*----------  Neutral colors  ----------*/
 $dark: #000;
@@ -54,6 +58,108 @@ $color-success: #9eea0c;
 $color-success-dark: #6da108;
 $color-info: #0cb1ea;
 $color-separator: #555;
+
+/*----------  Brand colors  ----------*/
+$color-android: #99cc00;
+$color-angularjs: #b23336;
+$color-apple: $gray;
+$color-bootstrap: #712cf9;
+$color-yeoman: #e01e2e;
+$color-c-sharp: #6f1e7c;
+$color-css3: #0271bb;
+$color-drupal: #009cde;
+$color-eslint: #533ac6;
+$color-expo: $gray;
+$color-express: #90c63f;
+$color-flutter: #01559d;
+$color-git: #f05033;
+$color-graphql: #f25bc0;
+$color-html5: #e64c25;
+$color-java: #da6901;
+$color-jest: #99425b;
+$color-jquery: #0773b4;
+$color-javascript: #f7df1e;
+$color-less: #1477c6;
+$color-linux: $gray;
+$color-mobx: #f05300;
+$color-mongodb: #04ee69;
+$color-mysql: #1d6998;
+$color-nextjs: $gray;
+$color-nodejs: #8fc604;
+$color-php: #7c7fb6;
+$color-postgresql: #306792;
+$color-prettier: #ea5e60;
+$color-rails: #d50408;
+$color-react-router: #d20b25;
+$color-react: #61dafb;
+$color-redux: #764abc;
+$color-rest-api: $gray;
+$color-sass: #cc6699;
+$color-i18next: #049a8c;
+$color-storybook: #ff4d89;
+$color-styled-components: #ffd76a;
+$color-swift: #f1573f;
+$color-testing-library: #fc4444;
+$color-typescript: #397dc8;
+$color-vscode: #047fce;
+$color-vue: #48bb87;
+$color-windows: #21c1fb;
+$color-wordpress: #2a7a9e;
+$color-sublimetext: #ff9800;
+$color-lerna: #c084fc;
+$color-nx: $gray;
+
+// 1. Define the map of brand names to their color variables
+$brand-icon-colors: (
+  'android': $color-android,
+  'angularjs': $color-angularjs,
+  'apple': $color-apple,
+  'bootstrap': $color-bootstrap,
+  'yeoman': $color-yeoman,
+  'c-sharp': $color-c-sharp,
+  'css3': $color-css3,
+  'drupal': $color-drupal,
+  'eslint': $color-eslint,
+  'expo': $color-expo,
+  'express': $color-express,
+  'flutter': $color-flutter,
+  'git': $color-git,
+  'graphql': $color-graphql,
+  'html5': $color-html5,
+  'java': $color-java,
+  'jest': $color-jest,
+  'jquery': $color-jquery,
+  'javascript': $color-javascript,
+  'less': $color-less,
+  'linux': $color-linux,
+  'mobx': $color-mobx,
+  'mongodb': $color-mongodb,
+  'mysql': $color-mysql,
+  'nextjs': $color-nextjs,
+  'nodejs': $color-nodejs,
+  'php': $color-php,
+  'postgresql': $color-postgresql,
+  'prettier': $color-prettier,
+  'rails': $color-rails,
+  'react-router': $color-react-router,
+  'react': $color-react,
+  'redux': $color-redux,
+  'rest-api': $color-rest-api,
+  'sass': $color-sass,
+  'i18next': $color-i18next,
+  'storybook': $color-storybook,
+  'styled-components': $color-styled-components,
+  'swift': $color-swift,
+  'testing-library': $color-testing-library,
+  'typescript': $color-typescript,
+  'vscode': $color-vscode,
+  'vue': $color-vue,
+  'windows': $color-windows,
+  'wordpress': $color-wordpress,
+  'sublimetext': $color-sublimetext,
+  'lerna': $color-lerna,
+  'nx': $color-nx,
+);
 
 /*----------  Decorator colors  ----------*/
 $menu-item-outline: rgb(29, 36, 0);

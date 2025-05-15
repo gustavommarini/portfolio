@@ -1,5 +1,11 @@
-import { cvItemInfoProps } from '@/models';
+import { TechnologiesProps, workItemProps } from '@/models';
 
 export interface WorkCardItemProps {
-  workItem: cvItemInfoProps;
+  workItem: workItemProps;
+  showExtraSection?: boolean;
+}
+
+export interface TechnologiesListProps {
+  title: string;
+  techList: TechnologiesProps[];
 }

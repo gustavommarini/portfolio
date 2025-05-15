@@ -21,21 +21,7 @@
   display: block;
   padding: 0 12%;
 
-  &:before,
-  &:after {
-    background-color: var(--text-highlighted);
-    position: absolute;
-    content: '';
-    height: 2px;
-    top: 11px;
-    width: 30px;
-  }
-  &:before {
-    right: 0;
-  }
-  &:after {
-    left: 0;
-  }
+  @include meta-title;
 }
 
 @include mobile {

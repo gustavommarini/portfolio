@@ -38,7 +38,8 @@
 }
 
 .main-text {
-  position: relative;
+  // position: relative;
+  z-index: 2;
   h4 {
     font-family: $font-secundary;
     font-weight: 400;

@@ -11,6 +11,20 @@ export interface cvItemInfoProps {
   to?: string;
 }
 
+export interface workItemProps extends cvItemInfoProps {
+  developmentStack?: TechnologiesProps[];
+  codingEnvironment?: TechnologiesProps[];
+}
+
+export interface TechnologiesProps {
+  name: string;
+  url: string;
+}
+
+export interface TechnologiesData {
+  [key: string]: TechnologiesProps;
+}
+
 export interface contactConfigProps {
   email: string;
   phone: string;

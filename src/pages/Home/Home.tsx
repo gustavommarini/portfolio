@@ -1,7 +1,7 @@
 import { FC, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import { Button } from '@/components';
+import { ButtonAnimated } from '@/components';
 import { ButtonType } from '@/components/Button/Button.types';
 import { useTypewriter } from '@/hooks/useTypewriter';
 import HomeImg from '../../assets/photos/home.jpg';
@@ -46,12 +46,15 @@ const Home: FC = () => {
           </h1>
           <p>{homeTranslation('description')}</p>
           <div className="action_btns">
-            <Button type={ButtonType.outlined} onClick={goToProfileAction}>
+            <ButtonAnimated
+              type={ButtonType.outlined}
+              onClick={goToProfileAction}
+            >
               {homeTranslation('main_btn')}
-            </Button>
-            <Button onClick={goToContactAction}>
+            </ButtonAnimated>
+            <ButtonAnimated onClick={goToContactAction}>
               {homeTranslation('secundary_btn')}
-            </Button>
+            </ButtonAnimated>
           </div>
         </div>
       </div>
