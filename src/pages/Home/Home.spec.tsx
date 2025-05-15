@@ -5,6 +5,7 @@ import {
   screen,
   fireEvent,
   waitFor,
+  act,
 } from '@testing-library/react';
 import { useTranslation } from 'react-i18next';
 import { PageWrapper } from '@/test-utils';
@@ -65,15 +66,25 @@ describe('Home', () => {
     );
 
     // Click profile button
-    fireEvent.click(screen.getByText(t.result.current.t('home:main_btn')));
-    jest.advanceTimersByTime(300); // Advance timers by animation duration
+    await act(async () => {
+      fireEvent.click(screen.getByText(t.result.current.t('home:main_btn')));
+    });
+    await act(async () => {
+      jest.advanceTimersByTime(300); // Advance timers by animation duration
+    });
     await waitFor(() => {
       expect(mockedUsedNavigate).toHaveBeenCalledWith('/about');
     });
 
     // Click contact button
-    fireEvent.click(screen.getByText(t.result.current.t('home:secundary_btn')));
-    jest.advanceTimersByTime(300); // Advance timers by animation duration
+    await act(async () => {
+      fireEvent.click(
+        screen.getByText(t.result.current.t('home:secundary_btn'))
+      );
+    });
+    await act(async () => {
+      jest.advanceTimersByTime(300); // Advance timers by animation duration
+    });
     await waitFor(() => {
       expect(mockedUsedNavigate).toHaveBeenCalledWith('/contact');
     });
