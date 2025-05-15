@@ -2,8 +2,8 @@ import { createContext, FC, useContext, useEffect } from 'react';
 import { ProfileData } from '@/models';
 import { ThemeContext } from '@/theme';
 import useApiHook from '@/hooks/useApiHook';
-import { Error } from '@/pages';
-import { Loading, ThemeButton } from '@/components';
+import { Error, Loading } from '@/pages';
+import { ThemeButton } from '@/components';
 import { DataContextProps, DataProviderProps } from './data-context.types';
 
 const DataContext = createContext<DataContextProps>({

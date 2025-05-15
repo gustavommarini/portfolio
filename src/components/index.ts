@@ -7,4 +7,4 @@ export * from './Toast';
 export * from './TitlePage';
 export * from './EducationSection';
 export * from './WorkCardItem';
-export * from './Loading';
+export * from './LoadingSpinner';
