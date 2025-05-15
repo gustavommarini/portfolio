@@ -23,6 +23,7 @@ For the useApiHook I took the idea from here:
 To upload a JSON file directly to firebase you can use the function `initializeProfileData` that you can find on the file `src/services/fillFirebaseFromJSON.ts` that will take the info from `data_content.ts` under the same folder.
 
 [![CV portfolio](src/assets/screenshot.jpg)](https://gmm-portfolio.netlify.app)
+[![CV portfolio](src/assets/404.jpg)](https://gmm-portfolio.netlify.app)
 
 Details:
 
