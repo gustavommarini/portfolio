@@ -9,6 +9,7 @@
  * MEDIA QUERIES 
  * GRID SYSTEM
  * FLOATING BUTTON
+ * TITLE META TAGS
  *
 **/
 
@@ -147,3 +148,26 @@ $default_container-padding-right: 15px;
 }
 
 /*=====  End of FLOATING BUTTON  ======*/
+
+/*=============================================
+=            TITLE META TAGS            =
+=============================================*/
+@mixin meta-title {
+  &:before,
+  &:after {
+    background-color: var(--text-highlighted);
+    position: absolute;
+    content: '';
+    height: 2px;
+    top: 11px;
+    width: 30px;
+  }
+  &:before {
+    right: 0;
+  }
+  &:after {
+    left: 0;
+  }
+}
+
+/*=====  End of TITLE META TAGS  ======*/
