@@ -17,7 +17,8 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   font-family: $font-primary;
   p,
   span,
@@ -93,6 +94,11 @@ section {
   p {
     hyphens: auto;
     word-break: break-word;
+  }
+  h5 {
+    padding: 8px 0;
+    text-transform: uppercase;
+    font-family: $font-secundary;
   }
   .separator {
     display: inline-block;
