@@ -10,7 +10,7 @@
 }
 
 #main-navmenu:checked ~ .wrapper-navmenu {
-  clip-path: circle(75%);
+  clip-path: circle(150vmax at calc(100% - 45px) 45px);
 }
 #main-navmenu:checked ~ .menu-btn {
   i:before {
