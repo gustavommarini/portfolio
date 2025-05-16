@@ -1,0 +1,26 @@
+{
+  "title": "sobre <span>mi</span>",
+  "subtitle": "Desarrollo soluciones digitales con pasión",
+  "description": {
+    "title": "Soy un desarrollador Web/App, especializado en JavaScript, React & React Native",
+    "subtitle": "Desarrollador apasionado con más de 10 años de experiencia, especializado en desarrollo Web y Móvil moderno. Me centro en JavaScript, TypeScript, React y React Native, con un fuerte énfasis en la arquitectura limpia y el rendimiento. He contribuido a proyectos complejos implementando soluciones escalables usando GraphQL, Redux, Styled Components, Nx, Lerna, feature flags con Split, testing con Jest y Detox, y trabajado con herramientas como Amplitude, Retool, y Notion para seguimiento y documentación. Aprendiendo constantemente tecnologías y herramientas de vanguardia. Soy un jugador de equipo autodidacta, proactivo, versátil y con una actitud muy positiva, siempre abrazando metodologías ágiles y comprometido con la entrega de código de alta calidad."
+  },
+  "details": {
+    "birthday": "Cumpleaños",
+    "birthday_data": "11 de Noviembre",
+    "residence": "Residencia",
+    "residence_data": "Salerno, Italia",
+    "languages": "Idiomas",
+    "languages_data": "Español, Ingles e Italiano",
+    "experience": "Experiencia",
+    "nationality": "Nacionalidad",
+    "freelance": "Freelance",
+    "freelance_data": "Disponible",
+    "phone": "Telefono"
+  },
+  "btn_dwn_cv": "Descargar CV",
+  "edu_section_title": "Educacion",
+  "course_section_title": "Cursos",
+  "lang_section_title": "Idiomas",
+  "title-work": "experiencia laboral"
+}
