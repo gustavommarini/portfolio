@@ -5,7 +5,9 @@ import './language/i18n.ts';
 import { Routes } from './router';
 import { ThemeProvider } from './theme';
 import { DataProvider } from './context/dataContext.tsx';
+import { consoleCopyrightMessage } from './console-message.ts';
 
+consoleCopyrightMessage();
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider>
