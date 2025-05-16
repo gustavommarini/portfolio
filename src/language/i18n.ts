@@ -27,7 +27,6 @@ i18n
   .use(LanguageDetector) // Detect user language
   .use(initReactI18next) // Pass i18n instance to react-i18next
   .init({
-    lng: AvailableLanguages.en, // Set the initial language of the App
     fallbackLng: AvailableLanguages.en, // Default language
     supportedLngs: [
       AvailableLanguages.en,
