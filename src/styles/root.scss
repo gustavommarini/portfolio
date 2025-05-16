@@ -22,6 +22,7 @@
   =============================================*/
   --gmm-bg: #{$color-background};
   --gmm-primary: #{$color-primary};
+  --gmm-terciary: #{$color-terciary};
   --gmm-text-base: #{$white};
   --gmm-btn: #{$white};
   --gmm-btn-outlined: #{$black};
@@ -38,12 +39,13 @@
   --gmm-overlay-bg2: #{$color-overlay-bg2};
   --gmm-overlay-bg3: #{$color-overlay-bg3};
   --gmm-overlay-bg4: #{$color-overlay-bg4};
+  --gmm-overlay-bg5: #{$color-overlay-bg5};
 
   /*=============================================
   =            Light colors            =
   =============================================*/
   --gmm-bg-light: #{$color-background-light};
-  --gmm-primary-light: #{$red};
+  --gmm-primary-light: #{$color-secundary};
   --gmm-text-base-light: #{$black};
   --gmm-btn-light: #{$black};
   --gmm-btn-outlined-light: #{$white};
@@ -60,6 +62,7 @@
   --gmm-overlay-bg2-light: #{$color-overlay-bg2-light};
   --gmm-overlay-bg3-light: #{$color-overlay-bg3-light};
   --gmm-overlay-bg4-light: #{$color-overlay-bg4-light};
+  --gmm-overlay-bg5-light: #{$color-overlay-bg5-light};
 }
 
 /*=============================================
@@ -93,11 +96,13 @@
   --text-base: var(--gmm-text-base);
   --text-highlighted: var(--gmm-primary);
   --text-light-highlight: var(--gmm-primary-smooth);
+  --text-subtitle: var(--gmm-text-base);
   /*  Home colors  */
   --overlay-bg1: var(--gmm-overlay-bg1);
   --overlay-bg2: var(--gmm-overlay-bg2);
   --overlay-bg3: var(--gmm-overlay-bg3);
   --overlay-bg4: var(--gmm-overlay-bg4);
+  --overlay-dark: var(--gmm-overlay-bg5);
   //ABOUT
   --img-square: var(--gmm-primary);
   --about-list-title: var(--gmm-text-base);
@@ -150,11 +155,13 @@
   --text-base: var(--gmm-text-base-light);
   --text-highlighted: var(--gmm-primary-light);
   --text-light-highlight: var(--gmm-red-smooth);
+  --text-subtitle: var(--gmm-terciary);
   /*  Home colors  */
   --overlay-bg1: var(--gmm-overlay-bg1-light);
   --overlay-bg2: var(--gmm-overlay-bg2-light);
   --overlay-bg3: var(--gmm-overlay-bg3-light);
   --overlay-bg4: var(--gmm-overlay-bg4-light);
+  --overlay-dark: var(--gmm-overlay-bg5-light);
   //ABOUT
   --img-square: var(--gmm-primary-light);
   --about-list-title: var(--gmm-text-base-light);

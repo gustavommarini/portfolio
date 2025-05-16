@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser';
 import { contactConfig, PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from '@/services';
 import { useToast } from '@/hooks/useToast';
 import { useForm } from '@/hooks/useForm';
-import { Button, TitlePage, Toast, ToastTypes } from '@/components';
+import { Button, TitlePageV2, Toast, ToastTypes } from '@/components';
 import './contact.scss';
 
 const Contact: FC = () => {
@@ -52,7 +52,7 @@ const Contact: FC = () => {
   return (
     <section id="contact" className="contact">
       <div className="contact-section container-xxl">
-        <TitlePage
+        <TitlePageV2
           title={contactTranslation('title')}
           subtitle={contactTranslation('subtitle')}
         />
