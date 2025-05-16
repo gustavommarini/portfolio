@@ -17,6 +17,7 @@ To connect with emailjs on the contact form you can follow this guide:
 - [Emailjs on react](https://medium.com/@alagappan.dev/using-emailjs-with-react-to-build-a-contact-form-for-your-website-5040966a814)
 
 [![CV portfolio](src/assets/screenshot.jpg)](https://gmm-portfolio.netlify.app)
+[![CV portfolio](src/assets/404.jpg)](https://gmm-portfolio.netlify.app)
 
 Details:
 
