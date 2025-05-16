@@ -22,8 +22,17 @@ For the useApiHook I took the idea from here:
 
 To upload a JSON file directly to firebase you can use the function `initializeProfileData` that you can find on the file `src/services/fillFirebaseFromJSON.ts` that will take the info from `data_content.ts` under the same folder.
 
-[![CV portfolio](src/assets/screenshot.jpg)](https://gmm-portfolio.netlify.app)
-[![CV portfolio](src/assets/404.jpg)](https://gmm-portfolio.netlify.app)
+There is a button on the left bottom corner to change th theme
+[![CV portfolio](src/assets/screenshot1.jpg)](https://gmm-portfolio.netlify.app)
+[![CV portfolio](src/assets/screenshot2.jpg)](https://gmm-portfolio.netlify.app)
+On the information section if the user clicks on the Download CV button the browser print screen will be prompt using custom print css properties.
+[![CV portfolio](src/assets/screenshot3a.jpg)](https://gmm-portfolio.netlify.app)
+The work experience menu has a dropdown that shows the technologic stack and the deve environment
+[![CV portfolio](src/assets/screenshot3b.jpg)](https://gmm-portfolio.netlify.app)
+There is a custom Error page
+[![CV portfolio](src/assets/screenshot4.jpg)](https://gmm-portfolio.netlify.app)
+And finally the contact form
+[![CV portfolio](src/assets/screenshot5.jpg)](https://gmm-portfolio.netlify.app)
 
 Details:
 
