@@ -10,5 +10,7 @@
   "description": "Soy desarrollador freelance con base en Salerno, Italia. Me enfoco en crear aplicaciones web funcionales, rápidas y accesibles, con una atención especial a los detalles visuales desde un enfoque práctico y minimalista.",
   "main_btn": "Sobre Mi",
   "secundary_btn": "Contactame",
-  "follow_me": "Sigueme"
+  "follow_me": "Sigueme",
+  "generic_error_title": "¡Ups! Algo no salió como esperábamos.",
+  "wrong_route_error": "Pero no te preocupes, no fue culpa tuya (probablemente). Intenta volver atrás, recargar la página o simplemente culpar a JavaScript. Yo también lo hago a veces."
 }

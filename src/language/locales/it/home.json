@@ -10,5 +10,7 @@
   "description": "Sono uno sviluppatore freelance con base a Salerno. Realizzo applicazioni web funzionali, rapide e accessibili, con un tocco estetico semplice e orientato all’usabilità.",
   "main_btn": "Chi Sono",
   "secundary_btn": "Contattami",
-  "follow_me": "Seguitemi"
+  "follow_me": "Seguitemi",
+  "generic_error_title": "Ops! Qualcosa è andato storto.",
+  "wrong_route_error": "Ma non preoccuparti, non è colpa tua (forse). Prova a tornare indietro, ricaricare la pagina o... dare la colpa a JavaScript. Anche io lo faccio, funziona quasi sempre!"
 }
