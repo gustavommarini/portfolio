@@ -4,7 +4,11 @@ import './loading.scss';
 
 const Loading: FC = () => {
   return (
-    <section id="loading-page" className="loading-page container-xxl">
+    <section
+      id="loading-page"
+      data-testid="loading-page"
+      className="loading-page container-xxl"
+    >
       <LoadingSpinner />
     </section>
   );

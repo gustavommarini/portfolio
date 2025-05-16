@@ -9,8 +9,7 @@ i18n
   .use(LanguageDetector) // Detect user language
   .use(initReactI18next) // Connect with React
   .init({
-    lng: AvailableLanguages.en,
-    fallbackLng: AvailableLanguages.en,
+    fallbackLng: AvailableLanguages.en, // Default language
     supportedLngs: [
       AvailableLanguages.en,
       AvailableLanguages.es,

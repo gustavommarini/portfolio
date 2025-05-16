@@ -11,7 +11,11 @@ const Error: FC<ErrorProps> = ({ customErrorMsg = '' }) => {
   const { t: homeTranslation } = useTranslation(['home']);
 
   return (
-    <section id="error-page" className="error-page container-xxl">
+    <section
+      id="error-page"
+      data-testid="error-page"
+      className="error-page container-xxl"
+    >
       <h1>404</h1>
       <div className="error-image">
         <div className="image-container">
