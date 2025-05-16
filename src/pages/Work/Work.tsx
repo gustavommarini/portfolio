@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
-import { TitlePage, WorkCardItem } from '@/components';
+import { TitlePageV2, WorkCardItem } from '@/components';
 import { jobInfo, skills } from '@/services';
 import { SkillItem } from './components';
 import './work.scss';
@@ -10,7 +10,7 @@ const Work: FC = () => {
 
   return (
     <section id="work" className="work container-xxl">
-      <TitlePage
+      <TitlePageV2
         title={workTranslation('title')}
         subtitle={workTranslation('subtitle')}
       />
