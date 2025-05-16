@@ -303,6 +303,7 @@ const jobInfo = [
       technologies.eslint,
       technologies.prettier,
       technologies.git,
+      technologies.sublimeText,
       technologies.vscode,
     ],
   },

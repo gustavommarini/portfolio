@@ -35,7 +35,12 @@ $color-primary: #f3e156;
 $color-primary-smooth: #f0e7a6;
 $color-print-primary: #fed700;
 $color-background: #111111;
-$color-background-light: #f8f6ea;
+// $color-background-light: #eff3dd;
+// $color-secundary: #495632;
+// $color-terciary: #bcc163;
+$color-background-light: #fef9f3;
+$color-secundary: #ff8f32;
+$color-terciary: #424242;
 $orange: #ff8f32;
 $orange-light: #fca900;
 $red: #fa644d;
@@ -170,11 +175,13 @@ $color-overlay-bg1: #090601;
 $color-overlay-bg2: rgba(1, 2, 18, 0.44);
 $color-overlay-bg3: rgba(9, 6, 1, 0.96);
 $color-overlay-bg4: #010212;
+$color-overlay-bg5: rgba(9, 6, 1, 0.812);
 //Overlay
 $color-overlay-bg1-light: #fdf8f0;
 $color-overlay-bg2-light: rgba(236, 237, 245, 0.44);
 $color-overlay-bg3-light: rgba(253, 248, 239, 0.96);
 $color-overlay-bg4-light: #ecedf4;
+$color-overlay-bg5-light: rgba(248, 246, 234, 0.7);
 
 /*=============================================
 =            TYPOGRAPHY            =
@@ -206,6 +213,16 @@ $fs-md: 1.125rem; //18px
 $fs-lg: 1.5rem; //24px
 $fs-xl: 2rem; //32px
 $fs-xxl: 2.625rem; //42px
+$fs-xxxl: 3.125rem; //50px
+
+/*----------  Title sizes  ----------*/
+$ts-xxs: 50px;
+$ts-xs: 70px;
+$ts-sm: 80px;
+$ts-md: 120px;
+$ts-lg: 150px;
+$ts-xl: 230px;
+$ts-xxl: 400px;
 
 /*----------  Menu & Icon sizes  ----------*/
 $is-normal: 1.125rem; //18px
@@ -284,5 +301,6 @@ $columns: (
 =============================================*/
 $font-typewriter-size: 42px;
 $font-typewriter-size-cursor: 37px;
+$font-typewriter-size-cursor-gmm-style: 30px;
 
 /*=====  End of TYPEWRITTER  ======*/

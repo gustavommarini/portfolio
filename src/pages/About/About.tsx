@@ -4,6 +4,7 @@ import {
   Button,
   EducationSection,
   TitlePage,
+  TitlePageV2,
   WorkCardItem,
 } from '@/components';
 import { ThemeContext } from '@/theme';
@@ -24,7 +25,7 @@ const About: FC = () => {
   return (
     <section id="about" className="about container-xxl">
       <div className="no-print">
-        <TitlePage
+        <TitlePageV2
           title={aboutTranslation('title')}
           subtitle={aboutTranslation('subtitle')}
         />

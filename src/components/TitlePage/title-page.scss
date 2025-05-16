@@ -8,9 +8,25 @@
     position: relative;
     margin: 19px 0px 10px;
     text-transform: uppercase;
+    font-size: $fs-xxxl;
     span {
       color: var(--text-highlighted);
       font-weight: 700;
+    }
+  }
+  &.page-version-two {
+    position: relative;
+    .first-h1 {
+      transform: scale(1.2, 1.5);
+      padding-bottom: 30px;
+    }
+    .second-h1 {
+      position: absolute;
+      top: 30px;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      color: var(--text-highlighted);
     }
   }
 }

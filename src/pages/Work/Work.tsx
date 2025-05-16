@@ -1,6 +1,6 @@
 import React, { FC, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
-import { TitlePage, WorkCardItem } from '@/components';
+import { TitlePageV2, WorkCardItem } from '@/components';
 import { SkillItem } from './components';
 import './work.scss';
 import { DataContext } from '@/context/dataContext';
@@ -11,7 +11,7 @@ const Work: FC = () => {
 
   return (
     <section id="work" className="work container-xxl">
-      <TitlePage
+      <TitlePageV2
         title={workTranslation('title')}
         subtitle={workTranslation('subtitle')}
       />
