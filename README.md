@@ -26,13 +26,13 @@ There is a button on the left bottom corner to change th theme
 [![CV portfolio](src/assets/screenshot1.jpg)](https://gmm-portfolio.netlify.app)
 [![CV portfolio](src/assets/screenshot2.jpg)](https://gmm-portfolio.netlify.app)
 On the information section if the user clicks on the Download CV button the browser print screen will be prompt using custom print css properties.
-[![CV portfolio](src/assets/screenshot3a.jpg)](https://gmm-portfolio.netlify.app)
+[![CV portfolio](src/assets/screenshot3a.jpg)](https://gmm-portfolio.netlify.app/about)
 The work experience menu has a dropdown that shows the technologic stack and the deve environment
-[![CV portfolio](src/assets/screenshot3b.jpg)](https://gmm-portfolio.netlify.app)
+[![CV portfolio](src/assets/screenshot3b.jpg)](https://gmm-portfolio.netlify.app/work-experience)
 There is a custom Error page
-[![CV portfolio](src/assets/screenshot4.jpg)](https://gmm-portfolio.netlify.app)
+[![CV portfolio](src/assets/screenshot4.jpg)](https://gmm-portfolio.netlify.app/wrong-url)
 And finally the contact form
-[![CV portfolio](src/assets/screenshot5.jpg)](https://gmm-portfolio.netlify.app)
+[![CV portfolio](src/assets/screenshot5.jpg)](https://gmm-portfolio.netlify.app/contact)
 
 Details:
 
