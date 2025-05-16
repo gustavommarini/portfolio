@@ -365,6 +365,7 @@ const jobInfo = [
       technologies.eslint,
       technologies.prettier,
       technologies.git,
+      technologies.sublimeText,
       technologies.vscode,
     ],
   },
@@ -383,7 +384,11 @@ const jobInfo = [
       technologies.sass,
       technologies.restApi,
     ],
-    codingEnvironment: [technologies.windows, technologies.vscode],
+    codingEnvironment: [
+      technologies.windows,
+      technologies.vscode,
+      technologies.sublimeText,
+    ],
   },
   {
     id: '6',
@@ -405,11 +410,7 @@ const jobInfo = [
       technologies.drupal,
       technologies.restApi,
     ],
-    codingEnvironment: [
-      technologies.windows,
-      technologies.sublimeText,
-      technologies.vscode,
-    ],
+    codingEnvironment: [technologies.windows, technologies.sublimeText],
   },
   {
     id: '7',
