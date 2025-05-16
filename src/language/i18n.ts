@@ -15,7 +15,7 @@ i18n
       AvailableLanguages.es,
       AvailableLanguages.it,
     ],
-    debug: true,
+    debug: false,
     interpolation: {
       escapeValue: false, // React already protects from XSS
     },
