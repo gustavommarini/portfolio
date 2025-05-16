@@ -65,6 +65,6 @@ describe('Error Page', () => {
 
     const errorSection = screen.getByTestId('error-page');
     expect(errorSection).toBeInTheDocument();
-    expect(errorSection).toHaveClass('error-page', 'container-xxl');
+    expect(errorSection).toHaveClass('error-page');
   });
 });

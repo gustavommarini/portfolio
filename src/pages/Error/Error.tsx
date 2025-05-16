@@ -11,24 +11,22 @@ const Error: FC<ErrorProps> = ({ customErrorMsg = '' }) => {
   const { t: homeTranslation } = useTranslation(['home']);
 
   return (
-    <section
-      id="error-page"
-      data-testid="error-page"
-      className="error-page container-xxl"
-    >
-      <h1>404</h1>
-      <div className="error-image">
-        <div className="image-container">
-          {theme === 'light-theme' ? (
-            <img src={Error404Light} alt="profile-image-light" />
-          ) : (
-            <img src={Error404} alt="profile-image" />
-          )}
+    <section id="error-page" data-testid="error-page" className="error-page">
+      <div className="main-title-text">
+        <h1>404</h1>
+        <div className="title-home-style-image">
+          <div className="image-container">
+            {theme === 'light-theme' ? (
+              <img src={Error404Light} alt="profile-image-light" />
+            ) : (
+              <img src={Error404} alt="profile-image" />
+            )}
+          </div>
         </div>
+        <h2>
+          Erro<span>r</span>
+        </h2>
       </div>
-      <h2>
-        Erro<span>r</span>
-      </h2>
       {!customErrorMsg ? (
         <div className="error-description portfolio-row">
           <p className="error-en portfolio-col-4">
@@ -49,7 +47,7 @@ const Error: FC<ErrorProps> = ({ customErrorMsg = '' }) => {
           <a href="mailto:gustavommarini@gmail.com">gustavommarini@gmail.com</a>
         </div>
       ) : (
-        <div className="error-custom-description">
+        <div className="title-home-style-custom-description">
           <h3>{homeTranslation('generic_error_title')}</h3>
           <p className="custom-text-error">{homeTranslation(customErrorMsg)}</p>
         </div>

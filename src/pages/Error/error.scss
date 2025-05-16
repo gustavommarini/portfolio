@@ -1,19 +1,9 @@
 @use '../../styles/mixins.scss' as *;
 
 .error-page {
-  text-align: center;
-  text-transform: uppercase;
+  @include homeStyleTitle;
   h1 {
-    font-size: 150px;
-    transform: scale(1, 1.5);
-    color: var(--text-highlighted);
-  }
-  h2 {
-    font-size: 70px;
-    span {
-      transform: rotate(-15deg) scale(-1, 1);
-      display: inline-block;
-    }
+    color: $color-error-light;
   }
   a {
     text-transform: uppercase;
@@ -21,23 +11,11 @@
     text-decoration: none;
     font-size: $fs-md;
   }
-  .error-image {
-    @include mainImageWithBorder;
+  .title-home-style-image {
     &::before {
-      z-index: 0;
+      border-color: $color-error-light;
     }
-    .image-container img {
-      z-index: 0;
-      position: relative;
-    }
-    position: absolute;
-    margin: 0 auto;
-    right: 0;
-    top: 12%;
-    left: 8%;
-    max-width: 130px;
   }
-
   .error-description {
     display: flex;
     justify-content: center;
@@ -64,7 +42,7 @@
     &::before {
       position: absolute;
       z-index: -1;
-      font-size: 90px;
+      font-size: $ts-sm;
       opacity: 0.3;
       margin: 0 auto;
       top: -15px;
@@ -74,61 +52,11 @@
   }
 }
 
-.error-custom-description {
-  padding-bottom: 20px;
-  padding-top: 30px;
-  position: relative;
-  .custom-text-error {
-    font-size: $fs-md;
-    text-transform: initial;
-    padding: 10px 10% 0 10%;
-    max-width: 900px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    position: relative;
-  }
-}
-
-@include mobile {
-  .error-page {
-    h1 {
-      font-size: 230px;
-    }
-    h2 {
-      font-size: 80px;
-    }
-    .error-image {
-      max-width: 200px;
-      top: 10%;
-      left: 5%;
-    }
-  }
-}
-
 @include smallIntermediate {
   .error-page {
-    .error-image {
-      left: 3%;
-    }
-  }
-  .error-description {
-    column-gap: 0;
-    row-gap: 0;
-  }
-}
-
-@include tablet {
-  .error-page {
-    h1 {
-      font-size: 400px;
-    }
-    h2 {
-      font-size: 120px;
-    }
-    .error-image {
-      max-width: 325px;
-      left: 0;
+    .error-description {
+      column-gap: 0;
+      row-gap: 0;
     }
   }
 }
