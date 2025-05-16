@@ -1,16 +1,8 @@
 import { BrowserRouter, Routes as AppRoutes, Route } from 'react-router-dom';
 import { HomeV2, About, Work, Contact, Error } from '../pages';
-import { LanguageMenu, Navbar, SocialIcons, ThemeButton } from '@/components';
-import { ThemeContext } from '@/theme';
-import { useContext, useEffect } from 'react';
+import { LanguageMenu, Navbar, SocialIcons } from '@/components';
 
 export const Routes = () => {
-  const { theme } = useContext(ThemeContext);
-
-  useEffect(() => {
-    document.body.className = theme;
-  }, [theme]);
-
   return (
     <main className="main-app">
       <BrowserRouter
@@ -32,7 +24,6 @@ export const Routes = () => {
         </AppRoutes>
         <SocialIcons />
         <LanguageMenu />
-        <ThemeButton />
       </BrowserRouter>
     </main>
   );

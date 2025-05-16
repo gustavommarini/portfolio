@@ -2,11 +2,21 @@ import { ReactNode } from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { ThemeContext } from '@/theme';
 import { ThemeContextProps } from '@/theme/theme.types';
+import { DataContext } from '@/context/dataContext';
+import {
+  skills,
+  contactConfig,
+  socialprofiles,
+  educationInfo,
+  jobInfo,
+} from '../services/data_content';
 import '../language/test-i18n';
+import { DataContextProps } from '@/context/data-context.types';
 
 interface PageWrapperProps {
   children: ReactNode;
   themeContext?: Partial<ThemeContextProps>;
+  dataContext?: Partial<DataContextProps>;
 }
 
 const defaultThemeContext = {
@@ -15,9 +25,22 @@ const defaultThemeContext = {
   toggleTheme: jest.fn(),
 };
 
+const defaultDataContext = {
+  data: {
+    skills,
+    contactConfig,
+    socialProfiles: socialprofiles,
+    educationInfo,
+    jobInfo,
+  },
+  loading: false,
+  error: null,
+};
+
 export const PageWrapper = ({
   children,
   themeContext = defaultThemeContext,
+  dataContext = defaultDataContext,
 }: PageWrapperProps) => {
   return (
     <MemoryRouter
@@ -27,7 +50,9 @@ export const PageWrapper = ({
       }}
     >
       <ThemeContext.Provider value={themeContext as ThemeContextProps}>
-        {children}
+        <DataContext.Provider value={dataContext as DataContextProps}>
+          {children}
+        </DataContext.Provider>
       </ThemeContext.Provider>
     </MemoryRouter>
   );

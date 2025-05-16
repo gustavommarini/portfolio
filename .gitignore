@@ -12,7 +12,18 @@ node_modules
 .env
 *.local
 
-/public/locales
+# Ignore everything in public/locales and its subfolders
+/public/locales/*
+# But don't ignore the subfolders where exceptions live
+!public/locales/en/
+!public/locales/es/
+# Still ignore everything inside those subfolders
+/public/locales/en/*
+/public/locales/es/*
+# Except the specific files we want to track
+# I need these files for testing purposes
+!public/locales/en/home.json
+!public/locales/es/home.json
 
 # Editor directories and files
 .vscode/*

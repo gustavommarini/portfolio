@@ -8,8 +8,8 @@ import {
   act,
 } from '@testing-library/react';
 import { useTranslation } from 'react-i18next';
-import { PageWrapper } from '@/test-utils';
 import '@/test-utils/envMock';
+import { PageWrapper } from '@/test-utils';
 import Home from './Home';
 import HomeImg from '../../assets/photos/home.jpg';
 import HomeImgLight from '../../assets/photos/home-light.jpg';

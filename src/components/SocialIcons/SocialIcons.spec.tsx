@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import '@/test-utils/envMock';
 import { socialprofiles } from '@/services';
 import { SocialIcons } from './SocialIcons';
+import { PageWrapper } from '@/test-utils';
 
 // Mock the translation hook
 jest.mock('react-i18next', () => ({
@@ -23,7 +24,11 @@ describe('SocialIcons', () => {
   });
 
   test('renders all social profile links', () => {
-    render(<SocialIcons />);
+    render(
+      <PageWrapper>
+        <SocialIcons />
+      </PageWrapper>
+    );
 
     // Check if all social profiles are rendered
     Object.entries(socialprofiles).forEach(([platform]) => {
@@ -36,7 +41,11 @@ describe('SocialIcons', () => {
   });
 
   test('social links have correct href attributes', () => {
-    render(<SocialIcons />);
+    render(
+      <PageWrapper>
+        <SocialIcons />
+      </PageWrapper>
+    );
 
     Object.entries(socialprofiles).forEach(([platform, url]) => {
       const link = screen.getByRole('link', {
@@ -47,7 +56,11 @@ describe('SocialIcons', () => {
   });
 
   test('renders social icons with correct classes', () => {
-    render(<SocialIcons />);
+    render(
+      <PageWrapper>
+        <SocialIcons />
+      </PageWrapper>
+    );
 
     Object.entries(socialprofiles).forEach(([platform]) => {
       const link = screen.getByRole('link', {

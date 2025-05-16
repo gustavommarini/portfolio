@@ -1,4 +1,5 @@
 import { renderHook } from '@testing-library/react';
+import '@/test-utils/envMock';
 import { advanceTimersByNTimes } from '@/test-utils';
 import { useTypewriter } from './useTypewriter';
 

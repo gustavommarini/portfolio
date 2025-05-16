@@ -8,7 +8,7 @@ import {
   WorkCardItem,
 } from '@/components';
 import { ThemeContext } from '@/theme';
-import { contactConfig, educationInfo, jobInfo } from '@/services';
+import { DataContext } from '@/context/dataContext';
 import ProfileImage from '../../assets/photos/about.jpg';
 import ProfileImageLight from '../../assets/photos/about-light.jpg';
 import './about.scss';
@@ -17,6 +17,7 @@ import './print.scss';
 const About: FC = () => {
   const { t: aboutTranslation } = useTranslation(['about']);
   const { theme } = useContext(ThemeContext);
+  const { data } = useContext(DataContext);
   const downloadCVAction = () => {
     window.print();
   };
@@ -66,11 +67,11 @@ const About: FC = () => {
                   </li>
                   <li className="hidden-col">
                     <span>Email:</span>
-                    {contactConfig.email}
+                    {data?.contactConfig.email}
                   </li>
                   <li className="hidden-col">
                     <span>Web:</span>
-                    {contactConfig.site}
+                    {data?.contactConfig.site}
                   </li>
                 </ul>
               </div>
@@ -89,7 +90,7 @@ const About: FC = () => {
                   </li>
                   <li className="hidden-col">
                     <span>{aboutTranslation('details.phone')}:</span>
-                    {contactConfig.phone_formated}
+                    {data?.contactConfig.phone_formated}
                   </li>
                 </ul>
               </div>
@@ -105,7 +106,7 @@ const About: FC = () => {
           <h2>{aboutTranslation('title-work')}</h2>
         </div>
         <div className="portfolio-row experience-section">
-          {jobInfo.map((item) => (
+          {data?.jobInfo.map((item) => (
             <React.Fragment key={item.id}>
               <WorkCardItem showExtraSection={false} workItem={item} />
             </React.Fragment>
@@ -115,20 +116,20 @@ const About: FC = () => {
       <div className="education-section">
         <EducationSection
           title={aboutTranslation('edu_section_title')}
-          eduArray={educationInfo.education}
+          eduArray={data?.educationInfo.education || []}
         />
       </div>
       <div className="courses-section">
         <EducationSection
           title={aboutTranslation('course_section_title')}
-          eduArray={educationInfo.courses}
+          eduArray={data?.educationInfo.courses || []}
           useBookIcon
         />
       </div>
       <div className="languages-section">
         <EducationSection
           title={aboutTranslation('lang_section_title')}
-          eduArray={educationInfo.languages}
+          eduArray={data?.educationInfo.languages || []}
         />
       </div>
     </section>
