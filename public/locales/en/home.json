@@ -12,5 +12,7 @@
   "secundary_btn": "Get in Touch",
   "follow_me": "Follow Me",
   "generic_error_title": "Oops! Something went wrong.",
-  "wrong_route_error": "But don’t worry, it’s probably not your fault. Try going back, refreshing the page, or just blame JavaScript. That’s what I usually do, and it works 30% of the time."
+  "generic_error": "But don’t worry, it’s probably not your fault. Try going back, refreshing the page, or just blame JavaScript. That’s what I usually do, and it works 30% of the time.",
+  "wrong_route_error_title": "Oops! Looks like you got lost",
+  "wrong_route_error": "The page you are looking for is not available or doesn’t exist. Head back to the homepage and keep exploring the site. I swear the rest of the code works!"
 }

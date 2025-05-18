@@ -1,3 +1,4 @@
 export interface ErrorProps {
-  customErrorMsg?: string;
+  errorCode?: number;
+  errorMsg?: string;
 }

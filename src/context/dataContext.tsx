@@ -3,7 +3,7 @@ import { ProfileData } from '@/models';
 import { ThemeContext } from '@/theme';
 import useApiHook from '@/hooks/useApiHook';
 import { Error, Loading } from '@/pages';
-import { ThemeButton } from '@/components';
+import { LanguageMenu, ThemeButton } from '@/components';
 import { DataContextProps, DataProviderProps } from './data-context.types';
 
 const DataContext = createContext<DataContextProps>({
@@ -27,8 +27,9 @@ const DataProvider: FC<DataProviderProps> = ({ children }) => {
   if (error) {
     return (
       <>
-        <Error />
+        <Error errorCode={error.code} errorMsg={error.message} />
         <ThemeButton />
+        <LanguageMenu />
       </>
     );
   }
@@ -42,7 +43,6 @@ const DataProvider: FC<DataProviderProps> = ({ children }) => {
       }}
     >
       {children}
-      <ThemeButton />
     </DataContext.Provider>
   );
 };

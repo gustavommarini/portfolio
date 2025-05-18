@@ -1,25 +1,29 @@
 import { FC, useContext } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ThemeContext } from '@/theme';
-import Error404 from '../../assets/photos/404.jpg';
-import Error404Light from '../../assets/photos/404-light.jpg';
+import { ErrorMessages } from '@/hooks/hooks.types';
+import Wayna from '../../assets/wayna/wayna01-bn.jpg';
+import Wayna2Light from '../../assets/wayna/wayna03.jpg';
 import { ErrorProps } from './error.types';
 import './error.scss';
-import { useTranslation } from 'react-i18next';
 
-const Error: FC<ErrorProps> = ({ customErrorMsg = '' }) => {
+const Error: FC<ErrorProps> = ({
+  errorCode = 404,
+  errorMsg = ErrorMessages.NOT_FOUND,
+}) => {
   const { theme } = useContext(ThemeContext);
   const { t: homeTranslation } = useTranslation(['home']);
 
   return (
     <section id="error-page" data-testid="error-page" className="error-page">
       <div className="main-title-text">
-        <h1>404</h1>
-        <div className="title-home-style-image">
+        <h1>{errorCode}</h1>
+        <div className="title-home-style-image wide-img">
           <div className="image-container">
             {theme === 'light-theme' ? (
-              <img src={Error404Light} alt="profile-image-light" />
+              <img src={Wayna2Light} alt="profile-image-light" />
             ) : (
-              <img src={Error404} alt="profile-image" />
+              <img src={Wayna} alt="profile-image" />
             )}
           </div>
         </div>
@@ -27,31 +31,10 @@ const Error: FC<ErrorProps> = ({ customErrorMsg = '' }) => {
           Erro<span>r</span>
         </h2>
       </div>
-      {!customErrorMsg ? (
-        <div className="error-description portfolio-row">
-          <p className="error-en portfolio-col-4">
-            An error has occurred somewhere on the site. Please try again later.
-            If the error persists, please let me know at the following email.
-            Thank you very much
-          </p>
-          <p className="error-it portfolio-col-4">
-            Si è verificato un errore in qualche punto del sito. Riprovare più
-            tardi. Se l'errore persiste, vi prego di farmelo sapere al seguente
-            indirizzo e-mail. Grazie mille
-          </p>
-          <p className="error-es portfolio-col-4">
-            Ha ocurrido un error en algun lugar del sitio. Por favor vuelve a
-            intentar mas tarde. Si el error persiste, por favor, comunicamelo al
-            siguiente email. Muchas gracias
-          </p>
-          <a href="mailto:gustavommarini@gmail.com">gustavommarini@gmail.com</a>
-        </div>
-      ) : (
-        <div className="title-home-style-custom-description">
-          <h3>{homeTranslation('generic_error_title')}</h3>
-          <p className="custom-text-error">{homeTranslation(customErrorMsg)}</p>
-        </div>
-      )}
+      <div className="title-home-style-custom-description">
+        <h3>{homeTranslation(`${errorMsg}_title`)}</h3>
+        <p className="custom-text-error">{homeTranslation(errorMsg)}</p>
+      </div>
     </section>
   );
 };

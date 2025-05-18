@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes as AppRoutes, Route } from 'react-router-dom';
+import { LanguageMenu, Navbar, SocialIcons, ThemeButton } from '@/components';
 import { HomeV2, About, Work, Contact, Error } from '../pages';
-import { LanguageMenu, Navbar, SocialIcons } from '@/components';
 
 export const Routes = () => {
   return (
@@ -17,12 +17,10 @@ export const Routes = () => {
           <Route path="/about" element={<About />} />
           <Route path="/work-experience" element={<Work />} />
           <Route path="/contact" element={<Contact />} />
-          <Route
-            path="*"
-            element={<Error customErrorMsg="wrong_route_error" />}
-          />
+          <Route path="*" element={<Error />} />
         </AppRoutes>
         <SocialIcons />
+        <ThemeButton />
         <LanguageMenu />
       </BrowserRouter>
     </main>

@@ -12,5 +12,7 @@
   "secundary_btn": "Contactame",
   "follow_me": "Sigueme",
   "generic_error_title": "¡Ups! Algo no salió como esperábamos.",
-  "wrong_route_error": "Pero no te preocupes, no fue culpa tuya (probablemente). Intenta volver atrás, recargar la página o simplemente culpar a JavaScript. Yo también lo hago a veces."
+  "generic_error": "Pero no te preocupes, no fue culpa tuya (probablemente). Intenta volver atrás, recargar la página o simplemente culpar a JavaScript. Yo también lo hago a veces.",
+  "wrong_route_error_title": "¡Ups! Parece que le erraste de lugar",
+  "wrong_route_error": "La página que estás buscando no está disponible o no existe. Volvé al inicio y seguí navegando por el sitio. ¡Prometo que el resto del código está en orden!"
 }
