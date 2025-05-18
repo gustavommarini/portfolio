@@ -27,6 +27,8 @@
       left: 0;
       right: 0;
       color: var(--text-highlighted);
+      -webkit-text-stroke: 2px var(--body-bg);
+      -webkit-text-fill-color: var(--text-highlighted);
     }
   }
 }

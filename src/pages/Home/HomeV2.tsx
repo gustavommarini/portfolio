@@ -2,8 +2,7 @@ import { FC, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ThemeContext } from '@/theme';
 import { useTypewriter } from '@/hooks/useTypewriter';
-import Error404 from '../../assets/photos/404.jpg';
-import Error404Light from '../../assets/photos/404-light.jpg';
+import HomePic from '../../assets/photos/home-pic-01.jpg';
 import './home-v2.scss';
 
 const HomeV2: FC = () => {
@@ -21,12 +20,10 @@ const HomeV2: FC = () => {
       <div className="main-title-text">
         <h1>Gus</h1>
         <div className="title-home-style-image">
-          <div className="image-container">
-            {theme === 'light-theme' ? (
-              <img src={Error404Light} alt="profile-image-light" />
-            ) : (
-              <img src={Error404} alt="profile-image" />
-            )}
+          <div
+            className={`image-container${theme === 'dark-theme' ? ' bnw-bg' : ''}`}
+          >
+            <img src={HomePic} alt="profile-image" />
           </div>
         </div>
         <h2>

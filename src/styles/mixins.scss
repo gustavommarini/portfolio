@@ -11,6 +11,7 @@
  * FLOATING BUTTON
  * TITLE META TAGS
  * WRAP BORDER IMAGES
+ * HOME AND ERROR IMAGE TITLE
  *
 **/
 
@@ -195,6 +196,9 @@ $default_container-padding-right: 15px;
 
 /*=====  End of WRAP BORDER IMAGES  ======*/
 
+/*=============================================
+=         HOME AND ERROR IMAGE TITLE         =
+=============================================*/
 @mixin homeStyleTitle {
   overflow: hidden;
   text-align: center;
@@ -227,12 +231,19 @@ $default_container-padding-right: 15px;
   }
   .title-home-style-image {
     @include mainImageWithBorder;
+    &.wide-img {
+      max-width: 250px;
+      top: 30%;
+    }
     &::before {
       z-index: 0;
     }
-    .image-container img {
-      z-index: 0;
-      position: relative;
+
+    .image-container {
+      img {
+        z-index: 0;
+        position: relative;
+      }
     }
     position: absolute;
     margin: 0 auto;
@@ -274,6 +285,10 @@ $default_container-padding-right: 15px;
       right: 0;
       left: 0%;
       top: -5%;
+      &.wide-img {
+        max-width: 350px;
+        top: 25%;
+      }
     }
   }
 
@@ -300,6 +315,12 @@ $default_container-padding-right: 15px;
       max-width: 325px;
       left: 0;
       top: -3%;
+      &.wide-img {
+        max-width: 550px;
+        top: 20%;
+      }
     }
   }
 }
+
+/*=====  End of HOME AND ERROR IMAGE TITLE  ======*/
