@@ -25,8 +25,10 @@ export const TitlePageV2: FC<TitlePageProps> = ({ title, subtitle }) => {
   const { title1, title2 } = splitBySpanTag(title);
   return (
     <div className="page-title page-version-two">
-      <h1 className="first-h1">{title1}</h1>
-      <h1 className="second-h1">{title2}</h1>
+      <h1>
+        <div className="first-h1">{title1}</div>
+        <div className="second-h1">{title2}</div>
+      </h1>
       <span className="page-subtitle">{subtitle}</span>
     </div>
   );

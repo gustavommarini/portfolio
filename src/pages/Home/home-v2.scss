@@ -6,11 +6,6 @@
 
 .home-page {
   @include homeStyleTitle;
-  .image-container {
-    &.bnw-bg {
-      filter: grayscale(1) brightness(1.7) contrast(1.3);
-    }
-  }
 }
 
 // TYPEWRITTER
