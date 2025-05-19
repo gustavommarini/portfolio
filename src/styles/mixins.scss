@@ -241,6 +241,17 @@ $default_container-padding-right: 15px;
     top: -15%;
     left: 0;
     z-index: 3; // Above h2 but below span
+    &:hover {
+      .image-container {
+        filter: grayscale(1) brightness(2.2) contrast(1.3);
+        &.bnw-bg {
+          filter: none;
+        }
+        img {
+          transform: rotate(5deg);
+        }
+      }
+    }
     &.wide-img {
       max-width: 250px;
       top: 30%;
@@ -258,6 +269,7 @@ $default_container-padding-right: 15px;
       img {
         z-index: 3;
         position: relative;
+        transition: all 0.3s ease-in-out;
       }
     }
   }

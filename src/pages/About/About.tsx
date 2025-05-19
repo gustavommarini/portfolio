@@ -9,7 +9,7 @@ import {
 } from '@/components';
 import { ThemeContext } from '@/theme';
 import { DataContext } from '@/context/dataContext';
-import ProfileImage from '../../assets/photos/about.jpg';
+import ProfileImage from '../../assets/photos/about2.jpg';
 import ProfileImageLight from '../../assets/photos/about-light.jpg';
 import './about.scss';
 import './print.scss';
@@ -41,9 +41,17 @@ const About: FC = () => {
           <div className="profile-image portfolio-col-5">
             <div className="image-container">
               {theme === 'light-theme' ? (
-                <img src={ProfileImageLight} alt="profile-image-light" />
+                <img
+                  src={ProfileImageLight}
+                  className="image-about-light"
+                  alt="profile-image-light"
+                />
               ) : (
-                <img src={ProfileImage} alt="profile-image" />
+                <img
+                  src={ProfileImage}
+                  className="image-about"
+                  alt="profile-image"
+                />
               )}
             </div>
           </div>

@@ -8,6 +8,8 @@
   @include homeStyleTitle;
 }
 
+@include home-title-animation;
+
 // TYPEWRITTER
 @keyframes cursor-blink {
   0% {

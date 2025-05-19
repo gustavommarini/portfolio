@@ -15,6 +15,22 @@
   .image-container {
     @include mainImageWithBorder;
     max-width: 440px;
+    img {
+      transition: all 0.3s ease-in-out;
+      &.image-about {
+        filter: grayscale(1) brightness(1.2);
+      }
+    }
+    &:hover {
+      img.image-about {
+        transform: rotate(5deg);
+        filter: none;
+        &-light {
+          filter: grayscale(1) brightness(1.2);
+          transform: rotate(5deg);
+        }
+      }
+    }
   }
 }
 .basic-info-text {
