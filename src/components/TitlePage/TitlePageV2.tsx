@@ -24,12 +24,14 @@ const splitBySpanTag = (input: string) => {
 export const TitlePageV2: FC<TitlePageProps> = ({ title, subtitle }) => {
   const { title1, title2 } = splitBySpanTag(title);
   return (
-    <div className="page-title page-version-two">
-      <h1>
-        <div className="first-h1">{title1}</div>
-        <div className="second-h1">{title2}</div>
-      </h1>
-      <span className="page-subtitle">{subtitle}</span>
+    <div className="page-title page-version-two" data-testid="page-title">
+      {title && (
+        <h1>
+          <div className="first-h1">{title1}</div>
+          <div className="second-h1">{title2}</div>
+        </h1>
+      )}
+      {subtitle && <span className="page-subtitle">{subtitle}</span>}
     </div>
   );
 };

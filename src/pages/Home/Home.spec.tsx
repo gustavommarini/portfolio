@@ -1,4 +1,4 @@
-import '@testing-library/jest-dom';
+import { useTranslation } from 'react-i18next';
 import {
   render,
   renderHook,
@@ -7,7 +7,7 @@ import {
   waitFor,
   act,
 } from '@testing-library/react';
-import { useTranslation } from 'react-i18next';
+import '@testing-library/jest-dom';
 import '@/test-utils/envMock';
 import { PageWrapper } from '@/test-utils';
 import Home from './Home';
