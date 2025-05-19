@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export const useTypewriter = (
   text: string | string[],
+  lang: string = 'en',
   delay: number = 180,
   infinite: boolean = true
 ) => {
@@ -10,9 +11,18 @@ export const useTypewriter = (
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const stringArray =
     Object.prototype.toString.call(text) === '[object Array]' ? text : [text];
+  const oldLangRef = useRef(lang);
 
   useEffect(() => {
     let timeout: NodeJS.Timeout;
+    //If thelanguage change, then we should start again with the new text
+    if (oldLangRef.current !== lang) {
+      setCurrentIndex(0);
+      setCurrentTextIndex(0);
+      setCurrentText('');
+      oldLangRef.current = lang;
+    }
+    //Change on new lang
 
     if (
       currentTextIndex < stringArray.length &&
@@ -33,7 +43,7 @@ export const useTypewriter = (
     }
 
     return () => clearTimeout(timeout);
-  }, [currentIndex, delay, infinite, text]);
+  }, [currentIndex, delay, infinite, text, lang]);
 
   return currentText;
 };
