@@ -218,9 +218,12 @@ $default_container-padding-right: 15px;
     font-size: $ts-xs;
     padding-top: 15%;
     color: var(--text-subtitle);
+    z-index: 2; // Above h1, below image
     span {
       transform: rotate(-15deg) scale(-1, 1);
       display: inline-block;
+      position: relative;
+      z-index: 4; // Top of everything — above the image
     }
   }
   a {
@@ -231,6 +234,13 @@ $default_container-padding-right: 15px;
   }
   .title-home-style-image {
     @include mainImageWithBorder;
+    position: absolute;
+    margin: 0 auto;
+    max-width: 200px;
+    right: 0;
+    top: -15%;
+    left: 0;
+    z-index: 3; // Above h2 but below span
     &.wide-img {
       max-width: 250px;
       top: 30%;
@@ -240,20 +250,16 @@ $default_container-padding-right: 15px;
     }
 
     .image-container {
+      position: relative;
+      z-index: 3;
       &.bnw-bg {
         filter: grayscale(1) brightness(2.2) contrast(1.3);
       }
       img {
-        z-index: 0;
+        z-index: 3;
         position: relative;
       }
     }
-    position: absolute;
-    margin: 0 auto;
-    max-width: 200px;
-    right: 0;
-    top: -15%;
-    left: 0;
   }
 
   .title-home-style-custom-description {
@@ -326,4 +332,134 @@ $default_container-padding-right: 15px;
   }
 }
 
+//ANIMATIONS
+@mixin home-title-animation {
+  .home-animated {
+    .main-title-text {
+      h1 {
+        animation:
+          scaleIn 0.8s ease-out forwards,
+          shakeWithExtraTransform 0.4s ease-in 0.8s;
+        opacity: 0;
+        transform: scale(1.2, 2.7);
+        @include home-shake-animation(scale(1.2, 2.7));
+      }
+
+      h2 {
+        animation:
+          slideUpFadeIn 0.6s ease-out forwards 1.2s,
+          // starts after h1 (0.8 + 0.4)
+          shake 0.4s ease-in-out 1.8s;
+        opacity: 0;
+        transform: translateY(50px);
+      }
+    }
+    .title-home-style-custom-description {
+      animation:
+        slideUpFadeIn 0.6s ease-out forwards 3.2s,
+        shake 0.4s ease-in-out 3.8s;
+      opacity: 0;
+    }
+
+    .title-home-style-image {
+      animation:
+        slideDownFadeIn 0.6s ease-out forwards 2.2s,
+        // starts after h1 + h2
+        shake 0.4s ease-in-out 2.8s;
+      opacity: 0;
+      transform: translateY(-50px);
+      // .image-container {
+      // }
+    }
+
+    @include mobile {
+      h1 {
+        transform: scale(1.2, 2);
+        @include home-shake-animation(scale(1.2, 2));
+      }
+    }
+
+    @include tablet {
+      h1 {
+        transform: scale(1.2, 1.5);
+        @include home-shake-animation(scale(1.2, 1.5));
+      }
+    }
+  }
+  @include home-slide-normal_shake-animations;
+}
+
+@mixin home-slide-normal_shake-animations {
+  @keyframes slideUpFadeIn {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideDownFadeIn {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-3px);
+    }
+    40% {
+      transform: translateX(3px);
+    }
+    60% {
+      transform: translateX(-2px);
+    }
+    80% {
+      transform: translateX(2px);
+    }
+  }
+}
+@mixin home-shake-animation($extra_transform) {
+  @keyframes scaleIn {
+    0% {
+      transform: scale(0, 0);
+      opacity: 0;
+    }
+    100% {
+      transform: $extra_transform;
+      opacity: 1;
+    }
+  }
+
+  @keyframes shakeWithExtraTransform {
+    0%,
+    100% {
+      transform: translateX(0) $extra_transform;
+    }
+    20% {
+      transform: translateX(-3px) $extra_transform;
+    }
+    40% {
+      transform: translateX(3px) $extra_transform;
+    }
+    60% {
+      transform: translateX(-2px) $extra_transform;
+    }
+    80% {
+      transform: translateX(2px) $extra_transform;
+    }
+  }
+}
 /*=====  End of HOME AND ERROR IMAGE TITLE  ======*/
