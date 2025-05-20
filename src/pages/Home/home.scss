@@ -33,7 +33,7 @@
   height: 100%;
   display: flex;
   align-items: center;
-  margin-left: 50px;
+  margin-left: 5rem;
   max-width: 80%;
 }
 
@@ -50,7 +50,7 @@
     line-height: $font-typewriter-size;
     font-weight: 500;
     position: relative;
-    margin: 19px 0px 10px;
+    margin: 2rem 0 1rem;
     white-space: normal;
     text-transform: uppercase;
     span {
@@ -62,8 +62,8 @@
 
 .action_btns {
   display: flex;
-  gap: 40px;
-  padding-top: 30px;
+  gap: 4rem;
+  padding-top: 3rem;
 }
 
 // TYPEWRITTER
@@ -73,15 +73,9 @@
   }
 }
 
-.typewriter-cursor-end::after {
-  content: '';
-  position: relative;
-  top: 1px;
-  width: 3px;
+.typewriter-cursor-end {
+  @include typewriter-cursor;
   height: $font-typewriter-size-cursor;
-  background: ar(--text-highlighted);
-  display: inline-block;
-  animation: cursor-blink 1.5s steps(9) infinite;
 }
 
 @include smallIntermediate {
@@ -90,11 +84,11 @@
       white-space: nowrap;
     }
     p {
-      max-width: 550px;
+      max-width: 55rem;
     }
   }
   .main-text-container {
     margin-left: 10%;
-    max-width: 550px;
+    max-width: 55rem;
   }
 }

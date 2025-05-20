@@ -1,10 +1,11 @@
 .stick_follow_icon {
   top: 50%;
-  left: 20px;
-  width: 20px;
-  height: 200px;
+  left: 2rem;
+  width: 2rem;
+  height: 20rem;
   position: fixed;
-  margin-top: -100px;
+  margin-top: -10rem;
+  z-index: 4;
   ul {
     list-style: none;
     padding: 0;
@@ -12,7 +13,7 @@
     li {
       display: block;
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 1rem;
       transition: all 0.3s;
       &:hover {
         a i {
@@ -26,10 +27,10 @@
     font-size: $is-normal;
   }
   p {
-    top: 70px;
-    left: -24px;
-    width: 68px;
-    height: 20px;
+    top: 7rem;
+    left: -2.4rem;
+    width: 6.8rem;
+    height: 2rem;
     font-family: $font-primary;
     text-transform: uppercase;
     font-weight: 600;
@@ -38,10 +39,10 @@
     position: relative;
     transform: rotate(-90deg);
     &::after {
-      top: 9px;
-      right: -48px;
-      width: 40px;
-      height: 1px;
+      top: 0.9rem;
+      right: -4.8rem;
+      width: 4rem;
+      height: 0.1rem;
       content: '';
       display: block;
       position: absolute;

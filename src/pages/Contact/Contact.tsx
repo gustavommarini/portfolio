@@ -134,7 +134,11 @@ const Contact: FC = () => {
                   <small>{contactTranslation('error.message')}</small>
                 )}
               </div>
-              <Button disabled={loading || !isFormValid} isForSubmition>
+              <Button
+                disabled={loading || !isFormValid}
+                isForSubmition
+                fullSizeOnMobile
+              >
                 {contactTranslation('form.btn')}
               </Button>
             </form>

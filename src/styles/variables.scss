@@ -206,31 +206,31 @@ $font-primary: 'Fjalla One', sans-serif;
 $font-secundary: 'Lato', sans-serif; /* 3 */
 
 /*----------  Font sizes  ----------*/
-$fs-xxs: 0.75rem; //12px
-$fs-sm: 0.875rem; //14px
-$fs-normal: 1rem; //16px
-$fs-md: 1.125rem; //18px
-$fs-lg: 1.5rem; //24px
-$fs-xl: 2rem; //32px
-$fs-xml: 2.25rem; //36px
-$fs-xxl: 2.625rem; //42px
-$fs-xxxl: 3.125rem; //50px
+$fs-xxs: 1.2rem;
+$fs-sm: 1.4rem;
+$fs-normal: 1.6rem;
+$fs-md: 1.8rem;
+$fs-lg: 2.4rem;
+$fs-xl: 3.2rem;
+$fs-xml: 3.6rem;
+$fs-xxl: 4.2rem;
+$fs-xxxl: 5rem;
 
 /*----------  Title sizes  ----------*/
-$ts-xxs: 3.125rem; //50px;
-$ts-xs: 4.375rem; //70px;
-$ts-sm: 5rem; //80px;
-$ts-md: 7.5rem; //120px;
-$ts-lg: 9.375rem; //150px;
-$ts-xl: 14.375rem; //230px;
-$ts-xxl: 25rem; //400px;
+$ts-xxs: 5rem;
+$ts-xs: 7rem;
+$ts-sm: 8rem;
+$ts-md: 12rem;
+$ts-lg: 15rem;
+$ts-xl: 23rem;
+$ts-xxl: 40rem;
 
 /*----------  Menu & Icon sizes  ----------*/
-$is-normal: 1.125rem; //18px
-$is-md: 1.5rem; //24px
-$is-lg: 2rem; //32px
-$is-xl: 3.125rem; //50px
-$is-xxl: 5rem; //80px
+$is-normal: 1.8rem;
+$is-md: 2.4rem;
+$is-lg: 3.2rem;
+$is-xl: 5rem;
+$is-xxl: 8rem;
 
 /*=====  End of TYPOGRAPHY  ======*/
 
@@ -239,23 +239,15 @@ $is-xxl: 5rem; //80px
 =============================================*/
 $spacing: (
   none: 0rem,
-  xxxs: 0.25rem,
-  //4px
-  xxs: 0.5rem,
-  //8px
-  xs: 0.75rem,
-  //12px
-  sm: 1rem,
-  //16px
-  md: 1.5rem,
-  //24px
-  lg: 2rem,
-  //32px
-  xl: 3rem,
-  //48px
-  xxl: 4.5rem,
-  //72px
-  xxxl: 6rem, //96px
+  xxxs: 0.4rem,
+  xxs: 0.8rem,
+  xs: 1.2rem,
+  sm: 1.6rem,
+  md: 2.4rem,
+  lg: 3.2rem,
+  xl: 4.8rem,
+  xxl: 7.2rem,
+  xxxl: 9.6rem,
 ) !default;
 
 /*=====  End of SPACING  ======*/
@@ -273,11 +265,11 @@ $breakpoints: (
 );
 
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1320px,
+  sm: 54rem,
+  md: 72rem,
+  lg: 96rem,
+  xl: 114rem,
+  xxl: 132rem,
 );
 
 $columns: (
@@ -300,8 +292,8 @@ $columns: (
 /*=============================================
 =           TYPEWRITTER            =
 =============================================*/
-$font-typewriter-size: 42px;
-$font-typewriter-size-cursor: 37px;
-$font-typewriter-size-cursor-gmm-style: 30px;
+$font-typewriter-size: 4.2rem;
+$font-typewriter-size-cursor: 3.7rem;
+$font-typewriter-size-cursor-gmm-style: 3rem;
 
 /*=====  End of TYPEWRITTER  ======*/

@@ -103,7 +103,7 @@ const About: FC = () => {
                 </ul>
               </div>
             </div>
-            <Button onClick={downloadCVAction}>
+            <Button onClick={downloadCVAction} fullSizeOnMobile>
               {aboutTranslation('btn_dwn_cv')}
             </Button>
           </div>

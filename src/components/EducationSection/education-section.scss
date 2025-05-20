@@ -1,16 +1,16 @@
 @use '../../styles/mixins.scss' as *;
 
 .description-education {
-  padding-top: 50px;
+  padding-top: 5rem;
   .card-item {
     h4 {
-      border-bottom: 1px solid var(--line-item-separator);
+      border-bottom: 0.1rem solid var(--line-item-separator);
     }
   }
 }
 
 .adjust-padding-top {
-  padding-top: 50px;
+  padding-top: 5rem;
   &.description-education {
     .card-item {
       h4 {
@@ -23,7 +23,7 @@
 
 @include tablet {
   .description-education {
-    padding-top: 24px;
+    padding-top: 2.4rem;
   }
   .adjust-padding-top {
     padding-top: 0;

@@ -5,6 +5,7 @@ export interface ButtonProps {
   size?: ButtonSize;
   disabled?: boolean;
   isForSubmition?: boolean;
+  fullSizeOnMobile?: boolean;
 }
 
 export enum ButtonSize {

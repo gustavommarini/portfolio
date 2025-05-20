@@ -1,5 +1,5 @@
 @use './mixins.scss' as *;
-@include make-container(80px);
+@include make-container(8rem);
 
 .portfolio-row {
   display: flex;

@@ -2,8 +2,8 @@
 
 .theme-selector {
   @include floating-button;
-  bottom: 20px;
-  left: 20px;
-  height: 40px;
-  width: 40px;
+  bottom: 2rem;
+  left: 2rem;
+  height: 4rem;
+  width: 4rem;
 }

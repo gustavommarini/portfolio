@@ -1,27 +1,27 @@
 @use '../../styles/mixins.scss' as *;
 
 .contact-content {
-  padding-top: 50px;
+  padding-top: 5rem;
 }
 
 .contact-info {
-  padding-right: 20px;
+  padding-right: 2rem;
   h3 {
-    padding-bottom: 20px;
+    padding-bottom: 2rem;
   }
   .contact-info-description {
-    padding-top: 20px;
+    padding-top: 2rem;
   }
 }
 
 .contact-basic-details {
   p {
-    padding: 10px 0;
+    padding: 1rem 0;
   }
 }
 
 .contact-form {
-  padding-top: 60px;
+  padding-top: 6rem;
 }
 
 .contact-action {
@@ -29,7 +29,7 @@
   font-family: $font-secundary;
   .input-group {
     display: flex;
-    gap: 10px;
+    gap: 1rem;
   }
   .input-single-item {
     width: 50%;
@@ -42,11 +42,11 @@
     font-weight: 400;
     width: 100%;
     background-color: var(--form-bg);
-    border: 2px solid transparent;
+    border: 0.2rem solid transparent;
     border-radius: 0 !important;
     line-height: 1.5;
-    padding: 22px 12px;
-    margin-bottom: 32px;
+    padding: 2rem 1.2rem;
+    margin-bottom: 3.2rem;
     &::placeholder {
       color: var(--form-text-placeholder);
     }
@@ -55,13 +55,10 @@
     }
   }
   textarea {
-    min-height: 38px;
-  }
-  button {
-    width: 150px;
+    min-height: 3.8rem;
   }
   .error-messages {
-    padding-bottom: 10px;
+    padding-bottom: 1rem;
     small {
       color: var(--error-color);
       font-weight: bold;
@@ -89,5 +86,12 @@
   }
   .contact-form {
     padding-top: 0;
+  }
+
+  .contact-action {
+    .btn,
+    .btn.btn-full-mobile {
+      width: 15rem;
+    }
   }
 }

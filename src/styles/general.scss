@@ -1,7 +1,9 @@
 @use './variables.scss' as *;
-// html {
-//   font-size: 62.5%; // We can use this for this equivalence 16px = 1.6 rem. But I will not use it, because 16px is the standard
-// }
+html {
+  // This font-size should be 10, but we put it in a percertange because it could happend
+  // that the user sets a custom font-size on browser settings
+  font-size: 62.5%; // We use this for this equivalence 16px = 1.6 rem.
+}
 
 #root {
   width: 100%;
@@ -55,7 +57,7 @@ h5 {
 }
 
 section {
-  padding: 120px 0;
+  padding: 12rem 0;
   text-align: left;
   position: relative;
   width: 100%;
@@ -63,7 +65,7 @@ section {
 }
 
 .content-row {
-  padding-bottom: 24px;
+  padding-bottom: 2.4rem;
 }
 
 .title-content {
@@ -72,20 +74,20 @@ section {
 }
 
 .card-item {
-  padding-bottom: 64px;
+  padding-bottom: 6.4rem;
   position: relative;
   small {
     position: absolute;
-    top: -24px;
+    top: -2.4rem;
     font-size: $fs-sm;
     opacity: 0.8;
     font-weight: 400;
     i {
-      padding-right: 10px;
+      padding-right: 1rem;
     }
   }
   h4 {
-    padding: 8px 0;
+    padding: 0.8rem 0;
     text-transform: uppercase;
     span {
       font-weight: 500;
@@ -96,16 +98,16 @@ section {
     word-break: break-word;
   }
   h5 {
-    padding: 8px 0;
+    padding: 0.8rem 0;
     text-transform: uppercase;
     font-family: $font-secundary;
   }
   .separator {
     display: inline-block;
-    width: 10px;
+    width: 1rem;
     background: var(--text-item-separator);
-    height: 2px;
-    margin: 0 7px 3px 7px;
+    height: 0.2rem;
+    margin: 0 0.7rem 0.3rem 0.7rem;
     vertical-align: middle;
   }
 }

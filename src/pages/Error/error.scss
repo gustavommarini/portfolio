@@ -20,10 +20,10 @@
     display: flex;
     justify-content: center;
     text-transform: initial;
-    padding-bottom: 20px;
-    padding-top: 30px;
+    padding-bottom: 2rem;
+    padding-top: 3rem;
     position: relative;
-    row-gap: 30px;
+    row-gap: 3rem;
   }
   .error-en::before {
     content: '🇬🇧';
@@ -38,14 +38,14 @@
   .error-es,
   .error-it {
     position: relative;
-    padding: 0 15px;
+    padding: 0 1.6rem;
     &::before {
       position: absolute;
       z-index: -1;
       font-size: $ts-sm;
       opacity: 0.3;
       margin: 0 auto;
-      top: -15px;
+      top: -1.6rem;
       left: 0;
       right: 0;
     }

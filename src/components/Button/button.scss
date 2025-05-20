@@ -1,3 +1,5 @@
+@use '../../styles/mixins.scss' as *;
+
 .btn {
   padding: 0;
   background-color: var(--btn-base);
@@ -23,13 +25,13 @@
       font-size: $fs-md;
       .btn-children,
       .icon-container {
-        padding: 16px;
+        padding: 1.6rem;
       }
     }
   }
   &.btn-outlined {
     background-color: transparent;
-    border: 1px solid var(--btn-base);
+    border: 0.1rem solid var(--btn-base);
     .btn-children {
       background-color: transparent;
       color: var(--btn-base);
@@ -48,11 +50,16 @@
       }
     }
   }
+  &.btn-full-mobile {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 .btn-children {
   text-transform: uppercase;
-  padding: 20px;
+  padding: 2rem;
   background-color: var(--btn-base);
   color: var(--btn-outline-font);
   z-index: 2;
@@ -82,5 +89,13 @@
   }
   to {
     opacity: 0;
+  }
+}
+
+@include tablet {
+  .btn.btn-full-mobile {
+    width: auto;
+    margin: 0;
+    display: inline-block;
   }
 }

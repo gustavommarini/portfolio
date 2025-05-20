@@ -9,10 +9,11 @@ export const Button: FC<ButtonProps> = ({
   size = ButtonSize.md,
   isForSubmition = false,
   disabled = false,
+  fullSizeOnMobile = false,
 }) => {
   return (
     <button
-      className={`btn ${type} ${size}`}
+      className={`btn ${type} ${size}${fullSizeOnMobile ? ' btn-full-mobile' : ''}`}
       type={isForSubmition ? 'submit' : 'button'}
       disabled={disabled}
       onClick={onClick}

@@ -4,8 +4,8 @@
   display: none;
 }
 .basic-info-section {
-  padding-top: 60px;
-  padding-bottom: 80px;
+  padding-top: 6rem;
+  padding-bottom: 8rem;
 }
 
 .profile-image {
@@ -14,7 +14,7 @@
   }
   .image-container {
     @include mainImageWithBorder;
-    max-width: 440px;
+    max-width: 44rem;
     img {
       transition: all 0.3s ease-in-out;
       &.image-about {
@@ -34,23 +34,26 @@
   }
 }
 .basic-info-text {
-  padding-top: 60px;
+  padding-top: 6rem;
   h3 {
     font-family: $font-secundary;
+  }
+  .btn.btn-full-mobile {
+    margin-top: 3rem;
   }
 }
 
 .detailed-data {
   display: flex;
   justify-content: space-between;
-  padding: 10px 0 20px 0;
+  padding: 1rem 0 2rem 0;
   .detailed-column {
     ul {
       list-style: none;
       padding: 0;
       span {
         font-weight: bold;
-        padding-right: 15px;
+        padding-right: 1.6rem;
         color: var(--about-list-title);
       }
       color: var(--about-list-description);
@@ -68,12 +71,12 @@
 @include smallIntermediate {
   .profile-image {
     img {
-      padding: 0 50px;
+      padding: 0 5rem;
     }
     .image-container {
       margin: 0 auto;
       &:before {
-        transform: translate3d(0, 25px, 0);
+        transform: translate3d(0, 2.5rem, 0);
       }
     }
   }
@@ -90,16 +93,20 @@
   .profile-image {
     img {
       padding-left: 0;
-      padding-right: 15px;
+      padding-right: 1.6rem;
     }
     .image-container {
       &::before {
-        transform: translate3d(-25px, 25px, 0);
+        transform: translate3d(-2.5rem, 2.5rem, 0);
       }
     }
   }
   .basic-info-text {
     padding-top: 0;
+    .btn.btn-full-mobile {
+      width: auto;
+      margin-top: 0;
+    }
   }
   .detailed-data {
     .detailed-column {

@@ -6,6 +6,9 @@
 
 .home-page {
   @include homeStyleTitle;
+  .typewriter-cursor-end {
+    @include typewriter-cursor;
+  }
 }
 
 @include home-title-animation;
@@ -15,15 +18,4 @@
   0% {
     opacity: 0;
   }
-}
-
-.typewriter-cursor-end::after {
-  content: '';
-  position: relative;
-  top: 1px;
-  width: 3px;
-  height: $font-typewriter-size-cursor-gmm-style;
-  background: var(--text-highlighted);
-  display: inline-block;
-  animation: cursor-blink 1.5s steps(9) infinite;
 }
