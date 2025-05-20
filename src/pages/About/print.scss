@@ -70,13 +70,13 @@
     .image-container {
       margin: 0;
       margin-right: 15px;
+      border: 4px solid var(--highlight-color-print);
       &:before {
         content: none;
       }
     }
     img {
       padding: 0;
-      border: 4px solid var(--highlight-color-print);
     }
   }
 
