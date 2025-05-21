@@ -222,22 +222,28 @@ $default_container-padding-right: 1.6rem;
   overflow: hidden;
   text-align: center;
   text-transform: uppercase;
+  font-size: $ts-xxs;
   .main-title-text {
-    margin-top: 30%;
+    margin-top: 15%;
     position: relative;
+    font-size: $ts-xxs;
+    transition: all 0.3s ease-in-out;
   }
+
   h1 {
     position: relative;
-    font-size: $ts-lg;
-    transform: scale(1.2, 2.7);
+    transform: scale(1.2, 1.5);
     color: var(--text-highlighted);
     z-index: 0;
+    font-size: 3.3em;
+    transition: all 0.3s ease-in-out;
   }
   h2 {
-    font-size: $ts-xs;
-    padding-top: 15%;
+    padding-top: 0;
     color: var(--text-subtitle);
     z-index: 2; // Above h1, below image
+    font-size: 1em;
+    transition: all 0.3s ease-in-out;
     span {
       transform: rotate(-15deg) scale(-1, 1);
       display: inline-block;
@@ -255,11 +261,12 @@ $default_container-padding-right: 1.6rem;
     @include mainImageWithBorder;
     position: absolute;
     margin: 0 auto;
-    max-width: 20rem;
     right: 0;
-    top: -15%;
+    max-width: 2.7em; //32.5rem;
     left: 0;
+    top: -3%;
     z-index: 3; // Above h2 but below span
+    transition: all 0.3s ease-in-out;
     &:hover {
       .image-container {
         filter: grayscale(1) brightness(2.2) contrast(1.3);
@@ -272,8 +279,8 @@ $default_container-padding-right: 1.6rem;
       }
     }
     &.wide-img {
-      max-width: 25rem;
-      top: 30%;
+      max-width: 4.6em;
+      top: 20%;
     }
     &::before {
       z-index: 0;
@@ -308,57 +315,25 @@ $default_container-padding-right: 1.6rem;
     }
   }
 
-  @include mobile {
+  @include custom(400) {
     .main-title-text {
       margin-top: 15%;
     }
-    h1 {
-      font-size: $ts-xl;
-      transform: scale(1.2, 2);
-    }
-    h2 {
+  }
+
+  @include custom(550) {
+    font-size: $ts-sm;
+    .main-title-text {
+      margin-top: 10%;
       font-size: $ts-sm;
-      padding-top: 5%;
-    }
-    .title-home-style-image {
-      max-width: 22rem;
-      right: 0;
-      left: 0%;
-      top: -5%;
-      &.wide-img {
-        max-width: 35rem;
-        top: 25%;
-      }
     }
   }
 
-  @include smallIntermediate {
-    .title-home-style-description {
-      column-gap: 0;
-      row-gap: 0;
-    }
-  }
-
-  @include tablet {
+  @include custom(800) {
+    font-size: $ts-md;
     .main-title-text {
       margin-top: 0;
-    }
-    h1 {
-      font-size: $ts-xxl;
-      transform: scale(1.2, 1.5);
-    }
-    h2 {
       font-size: $ts-md;
-      padding-top: 0;
-    }
-    .title-home-style-image {
-      max-width: 32.5rem;
-      left: 0;
-      top: -3%;
-      &.wide-img {
-        max-width: 55rem;
-        top: 20%;
-      }
     }
   }
 }

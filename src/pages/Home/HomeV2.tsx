@@ -19,7 +19,11 @@ const HomeV2: FC = () => {
   );
 
   return (
-    <section id="home-page" data-testid="home" className="home-page">
+    <section
+      id="home-page"
+      data-testid="home"
+      className="home-page container-xxl"
+    >
       <div className="main-title-text">
         <h1>Gus</h1>
         <div className="title-home-style-image">
