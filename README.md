@@ -26,7 +26,9 @@ For the loading page I used:
 
 To upload a JSON file directly to firebase you can use the function `initializeProfileData` that you can find on the file `src/services/fillFirebaseFromJSON.ts` that will take the info from `data_content.ts` under the same folder.
 
-There is a button on the left bottom corner to change th theme
+Following the Semantic [Commit Messages structure](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
+
+There is a button on the left bottom corner to change the theme
 [![CV portfolio](src/assets/screenshot1.jpg)](https://gmm-portfolio.netlify.app)
 [![CV portfolio](src/assets/screenshot2.jpg)](https://gmm-portfolio.netlify.app)
 On the information section if the user clicks on the Download CV button the browser print screen will be prompt using custom print css properties.
