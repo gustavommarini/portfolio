@@ -1,5 +1,6 @@
-import { FC } from 'react';
+import { FC, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { trackExpandedSkills } from '@/services/analytics';
 import {
   TechnologiesListProps,
   WorkCardItemProps,
@@ -32,6 +33,14 @@ export const WorkCardItem: FC<WorkCardItemProps> = ({
   showExtraSection = true,
 }) => {
   const { t: workTranslation } = useTranslation(['experience']);
+  const checkboxRef: React.LegacyRef<HTMLInputElement> | null = useRef(null);
+  const trackExpandedSkillsClick = (companyName: string, locationJob: string) =>
+    trackExpandedSkills(
+      'toggle_skills_details',
+      companyName,
+      locationJob,
+      !checkboxRef?.current?.checked ? 'open' : 'close'
+    );
 
   return (
     <div className="card-item-container portfolio-col-6">
@@ -52,10 +61,14 @@ export const WorkCardItem: FC<WorkCardItemProps> = ({
               id={`collapsible-${workItem.id}`}
               className="toggle"
               type="checkbox"
+              ref={checkboxRef}
             />
             <label
               htmlFor={`collapsible-${workItem.id}`}
               className="lbl-toggle"
+              onClick={() =>
+                trackExpandedSkillsClick(workItem.name, workItem.location)
+              }
             >
               <i className="fa-solid fa-circle-arrow-down"></i>
               {/* <i className="fa-solid fa-arrow-down-wide-short"></i> */}
