@@ -1,6 +1,7 @@
 import React, { FC, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation } from 'react-router-dom';
+import { trackButtonClick } from '@/services/analytics';
 import './navbar.scss';
 
 export const Navbar: FC = () => {
@@ -17,10 +18,21 @@ export const Navbar: FC = () => {
     window.scrollTo(0, 0);
   }, [location]);
 
+  const trackDataClick = () =>
+    trackButtonClick(
+      'toggle_menu',
+      !checkboxRef.current?.checked ? 'open' : 'close'
+    );
+
   return (
     <>
       <input type="checkbox" id="main-navmenu" ref={checkboxRef} />
-      <label className="menu-btn" data-testid="menu-btn" htmlFor="main-navmenu">
+      <label
+        className="menu-btn"
+        data-testid="menu-btn"
+        htmlFor="main-navmenu"
+        onClick={trackDataClick}
+      >
         <i className="fas fa-bars"></i>
       </label>
       <div className="wrapper-navmenu">

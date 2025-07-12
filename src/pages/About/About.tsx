@@ -9,17 +9,19 @@ import {
 } from '@/components';
 import { ThemeContext } from '@/theme';
 import { DataContext } from '@/context/dataContext';
+import { trackButtonClick } from '@/services/analytics';
 import ProfileImage from '../../assets/photos/about2.jpg';
 import ProfileImageLight from '../../assets/photos/about-light.jpg';
 import './about.scss';
 import './print.scss';
 
 const About: FC = () => {
-  const { t: aboutTranslation } = useTranslation(['about']);
+  const { t: aboutTranslation, i18n } = useTranslation(['about']);
   const { theme } = useContext(ThemeContext);
   const { data } = useContext(DataContext);
   const downloadCVAction = () => {
     window.print();
+    trackButtonClick('download_cv', i18n.language);
   };
 
   return (

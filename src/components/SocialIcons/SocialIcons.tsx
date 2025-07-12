@@ -1,12 +1,16 @@
 import { FC, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
+import { DataContext } from '@/context/dataContext';
+import { trackSocialAccess } from '@/services/analytics';
 import { ICON_MAPPING } from './social-icons.types';
 import './social-icons.scss';
-import { DataContext } from '@/context/dataContext';
 
 export const SocialIcons: FC = () => {
   const { t: homeTranslation } = useTranslation(['home']);
   const { data } = useContext(DataContext);
+
+  const trackDataSocialLink = (platform: string) =>
+    trackSocialAccess('social_link', platform);
 
   return (
     <div className="stick_follow_icon">
@@ -19,6 +23,7 @@ export const SocialIcons: FC = () => {
             <li key={platform}>
               <a
                 href={url}
+                onClick={() => trackDataSocialLink(platform)}
                 target="_blank"
                 aria-label={`Visit my ${platform} profile`}
               >

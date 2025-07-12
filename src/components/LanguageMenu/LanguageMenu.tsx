@@ -1,6 +1,7 @@
 import React, { FC, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { AvailableLanguages } from '@/language/i18n.types';
+import { trackButtonClick } from '@/services/analytics';
 import './language-menu.scss';
 
 export const LanguageMenu: FC = () => {
@@ -15,6 +16,7 @@ export const LanguageMenu: FC = () => {
     if (checkboxRef.current) {
       checkboxRef.current.checked = false;
     }
+    trackButtonClick('change_language', lang);
   };
 
   return (

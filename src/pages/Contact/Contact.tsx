@@ -5,8 +5,9 @@ import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from '@/services';
 import { useToast } from '@/hooks/useToast';
 import { useForm } from '@/hooks/useForm';
 import { Button, TitlePageV2, Toast, ToastTypes } from '@/components';
-import './contact.scss';
 import { DataContext } from '@/context/dataContext';
+import { trackButtonClick, trackLinkClick } from '@/services/analytics';
+import './contact.scss';
 
 const Contact: FC = () => {
   const { t: contactTranslation } = useTranslation(['contact']);
@@ -23,6 +24,7 @@ const Contact: FC = () => {
     event.preventDefault();
     setLoading(true);
     const { email, name, message } = formData;
+    trackButtonClick('send_email', `email:${email}, name:${name}`);
     emailjs
       .send(
         SERVICE_ID,
@@ -66,13 +68,29 @@ const Contact: FC = () => {
             <div className="contact-basic-details">
               <p>
                 <strong>Email:</strong>{' '}
-                <a href={`mailto:${data?.contactConfig.email}`}>
+                <a
+                  href={`mailto:${data?.contactConfig.email}`}
+                  onClick={() =>
+                    trackLinkClick(
+                      'contact_link',
+                      data?.contactConfig.email || ''
+                    )
+                  }
+                >
                   {data?.contactConfig.email}
                 </a>
               </p>
               <p>
                 <strong>{contactTranslation('phone')}:</strong>{' '}
-                <a href={`tel:${data?.contactConfig.phone}`}>
+                <a
+                  href={`tel:${data?.contactConfig.phone}`}
+                  onClick={() =>
+                    trackLinkClick(
+                      'contact_link',
+                      data?.contactConfig.phone || ''
+                    )
+                  }
+                >
                   {data?.contactConfig.phone_formated}
                 </a>
               </p>
