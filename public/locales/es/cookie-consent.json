@@ -1,0 +1,15 @@
+{
+  "title": "Consentimiento de Cookies",
+  "description": "Utilizamos cookies para mejorar tu experiencia de navegación y analizar el tráfico del sitio. Al continuar usando este sitio, consientes el uso de cookies.",
+  "close": "Cerrar",
+  "accept": "Aceptar Todo",
+  "decline": "Rechazar",
+  "necessary": {
+    "title": "Cookies Necesarias",
+    "description": "Estas cookies son esenciales para que el sitio web funcione correctamente. No se pueden desactivar."
+  },
+  "analytics": {
+    "title": "Cookies de Análisis",
+    "description": "Estas cookies nos ayudan a entender cómo los visitantes interactúan con nuestro sitio web recopilando y reportando información de forma anónima."
+  }
+}

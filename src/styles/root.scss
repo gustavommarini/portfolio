@@ -122,6 +122,13 @@
   --form-text-placeholder: var(--gmm-gray);
   //PRINT
   --highlight-color-print: var(--gmm-color-print);
+  //COOKIE CONSENT
+  --cookie-consent-bg: var(--gmm-bg);
+  --cookie-consent-text: var(--gmm-text-base);
+  --cookie-consent-border: var(--gmm-primary);
+  --cookie-consent-btn-bg: var(--gmm-primary);
+  --cookie-consent-btn-text: var(--gmm-btn);
+  --cookie-consent-btn-text-wbg: var(--gmm-black);
 }
 
 /*=============================================
@@ -181,4 +188,11 @@
   --form-text-placeholder: var(--gmm-gray);
   //PRINT
   --highlight-color-print: var(--gmm-primary-light);
+  //COOKIE CONSENT
+  --cookie-consent-bg: var(--gmm-bg-light);
+  --cookie-consent-text: var(--gmm-text-base-light);
+  --cookie-consent-border: var(--gmm-primary-light);
+  --cookie-consent-btn-bg: var(--gmm-primary-light);
+  --cookie-consent-btn-text: var(--gmm-btn-light);
+  --cookie-consent-btn-text-wbg: var(--gmm-white);
 }

@@ -1,0 +1,15 @@
+{
+  "title": "Consenso ai Cookie",
+  "description": "Utilizziamo i cookie per migliorare la tua esperienza di navigazione e analizzare il traffico del sito. Continuando a utilizzare questo sito, acconsenti all'uso dei cookie.",
+  "close": "Chiudi",
+  "accept": "Accetta Tutto",
+  "decline": "Rifiuta",
+  "necessary": {
+    "title": "Cookie Necessari",
+    "description": "Questi cookie sono essenziali per il corretto funzionamento del sito web. Non possono essere disabilitati."
+  },
+  "analytics": {
+    "title": "Cookie di Analisi",
+    "description": "Questi cookie ci aiutano a capire come i visitatori interagiscono con il nostro sito web raccogliendo e riportando informazioni in modo anonimo."
+  }
+}

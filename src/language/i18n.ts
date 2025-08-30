@@ -26,7 +26,15 @@ i18n
     backend: {
       loadPath: '/locales/{{lng}}/{{ns}}.json', // URL path to load translations
     },
-    ns: ['home', 'navbar', 'about', 'education', 'experience', 'contact'],
+    ns: [
+      'home',
+      'navbar',
+      'about',
+      'education',
+      'experience',
+      'contact',
+      'cookie-consent',
+    ],
     defaultNS: 'home',
   });
 
