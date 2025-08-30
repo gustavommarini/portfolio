@@ -70,6 +70,20 @@ export const technologies: TechnologiesData = {
   sublimeText: { name: 'sublimetext', url: 'https://www.sublimetext.com/' },
   lerna: { name: 'lerna', url: 'https://lerna.js.org/' },
   nx: { name: 'nx', url: 'https://nx.dev/' },
+  zustand: { name: 'zustand', url: 'https://zustand-demo.pmnd.rs/' },
+  turborepo: { name: 'turborepo', url: 'https://turborepo.com/' },
+  dashjs: { name: 'dashjs', url: 'https://dashjs.org/' },
+  hlsjs: {
+    name: 'hlsjs',
+    url: 'https://github.com/video-dev/hls.js?tab=readme-ov-file',
+  },
+  samsung: { name: 'samsung', url: 'https://www.samsung.com/' },
+  lg: { name: 'lg', url: 'https://webostv.developer.lge.com/' },
+  tizen: {
+    name: 'tizen',
+    url: 'https://docs.tizen.org/application/profiles/tv/',
+  },
+  hbbtv: { name: 'hbbtv', url: 'https://developer.hbbtv.org/' },
 };
 
 const skills = [

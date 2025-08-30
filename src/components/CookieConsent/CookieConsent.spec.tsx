@@ -9,15 +9,16 @@ jest.mock('react-i18next', () => ({
   useTranslation: () => ({
     t: (key: string) => {
       const translations: Record<string, string> = {
-        title: 'Cookie Consent',
-        description: 'We use cookies to enhance your browsing experience.',
+        title: 'Privacy Notice',
+        description:
+          'This website tracks user interactions to improve your experience.',
         close: 'Close',
-        accept: 'Accept All',
-        decline: 'Decline',
-        'necessary.title': 'Necessary Cookies',
-        'necessary.description': 'These cookies are essential.',
-        'analytics.title': 'Analytics Cookies',
-        'analytics.description': 'These cookies help us understand.',
+        accept: 'I Understand',
+        'tracking.title': 'Interaction Tracking',
+        'tracking.description': 'We track how you interact with our website.',
+        'preferences.title': 'Local Storage',
+        'preferences.description':
+          'Your theme and language preferences are stored locally.',
       };
       return translations[key] || key;
     },
@@ -30,7 +31,6 @@ const renderWithI18n = (component: React.ReactElement) => {
 
 describe('CookieConsent', () => {
   const mockOnAccept = jest.fn();
-  const mockOnDecline = jest.fn();
   const mockOnClose = jest.fn();
 
   beforeEach(() => {
@@ -44,7 +44,6 @@ describe('CookieConsent', () => {
       <CookieConsent
         show={false}
         onAccept={mockOnAccept}
-        onDecline={mockOnDecline}
         onClose={mockOnClose}
       />
     );
@@ -57,13 +56,12 @@ describe('CookieConsent', () => {
       <CookieConsent
         show={true}
         onAccept={mockOnAccept}
-        onDecline={mockOnDecline}
         onClose={mockOnClose}
       />
     );
 
     expect(screen.getByTestId('cookie-consent')).toBeInTheDocument();
-    expect(screen.getByText('Cookie Consent')).toBeInTheDocument();
+    expect(screen.getByText('Privacy Notice')).toBeInTheDocument();
   });
 
   it('should call onAccept when accept button is clicked', () => {
@@ -71,7 +69,6 @@ describe('CookieConsent', () => {
       <CookieConsent
         show={true}
         onAccept={mockOnAccept}
-        onDecline={mockOnDecline}
         onClose={mockOnClose}
       />
     );
@@ -82,28 +79,11 @@ describe('CookieConsent', () => {
     expect(mockOnAccept).toHaveBeenCalledTimes(1);
   });
 
-  it('should call onDecline when decline button is clicked', () => {
-    renderWithI18n(
-      <CookieConsent
-        show={true}
-        onAccept={mockOnAccept}
-        onDecline={mockOnDecline}
-        onClose={mockOnClose}
-      />
-    );
-
-    const declineButton = screen.getByTestId('cookie-consent-decline');
-    fireEvent.click(declineButton);
-
-    expect(mockOnDecline).toHaveBeenCalledTimes(1);
-  });
-
   it('should call onClose when close button is clicked', () => {
     renderWithI18n(
       <CookieConsent
         show={true}
         onAccept={mockOnAccept}
-        onDecline={mockOnDecline}
         onClose={mockOnClose}
       />
     );
@@ -119,7 +99,6 @@ describe('CookieConsent', () => {
       <CookieConsent
         show={true}
         onAccept={mockOnAccept}
-        onDecline={mockOnDecline}
         onClose={mockOnClose}
       />
     );
@@ -139,7 +118,6 @@ describe('CookieConsent', () => {
       <CookieConsent
         show={true}
         onAccept={mockOnAccept}
-        onDecline={mockOnDecline}
         onClose={mockOnClose}
       />
     );
@@ -150,21 +128,30 @@ describe('CookieConsent', () => {
     expect(setItemSpy).toHaveBeenCalledWith('cookie-consent', 'accepted');
   });
 
-  it('should store decline in localStorage when decline is clicked', () => {
-    const setItemSpy = jest.spyOn(Storage.prototype, 'setItem');
-
+  it('should display tracking and preferences sections', () => {
     renderWithI18n(
       <CookieConsent
         show={true}
         onAccept={mockOnAccept}
-        onDecline={mockOnDecline}
         onClose={mockOnClose}
       />
     );
 
-    const declineButton = screen.getByTestId('cookie-consent-decline');
-    fireEvent.click(declineButton);
+    expect(screen.getByText('Interaction Tracking')).toBeInTheDocument();
+    expect(screen.getByText('Local Storage')).toBeInTheDocument();
+  });
 
-    expect(setItemSpy).toHaveBeenCalledWith('cookie-consent', 'declined');
+  it('should not display decline button', () => {
+    renderWithI18n(
+      <CookieConsent
+        show={true}
+        onAccept={mockOnAccept}
+        onClose={mockOnClose}
+      />
+    );
+
+    expect(
+      screen.queryByTestId('cookie-consent-decline')
+    ).not.toBeInTheDocument();
   });
 });

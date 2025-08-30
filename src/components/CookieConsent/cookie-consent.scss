@@ -8,7 +8,7 @@
   background: var(--cookie-consent-bg);
   color: var(--cookie-consent-text);
   z-index: 5;
-  padding: map-get($spacing, md);
+  padding: map-get($spacing, md) map-get($spacing, xxxl);
   border-top: 2px solid var(--cookie-consent-border);
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
   animation: slideUp 0.3s ease-out;
@@ -89,7 +89,7 @@
   }
 
   &__detail {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--cookie-consent-text-bg);
     padding: map-get($spacing, sm);
     border-radius: 4px;
     border-left: 3px solid var(--cookie-consent-text);
@@ -132,55 +132,6 @@
 
     @media (max-width: map-get($breakpoints, sm)) {
       flex-direction: column;
-    }
-  }
-
-  &__btn {
-    font-family: $font-primary;
-    font-size: $fs-sm;
-    padding: map-get($spacing, xs) map-get($spacing, md);
-    border: 2px solid transparent;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    min-width: 120px;
-    text-transform: uppercase;
-
-    &:focus {
-      outline: 2px solid var(--cookie-consent-text);
-      outline-offset: 2px;
-    }
-
-    &--accept {
-      background: var(--cookie-consent-text);
-      color: var(--cookie-consent-btn-text-wbg);
-
-      &:hover {
-        background: var(--cookie-consent-text-light);
-        transform: translateY(-1px);
-      }
-
-      &:active {
-        transform: translateY(0);
-      }
-    }
-
-    &--decline {
-      background: transparent;
-      color: var(--cookie-consent-text);
-      border-color: var(--cookie-consent-text);
-
-      &:hover {
-        background: rgba(255, 255, 255, 0.1);
-        color: var(--cookie-consent-text);
-        border-color: var(--cookie-consent-text);
-
-        @media (prefers-color-scheme: light) {
-          background: rgba(0, 0, 0, 0.1);
-          color: var(--cookie-consent-text);
-          border-color: var(--cookie-consent-text);
-        }
-      }
     }
   }
 }

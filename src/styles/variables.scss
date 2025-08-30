@@ -56,6 +56,10 @@ $gray-dark: #555;
 $white: #fdfefe;
 $white-dark: #ededed;
 
+/*----------  Consent Cookies colors  ----------*/
+$cookie-consent-text-bg: rgba(255, 255, 255, 0.05);
+$cookie-consent-text-bg-light: $white;
+
 /*----------  Utility colors  ----------*/
 $color-error: #ff654d;
 $color-error-light: #f14328;
@@ -113,6 +117,14 @@ $color-wordpress: #2a7a9e;
 $color-sublimetext: #ff9800;
 $color-lerna: #c084fc;
 $color-nx: $gray;
+$color-zustand: #443e38;
+$color-turborepo: #cc387d;
+$color-dashjs: #0166ff;
+$color-hlsjs: #0066dc;
+$color-samsung: #0d47a1;
+$color-lg: #a50034;
+$color-tizen: #258bd1;
+$color-hbbtv: $gray;
 
 // 1. Define the map of brand names to their color variables
 $brand-icon-colors: (
@@ -164,6 +176,14 @@ $brand-icon-colors: (
   'sublimetext': $color-sublimetext,
   'lerna': $color-lerna,
   'nx': $color-nx,
+  'zustand': $color-zustand,
+  'turborepo': $color-turborepo,
+  'dashjs': $color-dashjs,
+  'hlsjs': $color-hlsjs,
+  'samsung': $color-samsung,
+  'lg': $color-lg,
+  'tizen': $color-tizen,
+  'hbbtv': $color-hbbtv,
 );
 
 /*----------  Decorator colors  ----------*/

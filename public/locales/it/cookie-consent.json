@@ -1,15 +1,14 @@
 {
-  "title": "Consenso ai Cookie",
-  "description": "Utilizziamo i cookie per migliorare la tua esperienza di navigazione e analizzare il traffico del sito. Continuando a utilizzare questo sito, acconsenti all'uso dei cookie.",
+  "title": "Informativa sulla Privacy",
+  "description": "Questo sito web traccia le interazioni dell'utente per migliorare la tua esperienza. Non vengono raccolti o memorizzati dati personali o sensibili. Le tue preferenze di tema e lingua vengono salvate localmente sul tuo dispositivo.",
   "close": "Chiudi",
-  "accept": "Accetta Tutto",
-  "decline": "Rifiuta",
-  "necessary": {
-    "title": "Cookie Necessari",
-    "description": "Questi cookie sono essenziali per il corretto funzionamento del sito web. Non possono essere disabilitati."
+  "accept": "Capisco",
+  "tracking": {
+    "title": "Tracciamento delle Interazioni",
+    "description": "Tracciamo come interagisci con il nostro sito web (pagine visitate, tempo trascorso) per migliorare la funzionalità e l'esperienza utente. Questi dati sono anonimi e non ti identificano personalmente."
   },
-  "analytics": {
-    "title": "Cookie di Analisi",
-    "description": "Questi cookie ci aiutano a capire come i visitatori interagiscono con il nostro sito web raccogliendo e riportando informazioni in modo anonimo."
+  "preferences": {
+    "title": "Memorizzazione Locale",
+    "description": "La tua preferenza di tema (modalità chiara/scura) e selezione della lingua vengono memorizzate localmente sul tuo dispositivo utilizzando la memorizzazione del browser. Questi dati rimangono sul tuo dispositivo e non vengono trasmessi ai nostri server."
   }
 }

@@ -4,7 +4,6 @@ export interface UseCookieConsentReturn {
   showConsent: boolean;
   hasConsented: boolean | null;
   acceptCookies: () => void;
-  declineCookies: () => void;
   closeConsent: () => void;
 }
 
@@ -33,12 +32,6 @@ export const useCookieConsent = (): UseCookieConsentReturn => {
     setShowConsent(false);
   };
 
-  const declineCookies = () => {
-    localStorage.setItem('cookie-consent', 'declined');
-    setHasConsented(false);
-    setShowConsent(false);
-  };
-
   const closeConsent = () => {
     setShowConsent(false);
   };
@@ -47,7 +40,6 @@ export const useCookieConsent = (): UseCookieConsentReturn => {
     showConsent,
     hasConsented,
     acceptCookies,
-    declineCookies,
     closeConsent,
   };
 };

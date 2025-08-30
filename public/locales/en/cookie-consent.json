@@ -1,15 +1,14 @@
 {
-  "title": "Cookie Consent",
-  "description": "We use cookies to enhance your browsing experience and analyze site traffic. By continuing to use this site, you consent to our use of cookies.",
+  "title": "Privacy Notice",
+  "description": "This website tracks user interactions to improve your experience. No personal or sensitive data is collected or stored. Your theme and language preferences are saved locally on your device.",
   "close": "Close",
-  "accept": "Accept All",
-  "decline": "Decline",
-  "necessary": {
-    "title": "Necessary Cookies",
-    "description": "These cookies are essential for the website to function properly. They cannot be disabled."
+  "accept": "I Understand",
+  "tracking": {
+    "title": "Interaction Tracking",
+    "description": "We track how you interact with our website (pages visited, time spent) to improve functionality and user experience. This data is anonymous and does not identify you personally."
   },
-  "analytics": {
-    "title": "Analytics Cookies",
-    "description": "These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously."
+  "preferences": {
+    "title": "Local Storage",
+    "description": "Your theme preference (light/dark mode) and language selection are stored locally on your device using browser storage. This data remains on your device and is not transmitted to our servers."
   }
 }

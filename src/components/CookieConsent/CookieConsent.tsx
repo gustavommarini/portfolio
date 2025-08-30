@@ -2,10 +2,10 @@ import { FC, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { CookieConsentProps } from './cookie-consent.types';
 import './cookie-consent.scss';
+import { Button } from '../Button';
 
 export const CookieConsent: FC<CookieConsentProps> = ({
   onAccept,
-  onDecline,
   onClose,
   show = false,
 }) => {
@@ -20,12 +20,6 @@ export const CookieConsent: FC<CookieConsentProps> = ({
     localStorage.setItem('cookie-consent', 'accepted');
     setIsVisible(false);
     onAccept?.();
-  };
-
-  const handleDecline = () => {
-    localStorage.setItem('cookie-consent', 'declined');
-    setIsVisible(false);
-    onDecline?.();
   };
 
   const handleClose = () => {
@@ -70,32 +64,25 @@ export const CookieConsent: FC<CookieConsentProps> = ({
 
           <div className="cookie-consent__details">
             <div className="cookie-consent__detail">
-              <h4>{t('necessary.title')}</h4>
-              <p>{t('necessary.description')}</p>
+              <h4>{t('tracking.title')}</h4>
+              <p>{t('tracking.description')}</p>
             </div>
 
             <div className="cookie-consent__detail">
-              <h4>{t('analytics.title')}</h4>
-              <p>{t('analytics.description')}</p>
+              <h4>{t('preferences.title')}</h4>
+              <p>{t('preferences.description')}</p>
             </div>
           </div>
         </div>
 
         <div className="cookie-consent__actions">
-          <button
-            className="cookie-consent__btn cookie-consent__btn--decline"
-            onClick={handleDecline}
-            data-testid="cookie-consent-decline"
-          >
-            {t('decline')}
-          </button>
-          <button
-            className="cookie-consent__btn cookie-consent__btn--accept"
+          <Button
             onClick={handleAccept}
+            fullSizeOnMobile
             data-testid="cookie-consent-accept"
           >
             {t('accept')}
-          </button>
+          </Button>
         </div>
       </div>
     </div>

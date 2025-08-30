@@ -27,8 +27,7 @@ export const Routes = () => {
 
 const RouterApp = () => {
   usePageTracking();
-  const { showConsent, acceptCookies, declineCookies, closeConsent } =
-    useCookieConsent();
+  const { showConsent, acceptCookies, closeConsent } = useCookieConsent();
 
   return (
     <>
@@ -46,7 +45,6 @@ const RouterApp = () => {
       <CookieConsent
         show={showConsent}
         onAccept={acceptCookies}
-        onDecline={declineCookies}
         onClose={closeConsent}
       />
     </>
