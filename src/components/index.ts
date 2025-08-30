@@ -8,3 +8,4 @@ export * from './TitlePage';
 export * from './EducationSection';
 export * from './WorkCardItem';
 export * from './LoadingSpinner';
+export * from './CookieConsent';

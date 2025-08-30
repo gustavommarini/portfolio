@@ -1,0 +1,169 @@
+@import '../../styles/variables.scss';
+
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--cookie-consent-bg);
+  color: var(--cookie-consent-text);
+  z-index: 5;
+  padding: map-get($spacing, md) map-get($spacing, xxxl);
+  border-top: 2px solid var(--cookie-consent-border);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease-out;
+
+  @media (prefers-color-scheme: light) {
+    background: var(--cookie-consent-bg-light);
+    color: var(--cookie-consent-text-light);
+    border-top-color: var(--cookie-consent-border-light);
+  }
+
+  &__content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: map-get($spacing, sm);
+  }
+
+  &__title {
+    font-family: $font-primary;
+    font-size: $fs-lg;
+    margin: 0;
+    text-transform: uppercase;
+    color: var(--cookie-consent-text);
+
+    @media (prefers-color-scheme: light) {
+      color: var(--cookie-consent-text-light);
+    }
+  }
+
+  &__close {
+    background: none;
+    border: none;
+    color: var(--cookie-consent-text);
+    font-size: $is-md;
+    cursor: pointer;
+    padding: map-get($spacing, xxs);
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--cookie-consent-text);
+    }
+
+    &:focus {
+      outline: 2px solid var(--cookie-consent-text);
+      outline-offset: 2px;
+    }
+  }
+
+  &__body {
+    margin-bottom: map-get($spacing, md);
+  }
+
+  &__description {
+    font-family: $font-secundary;
+    font-size: $fs-normal;
+    line-height: 1.6;
+    margin-bottom: map-get($spacing, sm);
+    color: var(--cookie-consent-text);
+
+    @media (prefers-color-scheme: light) {
+      color: var(--cookie-consent-text-light);
+    }
+  }
+
+  &__details {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: map-get($spacing, sm);
+
+    @media (min-width: map-get($breakpoints, md)) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__detail {
+    background: var(--cookie-consent-text-bg);
+    padding: map-get($spacing, sm);
+    border-radius: 4px;
+    border-left: 3px solid var(--cookie-consent-text);
+
+    @media (prefers-color-scheme: light) {
+      background: rgba(0, 0, 0, 0.05);
+      border-left-color: var(--cookie-consent-text);
+    }
+
+    h4 {
+      font-family: $font-primary;
+      font-size: $fs-sm;
+      margin: 0 0 map-get($spacing, xxs) 0;
+      color: var(--cookie-consent-text);
+      text-transform: uppercase;
+
+      @media (prefers-color-scheme: light) {
+        color: var(--cookie-consent-text-light);
+      }
+    }
+
+    p {
+      font-family: $font-secundary;
+      font-size: $fs-xxs;
+      line-height: 1.5;
+      margin: 0;
+      color: var(--cookie-consent-text);
+
+      @media (prefers-color-scheme: light) {
+        color: var(--cookie-consent-text-light);
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: map-get($spacing, sm);
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    @media (max-width: map-get($breakpoints, sm)) {
+      flex-direction: column;
+    }
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: map-get($breakpoints, sm)) {
+  .cookie-consent {
+    padding: map-get($spacing, sm);
+
+    &__title {
+      font-size: $fs-md;
+    }
+
+    &__description {
+      font-size: $fs-sm;
+    }
+
+    &__btn {
+      font-size: $fs-xxs;
+      padding: map-get($spacing, xxs) map-get($spacing, sm);
+      min-width: 100px;
+    }
+  }
+}

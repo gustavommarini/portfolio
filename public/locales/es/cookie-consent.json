@@ -1,0 +1,14 @@
+{
+  "title": "Aviso de Privacidad",
+  "description": "Este sitio web rastrea las interacciones del usuario para mejorar su experiencia. No se recopilan ni almacenan datos personales o sensibles. Sus preferencias de tema e idioma se guardan localmente en su dispositivo.",
+  "close": "Cerrar",
+  "accept": "Entiendo",
+  "tracking": {
+    "title": "Seguimiento de Interacciones",
+    "description": "Rastreamos cómo interactúa con nuestro sitio web (páginas visitadas, tiempo de permanencia) para mejorar la funcionalidad y experiencia del usuario. Estos datos son anónimos y no lo identifican personalmente."
+  },
+  "preferences": {
+    "title": "Almacenamiento Local",
+    "description": "Su preferencia de tema (modo claro/oscuro) y selección de idioma se almacenan localmente en su dispositivo usando el almacenamiento del navegador. Estos datos permanecen en su dispositivo y no se transmiten a nuestros servidores."
+  }
+}

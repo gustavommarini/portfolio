@@ -1,6 +1,13 @@
 import { BrowserRouter, Routes as AppRoutes, Route } from 'react-router-dom';
-import { LanguageMenu, Navbar, SocialIcons, ThemeButton } from '@/components';
+import {
+  LanguageMenu,
+  Navbar,
+  SocialIcons,
+  ThemeButton,
+  CookieConsent,
+} from '@/components';
 import { usePageTracking } from '@/services/analytics';
+import { useCookieConsent } from '@/hooks/useCookieConsent';
 import { HomeV2, About, Work, Contact, Error } from '../pages';
 
 export const Routes = () => {
@@ -20,6 +27,8 @@ export const Routes = () => {
 
 const RouterApp = () => {
   usePageTracking();
+  const { showConsent, acceptCookies, closeConsent } = useCookieConsent();
+
   return (
     <>
       <Navbar />
@@ -33,6 +42,11 @@ const RouterApp = () => {
       <SocialIcons />
       <ThemeButton />
       <LanguageMenu />
+      <CookieConsent
+        show={showConsent}
+        onAccept={acceptCookies}
+        onClose={closeConsent}
+      />
     </>
   );
 };

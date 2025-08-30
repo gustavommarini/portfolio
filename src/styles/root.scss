@@ -40,7 +40,8 @@
   --gmm-overlay-bg3: #{$color-overlay-bg3};
   --gmm-overlay-bg4: #{$color-overlay-bg4};
   --gmm-overlay-bg5: #{$color-overlay-bg5};
-
+  /*----------  Consent Cookies colors  ----------*/
+  --gmm-cookie-consent-text-bg: #{$cookie-consent-text-bg};
   /*=============================================
   =            Light colors            =
   =============================================*/
@@ -63,6 +64,8 @@
   --gmm-overlay-bg3-light: #{$color-overlay-bg3-light};
   --gmm-overlay-bg4-light: #{$color-overlay-bg4-light};
   --gmm-overlay-bg5-light: #{$color-overlay-bg5-light};
+  /*----------  Consent Cookies colors  ----------*/
+  --gmm-cookie-consent-text-bg-light: #{$cookie-consent-text-bg-light};
 }
 
 /*=============================================
@@ -122,6 +125,14 @@
   --form-text-placeholder: var(--gmm-gray);
   //PRINT
   --highlight-color-print: var(--gmm-color-print);
+  //COOKIE CONSENT
+  --cookie-consent-bg: var(--gmm-bg);
+  --cookie-consent-text: var(--gmm-text-base);
+  --cookie-consent-text-bg: var(--gmm-cookie-consent-text-bg);
+  --cookie-consent-border: var(--gmm-primary);
+  --cookie-consent-btn-bg: var(--gmm-primary);
+  --cookie-consent-btn-text: var(--gmm-btn);
+  --cookie-consent-btn-text-wbg: var(--gmm-black);
 }
 
 /*=============================================
@@ -181,4 +192,12 @@
   --form-text-placeholder: var(--gmm-gray);
   //PRINT
   --highlight-color-print: var(--gmm-primary-light);
+  //COOKIE CONSENT
+  --cookie-consent-bg: var(--gmm-bg-light);
+  --cookie-consent-text: var(--gmm-text-base-light);
+  --cookie-consent-text-bg: var(--gmm-cookie-consent-text-bg-light);
+  --cookie-consent-border: var(--gmm-primary-light);
+  --cookie-consent-btn-bg: var(--gmm-primary-light);
+  --cookie-consent-btn-text: var(--gmm-btn-light);
+  --cookie-consent-btn-text-wbg: var(--gmm-white);
 }

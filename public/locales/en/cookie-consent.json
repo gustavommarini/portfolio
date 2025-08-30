@@ -1,0 +1,14 @@
+{
+  "title": "Privacy Notice",
+  "description": "This website tracks user interactions to improve your experience. No personal or sensitive data is collected or stored. Your theme and language preferences are saved locally on your device.",
+  "close": "Close",
+  "accept": "I Understand",
+  "tracking": {
+    "title": "Interaction Tracking",
+    "description": "We track how you interact with our website (pages visited, time spent) to improve functionality and user experience. This data is anonymous and does not identify you personally."
+  },
+  "preferences": {
+    "title": "Local Storage",
+    "description": "Your theme preference (light/dark mode) and language selection are stored locally on your device using browser storage. This data remains on your device and is not transmitted to our servers."
+  }
+}
