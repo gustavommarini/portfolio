@@ -22,15 +22,39 @@
 
   .lang-link {
     text-decoration: none;
-    font-size: $is-lg;
     line-height: 4rem;
     opacity: 0;
     transform: scale(0.8) translateY(2rem);
     transition: all 0.3s ease-out;
 
-    &:hover,
-    &.selected {
-      font-size: $is-xl;
+    .flag {
+      display: inline-block;
+      width: 3.2rem; // base size ~ matches previous font-size
+      height: 2.4rem;
+      background-image: url('@/assets/flags/flags-sprite.png');
+      background-repeat: no-repeat;
+      background-size: 300% 100%; // 3 frames horizontally
+      transition: transform 0.2s ease-out;
+      transform-origin: center;
+    }
+
+    // Spain is the first frame, England second, Italy third
+    .flag-es {
+      background-position: 0% 0;
+    }
+    .flag-en {
+      background-position: 50% 0;
+    }
+    .flag-it {
+      background-position: 100% 0;
+    }
+
+    &:hover .flag,
+    &.selected .flag {
+      transform: scale(1.4);
+    }
+    &.selected .flag {
+      filter: brightness(0.6);
     }
   }
 }

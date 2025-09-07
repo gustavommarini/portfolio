@@ -34,19 +34,19 @@ export const LanguageMenu: FC = () => {
           className={`lang-link ${langSpanish && 'selected'}`}
           onClick={() => changeLanguage(AvailableLanguages.es)}
         >
-          🇪🇸
+          <span className="flag flag-es" />
         </div>
         <div
           className={`lang-link ${langEnglish && 'selected'}`}
           onClick={() => changeLanguage(AvailableLanguages.en)}
         >
-          🇬🇧
+          <span className="flag flag-en" />
         </div>
         <div
           className={`lang-link ${langItalian && 'selected'}`}
           onClick={() => changeLanguage(AvailableLanguages.it)}
         >
-          🇮🇹
+          <span className="flag flag-it" />
         </div>
       </div>
     </div>
