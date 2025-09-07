@@ -125,6 +125,7 @@ $color-samsung: #0d47a1;
 $color-lg: #a50034;
 $color-tizen: #258bd1;
 $color-hbbtv: $gray;
+$color-ice-cast: $gray;
 
 // 1. Define the map of brand names to their color variables
 $brand-icon-colors: (
@@ -184,6 +185,7 @@ $brand-icon-colors: (
   'lg': $color-lg,
   'tizen': $color-tizen,
   'hbbtv': $color-hbbtv,
+  'ice-cast': $color-ice-cast,
 );
 
 /*----------  Decorator colors  ----------*/
